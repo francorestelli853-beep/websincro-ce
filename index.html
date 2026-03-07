@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sincro AI — Automatización de Citas para Clínicas Estéticas</title>
+  <meta name="description"
+    content="Convertimos mensajes de Instagram y WhatsApp en citas confirmadas para clínicas estéticas. Automatización 24/7. Setup en 14 días. ROI garantizado.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --bg-base: #030305;
+      --bg-surface: #0a0a0f;
+      --bg-card: #0f0f17;
+      --bg-card-hover: #141420;
+      --border: rgba(255, 255, 255, 0.07);
+      --border-blue: rgba(37, 99, 235, 0.4);
+      --text-primary: #ffffff;
+      --text-secondary: #8a8fa8;
+      --text-muted: #44475a;
+      --accent: #2563EB;
+      --accent-hover: #1d4ed8;
+      --accent-glow: rgba(37, 99, 235, 0.15);
+      --danger: #ef4444;
+      --success: #10b981;
+      --font-display: 'Inter', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px
+    }
+
+    body {
+      background: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: .01em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 2px, transparent 2px);
+      background-size: 32px 32px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      font-family: var(--font-body)
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 2px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background .2s, box-shadow .2s, transform .1s;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 0 24px rgba(37, 99, 235, 0.4)
+    }
+
+    .btn-primary:active {
+      transform: scale(0.98)
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text-primary);
+      padding: 14px 28px;
+      border-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      transition: border-color .2s, box-shadow .2s, transform .1s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 16px rgba(37, 99, 235, 0.2)
+    }
+
+    .btn-secondary:active {
+      transform: scale(0.98)
+    }
+
+    .btn-outline-blue {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--accent);
+      padding: 12px 24px;
+      border-radius: 2px;
+      border: 1px solid var(--accent);
+      font-family: var(--font-body);
+      font-size: .95rem;
+      font-weight: 500;
+      transition: background .2s, box-shadow .2s, transform .1s;
+    }
+
+    .btn-outline-blue:hover {
+      background: var(--accent-glow);
+      box-shadow: 0 0 16px rgba(37, 99, 235, 0.25)
+    }
+
+    .btn-outline-blue:active {
+      transform: scale(0.98)
+    }
+
+    /* ===== NAVBAR ===== */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 68px;
+      background: rgba(3, 3, 5, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transform: translateY(-100%);
+      animation: navDown .5s .3s forwards;
+    }
+
+    @keyframes navDown {
+      to {
+        transform: translateY(0)
+      }
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -.02em
+    }
+
+    .nav-logo span {
+      color: var(--accent)
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px
+    }
+
+    .nav-links a {
+      font-size: .9rem;
+      color: var(--text-secondary);
+      transition: color .2s
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary)
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      padding: 4px
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: .3s
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: rgba(3, 3, 5, 0.97);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+    }
+
+    .mobile-menu.open {
+      display: flex
+    }
+
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--text-primary)
+    }
+
+    /* ===== SECTION UTILS ===== */
+    section {
+      padding: 100px 5%
+    }
+
+    .overline {
+      font-family: var(--font-body);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -.025em;
+      color: #fff;
+    }
+
+    .blue {
+      color: var(--accent)
+    }
+
+    .italic-serif {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    /* ===== FADE IN ANIMATION ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 5% 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border-blue);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: .82rem;
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+      background: rgba(37, 99, 235, 0.05);
+    }
+
+    .hero-badge::before {
+      content: "●";
+      color: var(--accent);
+      font-size: .6rem
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(2.6rem, 6.5vw, 5rem);
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      margin-bottom: 32px;
+      max-width: 850px;
+      color: #fff;
+    }
+
+    .hero-headline .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: wordUp .5s forwards;
+      margin-right: .25em;
+    }
+
+    .hero-headline .line-break {
+      display: block
+    }
+
+    .italic-line {
+      color: var(--accent);
+      text-shadow: 0 0 40px rgba(37, 99, 235, 0.4);
+      display: block;
+    }
+
+    @keyframes wordUp {
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 32px
+    }
+
+    .hero-proof {
+      font-size: .88rem;
+      color: var(--text-secondary);
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 64px;
+    }
+
+    .hero-proof span::before {
+      content: "✓ ";
+      color: var(--success)
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      width: 100%;
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .stat-item {
+      padding: 28px 24px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat-item:last-child {
+      border-right: none
+    }
+
+    .stat-num {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: .8rem;
+      color: var(--text-secondary);
+      line-height: 1.4
+    }
+
+    .hero-divider {
+      width: 100%;
+      max-width: 900px;
+      height: 1px;
+      background: var(--border);
+      margin-top: 0
+    }
+
+    /* ===== PAIN SECTION ===== */
+    #pain {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 30% 50%, rgba(239, 68, 68, 0.03) 0%, transparent 70%);
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      margin-bottom: 80px
+    }
+
+    .pain-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: #fff
+    }
+
+    .pain-subtitle {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--danger);
+      font-size: 1.2rem
+    }
+
+    .pain-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column
+    }
+
+    .pain-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .pain-item.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    .pain-dot {
+      color: var(--danger);
+      font-size: 1rem;
+      margin-top: 3px;
+      flex-shrink: 0
+    }
+
+    .pain-item p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #fff;
+      font-weight: 400
+    }
+
+    .pain-statement {
+      background: var(--bg-card);
+      padding: 80px 5%;
+      text-align: center;
+      margin: 0 -5%;
+    }
+
+    .pain-statement p {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.4rem, 3vw, 2.6rem);
+      line-height: 1.2;
+      letter-spacing: -.02em;
+      color: #fff;
+    }
+
+    /* ===== SOLUTION ===== */
+
+    .solution-cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin: 60px 0 60px;
+    }
+
+    .sol-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 2px;
+      padding: 28px 20px;
+      transition: background .2s, transform .2s;
+    }
+
+    .sol-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-4px)
+    }
+
+    .sol-num {
+      font-family: var(--font-body);
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--accent);
+      margin-bottom: 12px;
+      opacity: .7;
+      letter-spacing: -.02em
+    }
+
+    .sol-title {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: .95rem;
+      margin-bottom: 8px;
+      color: #fff
+    }
+
+    .sol-desc {
+      font-size: .85rem;
+      color: var(--text-secondary);
+      line-height: 1.7
+    }
+
+
+    /* ===== DEMO ===== */
+    #demo {
+      background: var(--bg-surface)
+    }
+
+    .demo-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-top: 60px
+    }
+
+    .phone-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px
+    }
+
+    .phone-frame {
+      width: 320px;
+      height: 620px;
+      background: #1a1a2e;
+      border-radius: 40px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .phone-notch {
+      height: 36px;
+      background: #1a1a2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .phone-notch-inner {
+      width: 100px;
+      height: 20px;
+      background: #0d0d1a;
+      border-radius: 0 0 14px 14px
+    }
+
+    .chat-header {
+      background: #111128;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      flex-shrink: 0;
+    }
+
+    .chat-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #60a5fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .chat-name {
+      font-size: .88rem;
+      font-weight: 600
+    }
+
+    .chat-status {
+      font-size: .72rem;
+      color: var(--success)
+    }
+
+    .chat-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: #0d0d20;
+    }
+
+    .chat-body::-webkit-scrollbar {
+      width: 4px
+    }
+
+    .chat-body::-webkit-scrollbar-track {
+      background: transparent
+    }
+
+    .chat-body::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px
+    }
+
+    .msg {
+      max-width: 80%;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .3s ease, transform .3s ease;
+    }
+
+    .msg.show {
+      opacity: 1;
+      transform: none
+    }
+
+    .msg.in {
+      align-self: flex-start
+    }
+
+    .msg.out {
+      align-self: flex-end
+    }
+
+    .msg-bubble {
+      padding: 8px 12px;
+      font-size: .75rem;
+      line-height: 1.5;
+      border-radius: 12px;
+    }
+
+    .msg.in .msg-bubble {
+      background: #1e1e35;
+      color: var(--text-primary);
+      border-radius: 2px 12px 12px 12px
+    }
+
+    .msg.out .msg-bubble {
+      background: linear-gradient(135deg, #1d4ed8, #2563EB);
+      color: #fff;
+      border-radius: 12px 2px 12px 12px;
+    }
+
+    .msg.out.success .msg-bubble {
+      background: linear-gradient(135deg, #065f46, #059669)
+    }
+
+    .msg-time {
+      font-size: .65rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+      text-align: right
+    }
+
+    .msg.in .msg-time {
+      text-align: left
+    }
+
+    .typing {
+      align-self: flex-start;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .3s, transform .3s;
+    }
+
+    .typing.show {
+      opacity: 1;
+      transform: none
+    }
+
+    .typing-inner {
+      background: #1e1e35;
+      padding: 10px 14px;
+      border-radius: 2px 12px 12px 12px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .typing-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      animation: typingBounce 1.2s infinite;
+    }
+
+    .typing-dot:nth-child(2) {
+      animation-delay: .2s
+    }
+
+    .typing-dot:nth-child(3) {
+      animation-delay: .4s
+    }
+
+    @keyframes typingBounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        opacity: .4
+      }
+
+      50% {
+        transform: translateY(-4px);
+        opacity: 1
+      }
+    }
+
+    .calendar-confirmed {
+      font-size: .7rem;
+      color: var(--success);
+      text-align: center;
+      padding: 8px;
+      opacity: 0;
+      transition: opacity .3s .2s;
+    }
+
+    .calendar-confirmed.show {
+      opacity: 1
+    }
+
+    .demo-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    .demo-stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-blue);
+      border-radius: 2px;
+      padding: 20px 24px;
+      box-shadow: 0 0 20px var(--accent-glow);
+      opacity: 0;
+      transform: translateX(20px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .demo-stat-card.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    .demo-stat-val {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 4px
+    }
+
+    .demo-stat-label {
+      font-size: .85rem;
+      color: var(--text-secondary)
+    }
+
+    .replay-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px
+    }
+
+    .chat-confirmed-note {
+      font-size: .7rem;
+      color: var(--success);
+      padding: 4px 0;
+      text-align: center
+    }
+
+    /* ===== ROI CALCULATOR ===== */
+    #roi {
+      background: var(--bg-base)
+    }
+
+    .roi-card {
+      max-width: 680px;
+      margin: 60px auto 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-blue);
+      border-radius: 2px;
+      padding: 48px;
+      box-shadow: 0 0 40px var(--accent-glow);
+    }
+
+    .roi-label {
+      font-size: .9rem;
+      color: var(--text-secondary);
+      margin-bottom: 12px
+    }
+
+    .roi-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(to right, var(--accent) 0%, var(--accent) 25%, var(--border) 25%);
+      outline: none;
+      cursor: pointer;
+      margin-bottom: 48px;
+    }
+
+    .roi-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 0 3px var(--accent), 0 2px 8px rgba(0, 0, 0, 0.4);
+      transition: box-shadow .2s;
+    }
+
+    .roi-slider::-webkit-slider-thumb:hover {
+      box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.3), 0 2px 8px rgba(0, 0, 0, 0.4)
+    }
+
+    .roi-display {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 32px;
+      margin-top: -16px;
+    }
+
+    .roi-display-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .roi-display-row:last-child {
+      border-bottom: none
+    }
+
+    .roi-key {
+      color: var(--text-secondary);
+      font-size: .9rem
+    }
+
+    .roi-val {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.4rem
+    }
+
+    .roi-val.big {
+      font-size: 2rem
+    }
+
+    .roi-val.green {
+      color: var(--success)
+    }
+
+    .roi-val.red {
+      color: var(--danger)
+    }
+
+    .roi-footer {
+      text-align: center;
+      margin-top: 48px
+    }
+
+    .roi-footer p {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 8px
+    }
+
+    .roi-footer .italic-line {
+      font-size: 1.1rem
+    }
+
+    /* ===== PRICING ===== */
+    #pricing {
+      background: var(--bg-surface)
+    }
+
+    .pricing-card {
+      max-width: 560px;
+      margin: 60px auto 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-blue);
+      border-radius: 2px;
+      padding: 48px;
+      box-shadow: 0 0 60px var(--accent-glow), 0 0 0 1px rgba(37, 99, 235, 0.1);
+    }
+
+    .pricing-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+    }
+
+    .pricing-amount {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 6px
+    }
+
+    .pricing-main {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 3.5rem
+    }
+
+    .pricing-period {
+      color: var(--text-secondary);
+      font-size: 1rem
+    }
+
+    .pricing-monthly {
+      font-size: 1.6rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 6px
+    }
+
+    .pricing-monthly span {
+      color: var(--text-secondary);
+      font-size: .9rem;
+      font-weight: 400
+    }
+
+    .pricing-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0
+    }
+
+    .pricing-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .pricing-feat {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: .88rem;
+      line-height: 1.4;
+    }
+
+    .pricing-feat::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px
+    }
+
+    .pricing-cta {
+      width: 100%;
+      padding: 16px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 16px
+    }
+
+    .pricing-note {
+      text-align: center;
+      font-size: .82rem;
+      color: var(--text-secondary);
+      line-height: 1.5
+    }
+
+    /* ===== GUARANTEE ===== */
+    #guarantee {
+      background: var(--bg-base)
+    }
+
+    .guarantee-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-blue);
+      border-radius: 2px;
+      padding: 64px 48px;
+      text-align: center;
+      box-shadow: 0 0 40px var(--accent-glow);
+    }
+
+    .shield-icon {
+      margin: 0 auto 32px;
+      width: 72px;
+      height: 72px
+    }
+
+    .shield-icon svg {
+      width: 72px;
+      height: 72px
+    }
+
+    .guarantee-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 24px
+    }
+
+    .guarantee-body {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-primary);
+      margin-bottom: 16px
+    }
+
+    .guarantee-sub {
+      color: var(--text-secondary);
+      font-size: .9rem;
+      font-style: italic
+    }
+
+    /* ===== FINAL CTA ===== */
+    #contact {
+      padding: 120px 5%;
+      text-align: center;
+      background: radial-gradient(ellipse at 50% 40%, rgba(37, 99, 235, 0.07) 0%, transparent 70%);
+    }
+
+    .contact-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: -.03em;
+      line-height: 1.1;
+      margin-bottom: 48px;
+    }
+
+    .contact-title .italic-line {
+      font-size: inherit
+    }
+
+    @keyframes glowPulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.4)
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(37, 99, 235, 0.7), 0 0 80px rgba(37, 99, 235, 0.2)
+      }
+    }
+
+    .cta-big {
+      animation: glowPulse 2.5s infinite;
+      font-size: 1.15rem;
+      padding: 18px 40px;
+      font-weight: 600;
+      border-radius: 2px
+    }
+
+    .contact-sub {
+      margin-top: 24px;
+      color: var(--text-secondary);
+      font-size: .95rem;
+      line-height: 1.7
+    }
+
+    .contact-muted {
+      margin-top: 8px;
+      color: var(--text-muted);
+      font-size: .82rem
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem
+    }
+
+    .footer-logo span {
+      color: var(--accent)
+    }
+
+    .footer-center {
+      color: var(--text-muted);
+      font-size: .82rem
+    }
+
+    .footer-right {
+      color: var(--text-muted);
+      font-size: .82rem;
+      text-align: center;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:1024px) {
+      .solution-cards {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .demo-inner {
+        grid-template-columns: 1fr;
+        text-align: center
+      }
+
+      .demo-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center
+      }
+
+      .demo-stat-card {
+        flex: 0 0 calc(50% - 8px)
+      }
+    }
+
+    @media(max-width:768px) {
+      section {
+        padding: 56px 5%
+      }
+
+      /* Navbar */
+      .nav-links {
+        display: none
+      }
+
+      .hamburger {
+        display: flex
+      }
+
+      /* Hero */
+      #hero {
+        padding: 100px 5% 48px
+      }
+
+      .hero-badge {
+        font-size: .75rem;
+        margin-bottom: 24px
+      }
+
+      .hero-headline {
+        font-size: clamp(2rem, 10vw, 3rem);
+        letter-spacing: -.02em;
+        margin-bottom: 20px
+      }
+
+      .hero-sub {
+        font-size: .92rem;
+        margin-bottom: 28px
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 340px
+      }
+
+      .hero-ctas a {
+        text-align: center;
+        justify-content: center
+      }
+
+      .hero-proof {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 40px
+      }
+
+      /* Stats bar */
+      .stats-bar {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .stat-item:nth-child(2) {
+        border-right: none
+      }
+
+      .stat-item:nth-child(3) {
+        border-top: 1px solid var(--border)
+      }
+
+      .stat-item:nth-child(4) {
+        border-top: 1px solid var(--border)
+      }
+
+      .stat-item {
+        padding: 20px 12px
+      }
+
+      /* Pain */
+      .pain-grid {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .pain-statement {
+        padding: 48px 5%
+      }
+
+      /* Solution */
+      .solution-cards {
+        grid-template-columns: 1fr
+      }
+
+      /* Demo */
+      .demo-inner {
+        gap: 40px
+      }
+
+      .phone-frame {
+        width: 272px;
+        height: 520px
+      }
+
+      .demo-stats {
+        flex-direction: column;
+        align-items: center
+      }
+
+      .demo-stat-card {
+        width: 100%;
+        max-width: 272px
+      }
+
+      /* ROI */
+      .roi-card {
+        padding: 28px 20px
+      }
+
+      .roi-display {
+        padding: 20px 16px
+      }
+
+      .roi-val.big {
+        font-size: 1.6rem
+      }
+
+      /* Pricing */
+      .pricing-card {
+        padding: 28px 20px
+      }
+
+      .pricing-features {
+        grid-template-columns: 1fr
+      }
+
+      .pricing-main {
+        font-size: 2.8rem
+      }
+
+      /* Guarantee */
+      .guarantee-card {
+        padding: 40px 20px
+      }
+
+      /* Final CTA buttons */
+      #contact .reveal {
+        flex-direction: column;
+        align-items: center
+      }
+
+      #contact .reveal a {
+        width: 100%;
+        max-width: 340px;
+        justify-content: center
+      }
+    }
+
+    @media(max-width:480px) {
+      .pain-statement p {
+        font-size: 1.2rem
+      }
+
+      .section-title {
+        font-size: clamp(1.5rem, 7vw, 2rem)
+      }
+
+      .hero-headline {
+        font-size: clamp(1.8rem, 11vw, 2.6rem)
+      }
+
+      .guarantee-title {
+        font-size: 1.5rem
+      }
+
+      .contact-title {
+        font-size: clamp(1.8rem, 8vw, 2.5rem)
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo">Sincro<span>|AI</span></div>
+    <div class="nav-links">
+      <a href="#pain">Problema</a>
+      <a href="#solution">Sistema</a>
+      <a href="#demo">Demo</a>
+      <a href="#pricing">Precio</a>
+      <a href="#contact">Contacto</a>
+      <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20me%20interesa%20agendar%20una%20llamada%20para%20ver%20c%C3%B3mo%20pueden%20ayudar%20a%20mi%20cl%C3%ADnica%20est%C3%A9tica."
+        target="_blank" class="btn-primary" style="padding:10px 20px;font-size:.88rem">Agendar llamada</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#pain" onclick="closeMobile()">Problema</a>
+    <a href="#solution" onclick="closeMobile()">Sistema</a>
+    <a href="#demo" onclick="closeMobile()">Demo</a>
+    <a href="#pricing" onclick="closeMobile()">Precio</a>
+    <a href="#contact" onclick="closeMobile()">Contacto</a>
+    <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20me%20interesa%20agendar%20una%20llamada%20para%20ver%20c%C3%B3mo%20pueden%20ayudar%20a%20mi%20cl%C3%ADnica%20est%C3%A9tica."
+      target="_blank" class="btn-primary">Agendar llamada</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-badge">Sistema activo en clínicas de LATAM</div>
+    <h1 class="hero-headline" id="heroHeadline">
+      <span class="line-break">
+        <span class="word" style="animation-delay:.6s">Tu</span><span class="word"
+          style="animation-delay:.68s">clínica</span><span class="word" style="animation-delay:.76s">pierde</span><span
+          class="word" style="animation-delay:.84s">citas</span>
+      </span>
+      <span class="line-break">
+        <span class="word" style="animation-delay:.92s">todos</span><span class="word"
+          style="animation-delay:1s">los</span><span class="word" style="animation-delay:1.08s">días.</span>
+      </span>
+      <span class="italic-line italic-serif">
+        <span class="word" style="animation-delay:1.16s">Nosotros</span><span class="word"
+          style="animation-delay:1.24s">las</span><span class="word" style="animation-delay:1.32s">recuperamos.</span>
+      </span>
+    </h1>
+    <p class="hero-sub">Automatizamos Instagram, WhatsApp y el seguimiento de pacientes para que tu agenda esté llena —
+      sin contratar más recepcionistas.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20me%20interesa%20agendar%20una%20llamada%20para%20ver%20c%C3%B3mo%20pueden%20ayudar%20a%20mi%20cl%C3%ADnica%20est%C3%A9tica."
+        target="_blank" class="btn-primary" style="animation:glowPulse 2.5s 2s infinite">Quiero más citas automatizadas
+        →</a>
+      <a href="#demo" class="btn-secondary">Ver cómo funciona</a>
+    </div>
+    <div class="hero-proof">
+      <span>Sin contratos</span>
+      <span>Setup en 14 días</span>
+      <span>ROI garantizado o trabajamos gratis</span>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-num" data-target="2400" data-prefix="+">0</div>
+        <div class="stat-label">mensajes automatizados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="340" data-prefix="+">0</div>
+        <div class="stat-label">citas recuperadas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="5" data-suffix="s" data-prefix="<">0</div>
+        <div class="stat-label">tiempo de respuesta</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-suffix="/7">24</div>
+        <div class="stat-label">activo</div>
+      </div>
+    </div>
+    <div class="hero-divider"></div>
+  </section>
+
+  <!-- PAIN -->
+  <section id="pain">
+    <div class="pain-grid">
+      <div class="reveal">
+        <div class="overline">El Problema</div>
+        <h2 class="pain-title">El problema no es<br>la falta de interés.</h2>
+        <p class="pain-subtitle">Es la falta de seguimiento.</p>
+      </div>
+      <ul class="pain-list">
+        <li class="pain-item"><span class="pain-dot">●</span>
+          <p>Mensajes de Instagram que nadie responde a tiempo.</p>
+        </li>
+        <li class="pain-item"><span class="pain-dot">●</span>
+          <p>Leads que preguntan precio y desaparecen.</p>
+        </li>
+        <li class="pain-item"><span class="pain-dot">●</span>
+          <p>Citas que se olvidan y no se confirman.</p>
+        </li>
+        <li class="pain-item"><span class="pain-dot">●</span>
+          <p>Horas perdidas respondiendo siempre lo mismo.</p>
+        </li>
+        <li class="pain-item"><span class="pain-dot">●</span>
+          <p>Recepcionistas saturadas con tareas repetitivas.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="pain-statement reveal">
+      <p style="text-align:center">Cada mensaje no respondido es dinero que se va a otra clínica.</p>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section id="solution">
+    <div style="max-width:760px">
+      <div class="overline reveal">La Solución</div>
+      <h2 class="section-title reveal">Convertimos mensajes en<br>citas confirmadas.<br><span
+          class="blue italic-serif">En automático.</span></h2>
+    </div>
+    <div class="solution-cards">
+      <div class="sol-card reveal">
+        <div class="sol-num">01</div>
+        <div class="sol-title">Responde en segundos, 24/7</div>
+        <p class="sol-desc">Cada DM recibe respuesta en menos de 5 segundos. Incluso a las 3am.</p>
+      </div>
+      <div class="sol-card reveal">
+        <div class="sol-num">02</div>
+        <div class="sol-title">Filtra y califica prospectos</div>
+        <p class="sol-desc">La IA detecta intención, presupuesto y urgencia antes de agendar.</p>
+      </div>
+      <div class="sol-card reveal">
+        <div class="sol-num">03</div>
+        <div class="sol-title">Agenda citas automáticamente</div>
+        <p class="sol-desc">Se conecta a tu calendario. El paciente elige horario. Confirma solo.</p>
+      </div>
+      <div class="sol-card reveal">
+        <div class="sol-num">04</div>
+        <div class="sol-title">Recordatorios anti no-show</div>
+        <p class="sol-desc">Mensajes automáticos 24hs y 2hs antes. Reducción de ausencias del 60%.</p>
+      </div>
+      <div class="sol-card reveal">
+        <div class="sol-num">05</div>
+        <div class="sol-title">Recupera leads fríos</div>
+        <p class="sol-desc">Seguimiento automático a quienes no reservaron. Hasta 5 touchpoints.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section id="demo">
+    <div style="max-width:800px">
+      <div class="overline reveal">Demo en Vivo</div>
+      <h2 class="section-title reveal">Así se ve tu clínica con<br><span class="blue">nuestro sistema
+          funcionando.</span></h2>
+      <p class="reveal" style="color:var(--text-secondary);font-style:italic">Clínica Bella Derma — caso real simulado
+      </p>
+    </div>
+    <div class="demo-inner">
+      <div class="phone-wrap">
+        <div class="phone-frame">
+          <div class="phone-notch">
+            <div class="phone-notch-inner"></div>
+          </div>
+          <div class="chat-header">
+            <div class="chat-avatar">BD</div>
+            <div>
+              <div class="chat-name">Clínica Bella Derma</div>
+              <div class="chat-status">● En línea</div>
+            </div>
+          </div>
+          <div class="chat-body" id="chatBody">
+            <!-- messages injected by JS -->
+          </div>
+        </div>
+        <div class="replay-wrap">
+          <button class="btn-outline-blue" id="replayBtn" onclick="replayChat()">↺ Ver demo de nuevo</button>
+        </div>
+      </div>
+      <div class="demo-stats">
+        <div class="demo-stat-card reveal" style="transition-delay:.1s">
+          <div class="demo-stat-val">⏱ 4s</div>
+          <div class="demo-stat-label">Tiempo de respuesta</div>
+        </div>
+        <div class="demo-stat-card reveal" style="transition-delay:.3s">
+          <div class="demo-stat-val" style="color:var(--success)">📅 +34%</div>
+          <div class="demo-stat-label">Conversión de leads</div>
+        </div>
+        <div class="demo-stat-card reveal" style="transition-delay:.5s">
+          <div class="demo-stat-val">🔄 0</div>
+          <div class="demo-stat-label">Intervención humana</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI CALCULATOR -->
+  <section id="roi">
+    <div style="text-align:center">
+      <div class="overline reveal">Calculadora de ROI</div>
+      <h2 class="section-title reveal">Si una cita vale $300...<br><span class="blue">¿cuánto vale recuperar 10 al
+          mes?</span></h2>
+    </div>
+    <div class="roi-card reveal">
+      <div class="roi-label">Ticket promedio por cita</div>
+      <div style="position:relative;margin-bottom:8px">
+        <div id="sliderBubble"
+          style="position:absolute;top:-36px;left:25%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 10px;border-radius:4px;font-size:.82rem;font-weight:600;pointer-events:none;transition:left .05s">
+          $500</div>
+      </div>
+      <input type="range" class="roi-slider" id="roiSlider" min="100" max="2000" value="500" step="10">
+      <div class="roi-display">
+        <div class="roi-display-row">
+          <span class="roi-key">10 citas extra recuperadas =</span>
+          <span class="roi-val big" id="roi10">$5,000</span>
+        </div>
+        <div class="roi-display-row">
+          <span class="roi-key">Inversión mensual</span>
+          <span class="roi-val">$997/mes</span>
+        </div>
+        <div class="roi-display-row">
+          <span class="roi-key">ROI mes 1</span>
+          <span class="roi-val green" id="roiMonth">$4,000</span>
+        </div>
+        <div class="roi-display-row">
+          <span class="roi-key">ROI anual</span>
+          <span class="roi-val green" id="roiYear">$48,000</span>
+        </div>
+      </div>
+      <div class="roi-footer">
+        <p>"Si el sistema no se paga solo, no tiene sentido."</p>
+        <span class="italic-serif blue italic-line" style="font-style:italic">El nuestro se paga en las primeras 4
+          citas.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div style="text-align:center">
+      <div class="overline reveal">La Oferta</div>
+      <h2 class="section-title reveal">Implementación completa en 14 días.</h2>
+      <p class="reveal" style="color:var(--text-secondary)">Sin contratos largos. Resultados medibles.</p>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-badge">MÁS POPULAR</div>
+      <div class="pricing-amount">
+        <span class="pricing-main">$1,497</span>
+        <span class="pricing-period">/setup único</span>
+      </div>
+      <div class="pricing-monthly">$997/mes <span>/mantenimiento</span></div>
+      <hr class="pricing-divider">
+      <div class="pricing-features">
+        <div class="pricing-feat">Automatización Instagram DMs 24/7</div>
+        <div class="pricing-feat">Automatización WhatsApp</div>
+        <div class="pricing-feat">Calificación de pacientes con IA</div>
+        <div class="pricing-feat">Agendamiento automático de citas</div>
+        <div class="pricing-feat">Recordatorios anti no-show</div>
+        <div class="pricing-feat">Seguimiento de leads no convertidos</div>
+        <div class="pricing-feat">Dashboard de leads en tiempo real</div>
+        <div class="pricing-feat">Soporte y mejoras continuas</div>
+        <div class="pricing-feat">Setup completo en 14 días</div>
+        <div class="pricing-feat">Sin contratos de permanencia</div>
+      </div>
+      <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20quiero%20implementar%20el%20sistema%20en%20mi%20cl%C3%ADnica%20est%C3%A9tica."
+        target="_blank" class="btn-primary pricing-cta">Quiero implementarlo en mi clínica →</a>
+      <p class="pricing-note">Hablamos primero. Sin compromiso.<br>Si no es para vos, te lo decimos.</p>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section id="guarantee">
+    <div class="guarantee-card reveal">
+      <div class="shield-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M36 6L12 16v20c0 14.4 10.2 27.8 24 31.2C49.8 63.8 60 50.4 60 36V16L36 6z" fill="rgba(37,99,235,0.12)"
+            stroke="#2563EB" stroke-width="2" />
+          <path d="M26 36l7 7 13-14" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h2 class="guarantee-title">Garantía de resultados.</h2>
+      <p class="guarantee-body">Si en los primeros 30 días no recuperás<br><strong>al menos 10 citas
+          confirmadas</strong>,<br>el mes siguiente es <span style="color:var(--success)">completamente gratis.</span>
+      </p>
+      <p class="guarantee-sub">Sin letra chica. 10 citas concretas, medibles, en tu calendario. Si no llegan, no pagás.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="contact">
+    <h2 class="contact-title reveal">
+      Tu agenda puede estar más llena<br>
+      <span class="italic-serif italic-line blue">en 30 días.</span>
+    </h2>
+    <div class="reveal" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:24px">
+      <a href="#roi" class="btn-secondary">Calculá cuánto estás perdiendo →</a>
+      <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20me%20interesa%20agendar%20una%20llamada%20estrat%C3%A9gica%20para%20mi%20cl%C3%ADnica."
+        target="_blank" class="btn-primary cta-big">Agendar llamada estratégica →</a>
+    </div>
+    <p class="contact-sub reveal">Te mostramos exactamente dónde estás perdiendo citas y cómo recuperarlas. Gratis. Sin
+      compromiso.</p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Sincro<span>AI</span></div>
+    <div class="footer-center">© 2026 Sincro AI · sincroai.net</div>
+    <div class="footer-right">Sistemas de automatización para clínicas estéticas</div>
+  </footer>
+
+  <script>
+    /* ===== HAMBURGER ===== */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    function closeMobile() { mobileMenu.classList.remove('open') }
+
+    /* ===== INTERSECTION OBSERVER ===== */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ===== PAIN ITEMS ===== */
+    const painObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const items = e.target.querySelectorAll('.pain-item');
+          items.forEach((item, i) => {
+            setTimeout(() => item.classList.add('visible'), i * 100);
+          });
+        }
+      });
+    }, { threshold: 0.1 });
+    const painList = document.querySelector('.pain-list');
+    if (painList) painObserver.observe(painList);
+
+    /* ===== COUNTERS ===== */
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target) || 0;
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 2000;
+      const start = performance.now();
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(target * ease);
+        el.textContent = prefix + (current >= 1000 ? current.toLocaleString() : current) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('[data-target]').forEach(el => animateCounter(el));
+          counterObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    const statsBar = document.querySelector('.stats-bar');
+    if (statsBar) counterObserver.observe(statsBar);
+
+    /* ===== CHAT DEMO ===== */
+    const chatMessages = [
+      { dir: 'in', text: 'Hola! Quiero información sobre Botox 💉', time: '14:32', typing: 1500 },
+      { dir: 'out', text: 'Hola! Gracias por escribirnos 😊\nSoy el asistente de Clínica Bella Derma.\nEl tratamiento de Botox tiene un costo desde $180 por zona.\n¿Para cuántas zonas te interesa?', time: '14:32', typing: 1000 },
+      { dir: 'in', text: 'Para frente y entrecejo', time: '14:33', typing: 1000 },
+      { dir: 'out', text: 'Perfecto! Para 2 zonas el costo es $320.\n¿Tenés disponibilidad esta semana? 🗓️', time: '14:33', typing: 1000 },
+      { dir: 'in', text: 'Sí! El jueves o viernes', time: '14:34', typing: 1000 },
+      { dir: 'out', text: '✅ Horarios disponibles:\nJueves 10 Abril — 15:00hs\nJueves 10 Abril — 17:30hs\nViernes 11 Abril — 11:00hs\n¿Cuál preferís?', time: '14:34', typing: 800 },
+      { dir: 'in', text: 'El jueves a las 15!', time: '14:35', typing: 0 },
+      { dir: 'out', text: '🎉 ¡Cita confirmada!\n📅 Jueves 10 Abril — 15:00hs\n📍 Clínica Bella Derma\nTe enviamos recordatorio 24hs antes.\n¡Hasta el jueves! 💙', time: '14:35', typing: 0, success: true },
+    ];
+
+    let chatTimeout = [];
+    let chatStarted = false;
+
+    function makeMsg(m) {
+      const div = document.createElement('div');
+      div.className = 'msg ' + m.dir + (m.success ? ' success' : '');
+      const bubble = document.createElement('div');
+      bubble.className = 'msg-bubble';
+      bubble.innerHTML = m.text.replace(/\n/g, '<br>');
+      const time = document.createElement('div');
+      time.className = 'msg-time';
+      time.textContent = m.time;
+      div.appendChild(bubble);
+      div.appendChild(time);
+      return div;
+    }
+
+    function makeTyping() {
+      const div = document.createElement('div');
+      div.className = 'typing';
+      div.innerHTML = '<div class="typing-inner"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
+      return div;
+    }
+
+    function runChat() {
+      const body = document.getElementById('chatBody');
+      body.innerHTML = '';
+      chatTimeout.forEach(clearTimeout);
+      chatTimeout = [];
+
+      let delay = 600;
+      chatMessages.forEach((m, i) => {
+        if (i > 0 && chatMessages[i - 1].typing > 0) {
+          const typingDelay = delay;
+          chatTimeout.push(setTimeout(() => {
+            const t = makeTyping();
+            body.appendChild(t);
+            body.scrollTop = body.scrollHeight;
+            setTimeout(() => t.classList.add('show'), 10);
+            chatTimeout.push(setTimeout(() => {
+              t.remove();
+              const msg = makeMsg(m);
+              body.appendChild(msg);
+              body.scrollTop = body.scrollHeight;
+              setTimeout(() => msg.classList.add('show'), 10);
+              if (i === chatMessages.length - 1) {
+                setTimeout(() => {
+                  const note = document.createElement('div');
+                  note.className = 'chat-confirmed-note';
+                  note.textContent = '✓ Cita guardada en calendario automáticamente';
+                  body.appendChild(note);
+                  body.scrollTop = body.scrollHeight;
+                  setTimeout(() => note.classList.add('show'), 10);
+                }, 600);
+              }
+            }, chatMessages[i - 1].typing));
+          }, typingDelay));
+          delay += chatMessages[i - 1].typing + 400;
+        } else {
+          chatTimeout.push(setTimeout(() => {
+            const msg = makeMsg(m);
+            body.appendChild(msg);
+            body.scrollTop = body.scrollHeight;
+            setTimeout(() => msg.classList.add('show'), 10);
+          }, delay));
+          delay += 400;
+        }
+        delay += 600;
+      });
+    }
+
+    function replayChat() { runChat() }
+
+    const demoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !chatStarted) {
+          chatStarted = true;
+          runChat();
+        }
+      });
+    }, { threshold: 0.3 });
+    const demoSection = document.getElementById('demo');
+    if (demoSection) demoObserver.observe(demoSection);
+
+    /* ===== ROI CALCULATOR ===== */
+    const slider = document.getElementById('roiSlider');
+    const roi10 = document.getElementById('roi10');
+    const roiMonth = document.getElementById('roiMonth');
+    const roiYear = document.getElementById('roiYear');
+    const bubble = document.getElementById('sliderBubble');
+
+    function fmt(n) { return n < 0 ? '-$' + Math.abs(n).toLocaleString() : '$' + n.toLocaleString() }
+
+    function updateROI() {
+      const ticket = parseInt(slider.value);
+      const pct = (ticket - 100) / (2000 - 100);
+      slider.style.background = `linear-gradient(to right,var(--accent) 0%,var(--accent) ${pct * 100}%,var(--border) ${pct * 100}%)`;
+      bubble.style.left = (pct * 100) + '%';
+      bubble.textContent = '$' + ticket.toLocaleString();
+      const month10 = ticket * 10;
+      const roiM = month10 - 997;
+      const roiA = roiM * 12;
+      roi10.textContent = fmt(month10);
+      roiMonth.textContent = fmt(roiM);
+      roiMonth.className = 'roi-val big ' + (roiM >= 0 ? 'green' : 'red');
+      roiYear.textContent = fmt(roiA);
+      roiYear.className = 'roi-val ' + (roiA >= 0 ? 'green' : 'red');
+    }
+    slider.addEventListener('input', updateROI);
+    updateROI();
+  </script>
+</body>
+
+</html>
