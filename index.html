@@ -6,11 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sincro AI — Automatización de Citas para Clínicas Estéticas</title>
-  <meta name="keywords" content="clínicas estéticas automatización, gestión turnos clínica estética, recordatorios automáticos turnos, bot whatsapp clínica estética, agenda online clínica estética, captación pacientes clínica estética, automatización whatsapp medicina estética, sistema gestión clínica estética argentina, reducir no show clínica, seguimiento pacientes automatizado, agendamiento online medicina estética, bot instagram clínica estética, leads clínica estética automatización, CRM clínica estética, automatización consultas whatsapp, recordatorio citas médicas automático, medicina estética digital argentina, captación leads instagram estética, sistema reservas clínica estética, inteligencia artificial clínica estética, automatización medicina estética argentina, gestión pacientes clínica, whatsapp business clínica estética, turnos online clínica estética, marketing automatizado clínica estética" />
   <meta name="description"
     content="Convertimos mensajes de Instagram y WhatsApp en citas confirmadas para clínicas estéticas. Automatización 24/7. Setup en 14 días. ROI garantizado.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="sincro_s_clean.svg">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
     rel="stylesheet">
@@ -1382,6 +1382,72 @@
         font-size: clamp(1.8rem, 8vw, 2.5rem)
       }
     }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .whatsapp-btn {
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .whatsapp-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    .whatsapp-tooltip {
+      background: #111128;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid var(--border-blue);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+      animation: fadeInTooltip 0.3s ease-out;
+    }
+
+    @keyframes fadeInTooltip {
+      from {
+        opacity: 0;
+        transform: translateX(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-tooltip {
+        display: none;
+      }
+    }
   </style>
 </head>
 
@@ -1394,7 +1460,7 @@
       <a href="#pain">Problema</a>
       <a href="#solution">Sistema</a>
       <a href="#demo">Demo</a>
-      <a href="#pricing">Precio</a>
+      <a href="#pricing">Presupuesto</a>
       <a href="#contact">Contacto</a>
       <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20me%20interesa%20agendar%20una%20llamada%20para%20ver%20c%C3%B3mo%20pueden%20ayudar%20a%20mi%20cl%C3%ADnica%20est%C3%A9tica."
         target="_blank" class="btn-primary" style="padding:10px 20px;font-size:.88rem">Agendar llamada</a>
@@ -1409,7 +1475,7 @@
     <a href="#pain" onclick="closeMobile()">Problema</a>
     <a href="#solution" onclick="closeMobile()">Sistema</a>
     <a href="#demo" onclick="closeMobile()">Demo</a>
-    <a href="#pricing" onclick="closeMobile()">Precio</a>
+    <a href="#pricing" onclick="closeMobile()">Presupuesto</a>
     <a href="#contact" onclick="closeMobile()">Contacto</a>
     <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20me%20interesa%20agendar%20una%20llamada%20para%20ver%20c%C3%B3mo%20pueden%20ayudar%20a%20mi%20cl%C3%ADnica%20est%C3%A9tica."
       target="_blank" class="btn-primary">Agendar llamada</a>
@@ -1590,29 +1656,21 @@
           mes?</span></h2>
     </div>
     <div class="roi-card reveal">
-      <div class="roi-label">Ticket promedio por cita</div>
+      <div class="roi-label">Ticket promedio por cita (USD)</div>
       <div style="position:relative;margin-bottom:8px">
         <div id="sliderBubble"
           style="position:absolute;top:-36px;left:25%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 10px;border-radius:4px;font-size:.82rem;font-weight:600;pointer-events:none;transition:left .05s">
           $500</div>
       </div>
-      <input type="range" class="roi-slider" id="roiSlider" min="100" max="2000" value="500" step="10">
+      <input type="range" class="roi-slider" id="roiSlider" min="50" max="2000" value="500" step="10">
       <div class="roi-display">
         <div class="roi-display-row">
-          <span class="roi-key">10 citas extra recuperadas =</span>
+          <span class="roi-key">Ingreso extra mensual (10 citas) =</span>
           <span class="roi-val big" id="roi10">$5,000</span>
         </div>
         <div class="roi-display-row">
-          <span class="roi-key">Inversión mensual</span>
-          <span class="roi-val">$997/mes</span>
-        </div>
-        <div class="roi-display-row">
-          <span class="roi-key">ROI mes 1</span>
-          <span class="roi-val green" id="roiMonth">$4,000</span>
-        </div>
-        <div class="roi-display-row">
-          <span class="roi-key">ROI anual</span>
-          <span class="roi-val green" id="roiYear">$48,000</span>
+          <span class="roi-key">Ingreso extra anual proyectado</span>
+          <span class="roi-val green" id="roiYear">$60,000</span>
         </div>
       </div>
       <div class="roi-footer">
@@ -1626,19 +1684,13 @@
   <!-- PRICING -->
   <section id="pricing">
     <div style="text-align:center">
-      <div class="overline reveal">La Oferta</div>
+      <div class="overline reveal">Tu Presupuesto</div>
       <h2 class="section-title reveal">Implementación completa en 14 días.</h2>
-      <p class="reveal" style="color:var(--text-secondary)">Sin contratos largos. Resultados medibles.</p>
+      <p class="reveal" style="color:var(--text-secondary)">Sistema llave en mano. Resultados medibles.</p>
     </div>
     <div class="pricing-card reveal">
-      <div class="pricing-badge">MÁS POPULAR</div>
-      <div class="pricing-amount">
-        <span class="pricing-main">$1,497</span>
-        <span class="pricing-period">/setup único</span>
-      </div>
-      <div class="pricing-monthly">$997/mes <span>/mantenimiento</span></div>
-      <hr class="pricing-divider">
-      <div class="pricing-features">
+      <div class="pricing-badge">SOLICITAR PRESUPUESTO</div>
+      <div class="pricing-features" style="margin-top: 24px;">
         <div class="pricing-feat">Automatización Instagram DMs 24/7</div>
         <div class="pricing-feat">Automatización WhatsApp</div>
         <div class="pricing-feat">Calificación de pacientes con IA</div>
@@ -1650,9 +1702,9 @@
         <div class="pricing-feat">Setup completo en 14 días</div>
         <div class="pricing-feat">Sin contratos de permanencia</div>
       </div>
-      <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20quiero%20implementar%20el%20sistema%20en%20mi%20cl%C3%ADnica%20est%C3%A9tica."
-        target="_blank" class="btn-primary pricing-cta">Quiero implementarlo en mi clínica →</a>
-      <p class="pricing-note">Hablamos primero. Sin compromiso.<br>Si no es para vos, te lo decimos.</p>
+      <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20quiero%20solicitar%20un%20presupuesto%20para%20mi%20cl%C3%ADnica"
+        target="_blank" class="btn-primary pricing-cta">Quiero solicitar un presupuesto para mi clínica →</a>
+      <p class="pricing-note">Hablamos primero. Sin compromiso.<br>Evaluamos tu caso y armamos un plan a medida.</p>
     </div>
   </section>
 
@@ -1693,11 +1745,12 @@
   </section>
 
   <!-- FOOTER -->
-<footer>
+  <footer>
     <div class="footer-logo">Sincro<span>AI</span></div>
-    <div class="footer-center">© 2026 Franco Restelli · Sincro AI · sincroai.net</div>
+    <div class="footer-center">© 2026 Sincro AI · sincroai.net</div>
     <div class="footer-right">Sistemas de automatización para clínicas estéticas</div>
   </footer>
+
   <script>
     /* ===== HAMBURGER ===== */
     const hamburger = document.getElementById('hamburger');
@@ -1852,30 +1905,38 @@
     /* ===== ROI CALCULATOR ===== */
     const slider = document.getElementById('roiSlider');
     const roi10 = document.getElementById('roi10');
-    const roiMonth = document.getElementById('roiMonth');
     const roiYear = document.getElementById('roiYear');
     const bubble = document.getElementById('sliderBubble');
 
-    function fmt(n) { return n < 0 ? '-$' + Math.abs(n).toLocaleString() : '$' + n.toLocaleString() }
+    function fmt(n) { return (n < 0 ? '-$' + Math.abs(n).toLocaleString() : '$' + n.toLocaleString()) + ' USD' }
 
     function updateROI() {
       const ticket = parseInt(slider.value);
-      const pct = (ticket - 100) / (2000 - 100);
+      const pct = (ticket - 50) / (2000 - 50);
       slider.style.background = `linear-gradient(to right,var(--accent) 0%,var(--accent) ${pct * 100}%,var(--border) ${pct * 100}%)`;
       bubble.style.left = (pct * 100) + '%';
-      bubble.textContent = '$' + ticket.toLocaleString();
+      bubble.textContent = '$' + ticket.toLocaleString() + ' USD';
       const month10 = ticket * 10;
-      const roiM = month10 - 997;
-      const roiA = roiM * 12;
+      const roiA = month10 * 12;
       roi10.textContent = fmt(month10);
-      roiMonth.textContent = fmt(roiM);
-      roiMonth.className = 'roi-val big ' + (roiM >= 0 ? 'green' : 'red');
       roiYear.textContent = fmt(roiA);
-      roiYear.className = 'roi-val ' + (roiA >= 0 ? 'green' : 'red');
+      roiYear.className = 'roi-val green';
     }
     slider.addEventListener('input', updateROI);
     updateROI();
   </script>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <div class="whatsapp-float">
+    <span class="whatsapp-tooltip">¡Hablamos por WhatsApp! 🤖</span>
+    <a href="https://wa.me/541140682555?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Sincro%20AI%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
+      class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    </a>
+  </div>
 </body>
 
 </html>
