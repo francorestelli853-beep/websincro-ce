@@ -1450,6 +1450,104 @@
         display: none;
       }
     }
+
+    /* ===== PARTNERS MARQUEE ===== */
+    .partners-section {
+      padding: 60px 0;
+      background: var(--bg-surface);
+      position: relative;
+      overflow: hidden;
+      margin: 0 -5%;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .partners-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .partners-title {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    .partners-subtitle {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #fff;
+    }
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      white-space: nowrap;
+      position: relative;
+      padding: 10px 0;
+    }
+    .marquee-container::before, .marquee-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 80px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    @media (min-width: 768px) {
+      .marquee-container::before, .marquee-container::after {
+        width: 150px;
+      }
+    }
+    .marquee-container::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg-surface) 0%, transparent 100%);
+    }
+    .marquee-container::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg-surface) 0%, transparent 100%);
+    }
+    .marquee-content {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      gap: 0;
+      padding: 0;
+      animation: marqueeScroll 16s linear infinite;
+    }
+    .marquee-content:hover {
+      animation-play-state: paused;
+    }
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      gap: 12px;
+      padding: 0 45px;
+      transition: transform 0.3s;
+    }
+    .marquee-item:hover {
+      transform: translateY(-2px);
+    }
+    .marquee-item img {
+      max-height: 50px;
+      width: auto;
+      object-fit: contain;
+    }
+    .marquee-text {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-50%)); }
+    }
   </style>
 </head>
 
@@ -1562,8 +1660,73 @@
         </li>
       </ul>
     </div>
-    <div class="pain-statement reveal">
-      <p style="text-align:center">Cada mensaje no respondido es dinero que se va a otra clínica.</p>
+    <div class="pain-statement reveal" style="padding: 0; background: transparent;">
+      <div class="partners-section">
+        <div class="partners-header">
+          <h3 class="partners-title">Partners</h3>
+          <h2 class="partners-subtitle">Alianzas & Integraciones</h2>
+        </div>
+        <div class="marquee-container">
+          <div class="marquee-content">
+            <!-- Set 1 -->
+            <div class="marquee-item">
+              <img src="./logos partners/whatsapp_original.png" alt="WhatsApp">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/meta_original.png" alt="Meta" style="transform: scale(1.3);">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/manychat_original.png" alt="Manychat" style="max-height: 32px;">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/gohighlevel_original.png" alt="GoHighLevel">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/supabase_original.png" alt="Supabase">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/n8n_original.png" alt="n8n">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/mercadopago_original.png" alt="Mercado Pago">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/hostinger_original.png" alt="Hostinger">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/shopify_original.png" alt="Shopify">
+            </div>
+            <!-- Set 2 -->
+            <div class="marquee-item">
+              <img src="./logos partners/whatsapp_original.png" alt="WhatsApp">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/meta_original.png" alt="Meta" style="transform: scale(1.3);">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/manychat_original.png" alt="Manychat" style="max-height: 32px;">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/gohighlevel_original.png" alt="GoHighLevel">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/supabase_original.png" alt="Supabase">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/n8n_original.png" alt="n8n">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/mercadopago_original.png" alt="Mercado Pago">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/hostinger_original.png" alt="Hostinger">
+            </div>
+            <div class="marquee-item">
+              <img src="./logos partners/shopify_original.png" alt="Shopify">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
