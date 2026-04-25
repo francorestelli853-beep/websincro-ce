@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sincro AI — Automatizamos los procesos manuales de tu negocio</title>
+    <title>Sincro — Automatizamos los procesos manuales de tu negocio</title>
     <meta name="description"
-        content="Para comercios, PyMEs y profesionales que pierden horas cada semana haciendo tareas repetitivas.">
+        content="Control de stock, presupuestos automáticos, pedidos por WhatsApp, páginas web y SEO. Empezá con una auditoría gratis.">
+    <link rel="icon" type="image/svg+xml" href="sincro_s_clean.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +51,7 @@
             font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
+            position: relative;
         }
 
         /* ---------- HERO SCHEMATIC ---------- */
@@ -134,6 +136,626 @@
             background-size: 48px 48px;
         }
 
+        /* ---------- HERO UPGRADE ---------- */
+        :root {
+            --scroll-progress: 0;
+            --hero-progress: 0;
+            --pointer-x: 0;
+            --pointer-y: 0;
+        }
+
+        .scroll-beam {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            z-index: 80;
+            background: rgba(255, 255, 255, 0.06);
+            pointer-events: none;
+        }
+
+        .scroll-beam-fill {
+            width: calc(var(--scroll-progress) * 100%);
+            height: 100%;
+            background: linear-gradient(90deg, #D97757, #42D6B5, #8FB7FF);
+            box-shadow: 0 0 18px rgba(217, 119, 87, 0.65);
+        }
+
+        .page-cable-layer {
+            position: absolute;
+            inset: 0 auto auto 0;
+            z-index: 2;
+            width: 100%;
+            height: var(--page-cable-height, 100vh);
+            pointer-events: none;
+            overflow: visible;
+            opacity: var(--page-cable-opacity, 0);
+            transition: opacity .25s ease;
+        }
+
+        .page-cable-orb-layer {
+            position: absolute;
+            inset: 0 auto auto 0;
+            z-index: 2;
+            width: 100%;
+            height: var(--page-cable-height, 100vh);
+            pointer-events: none;
+            overflow: visible;
+            opacity: var(--page-cable-opacity, 0);
+            transition: opacity .25s ease;
+        }
+
+        .page-cable-shadow,
+        .page-cable-main,
+        .page-cable-pulse,
+        .page-cable-progress {
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .page-cable-shadow {
+            stroke: rgba(217, 119, 87, 0.2);
+            stroke-width: 14;
+            filter: blur(10px);
+        }
+
+        .page-cable-main {
+            stroke: rgba(217, 119, 87, 0.46);
+            stroke-width: 2.2;
+            stroke-dasharray: 2 10;
+        }
+
+        .page-cable-progress {
+            stroke: #F08A62;
+            stroke-width: 3;
+            filter: drop-shadow(0 0 10px rgba(217, 119, 87, 0.9));
+        }
+
+        .page-cable-pulse {
+            stroke: rgba(255, 214, 188, 0.95);
+            stroke-width: 4.5;
+            filter: drop-shadow(0 0 12px rgba(217, 119, 87, 0.95));
+        }
+
+        .page-cable-orb,
+        .page-cable-orb-top {
+            fill: #F08A62;
+            stroke: rgba(255, 230, 216, 0.95);
+            stroke-width: 2;
+            filter: drop-shadow(0 0 14px rgba(217, 119, 87, 1));
+        }
+
+        #servicios .fade-up,
+        #proceso .fade-up,
+        #auditoria .fade-up,
+        footer {
+            position: relative;
+            z-index: 80;
+        }
+
+        #hero {
+            isolation: isolate;
+        }
+
+        #hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(66, 214, 181, 0.08), transparent 32%),
+                linear-gradient(300deg, rgba(143, 183, 255, 0.08), transparent 38%);
+            opacity: calc(0.35 + var(--hero-progress) * 0.45);
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+
+        .schematic {
+            max-width: 720px;
+            width: min(112%, 720px);
+            justify-self: end;
+            transform:
+                translateY(calc(var(--hero-progress) * -18px))
+                rotateX(calc(var(--pointer-y) * -5deg))
+                rotateY(calc(var(--pointer-x) * 5deg));
+            transform-style: preserve-3d;
+            transition: transform .18s ease-out;
+        }
+
+        .schematic > svg:not(.sync-wires) {
+            display: none;
+        }
+
+        .sync-lab {
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            overflow: hidden;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015)),
+                repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 34px),
+                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 34px),
+                #080808;
+            box-shadow:
+                0 28px 90px rgba(0, 0, 0, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .sync-lab::before {
+            content: "";
+            position: absolute;
+            inset: -20%;
+            z-index: 0;
+            background:
+                conic-gradient(from 130deg at 50% 52%, transparent 0 18%, rgba(217, 119, 87, 0.24) 22%, transparent 30% 53%, rgba(66, 214, 181, 0.18) 58%, transparent 66% 100%);
+            opacity: 0.52;
+            transform: rotate(calc(var(--scroll-progress) * 120deg));
+            pointer-events: none;
+        }
+
+        .sync-lab::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+            transform: translateX(calc(-90% + var(--hero-progress) * 180%));
+            opacity: 0.65;
+            pointer-events: none;
+        }
+
+        .signal-canvas,
+        .sync-wires {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .signal-canvas {
+            z-index: 1;
+        }
+
+        .sync-wires {
+            z-index: 2;
+        }
+
+        .sync-wire {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.12);
+            stroke-width: 1.2;
+            stroke-linecap: round;
+            stroke-dasharray: 3 10;
+            animation: wireMarch 8s linear infinite;
+        }
+
+        .sync-wire.hot {
+            stroke: rgba(217, 119, 87, 0.42);
+        }
+
+        .sync-wire.cool {
+            stroke: rgba(66, 214, 181, 0.32);
+        }
+
+        @keyframes wireMarch {
+            to {
+                stroke-dashoffset: -130;
+            }
+        }
+
+        .sync-core {
+            position: absolute;
+            left: 50%;
+            top: 52%;
+            z-index: 6;
+            width: 168px;
+            height: 168px;
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            transform: translate(-50%, -50%) translateZ(42px);
+            background:
+                linear-gradient(145deg, rgba(217, 119, 87, 0.18), rgba(66, 214, 181, 0.08)),
+                rgba(10, 10, 10, 0.86);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            box-shadow:
+                0 0 0 1px rgba(217, 119, 87, 0.12),
+                0 26px 80px rgba(217, 119, 87, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .sync-core::before,
+        .sync-core::after {
+            content: "";
+            position: absolute;
+            inset: -18px;
+            border-radius: 8px;
+            border: 1px solid rgba(217, 119, 87, 0.28);
+            animation: coreScan 4s ease-in-out infinite;
+        }
+
+        .sync-core::after {
+            inset: -34px;
+            border-color: rgba(66, 214, 181, 0.18);
+            animation-delay: -1.2s;
+        }
+
+        @keyframes coreScan {
+            0%, 100% {
+                transform: scale(0.95);
+                opacity: 0.35;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+        }
+
+        .sync-mark {
+            font-size: 4.8rem;
+            line-height: 1;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 0 0 30px rgba(217, 119, 87, 0.65);
+        }
+
+        .sync-core-label {
+            position: absolute;
+            left: 50%;
+            bottom: 22px;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.68);
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #42D6B5;
+            box-shadow: 0 0 12px rgba(66, 214, 181, 0.95);
+        }
+
+        .sync-node {
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            z-index: 5;
+            width: min(34vw, 154px);
+            min-height: 72px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(12, 12, 12, 0.82);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(14px);
+            transform:
+                translate(-50%, -50%)
+                translate3d(calc(var(--pointer-x) * var(--depth, 10px)), calc(var(--pointer-y) * var(--depth, 10px)), 22px);
+            animation: nodeFloat 6s ease-in-out infinite;
+            animation-delay: var(--delay, 0s);
+        }
+
+        .sync-node.output {
+            border-color: rgba(66, 214, 181, 0.18);
+        }
+
+        @keyframes nodeFloat {
+            0%, 100% {
+                margin-top: 0;
+            }
+
+            50% {
+                margin-top: -8px;
+            }
+        }
+
+        .sync-node-top {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0;
+        }
+
+        .sync-node svg {
+            width: 20px;
+            height: 20px;
+            color: #D97757;
+            flex: 0 0 auto;
+        }
+
+        .sync-node.output svg {
+            color: #42D6B5;
+        }
+
+        .sync-node small {
+            display: block;
+            color: rgba(255, 255, 255, 0.44);
+            font-size: 0.68rem;
+            margin-top: 7px;
+            line-height: 1.25;
+        }
+
+        .sync-status {
+            position: absolute;
+            left: 24px;
+            right: 24px;
+            bottom: 22px;
+            z-index: 8;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 16px;
+            align-items: center;
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            background: rgba(5, 5, 5, 0.78);
+            backdrop-filter: blur(18px);
+        }
+
+        .sync-status span {
+            color: rgba(255, 255, 255, 0.62);
+            font-size: 0.78rem;
+        }
+
+        .sync-status strong {
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .sync-rail {
+            position: absolute;
+            left: 14px;
+            top: 18px;
+            bottom: 86px;
+            width: 2px;
+            z-index: 4;
+            background: rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+        }
+
+        .sync-rail::before {
+            content: "";
+            display: block;
+            height: calc(18% + var(--hero-progress) * 82%);
+            background: linear-gradient(180deg, #D97757, #42D6B5);
+            box-shadow: 0 0 14px rgba(66, 214, 181, 0.55);
+        }
+
+        .scroll-compass {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            margin-top: 28px;
+            color: rgba(255, 255, 255, 0.48);
+            font-size: 0.82rem;
+            transition: color .2s ease, transform .2s ease;
+        }
+
+        .scroll-compass:hover {
+            color: #fff;
+            transform: translateY(2px);
+        }
+
+        .scroll-compass i {
+            width: 18px;
+            height: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 999px;
+            position: relative;
+        }
+
+        .scroll-compass i::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 7px;
+            width: 4px;
+            height: 4px;
+            border-radius: 999px;
+            background: #D97757;
+            transform: translateX(-50%);
+            animation: scrollDot 1.7s ease-in-out infinite;
+        }
+
+        @keyframes scrollDot {
+            0%, 100% {
+                transform: translate(-50%, 0);
+                opacity: 0.35;
+            }
+
+            50% {
+                transform: translate(-50%, 10px);
+                opacity: 1;
+            }
+        }
+
+        .sync-lab.axo-scene {
+            border-color: rgba(217, 119, 87, 0.055);
+            border-radius: 8px;
+            background:
+                linear-gradient(180deg, rgba(16, 10, 8, 0.72), rgba(5, 5, 5, 0.86)),
+                #080808;
+            box-shadow:
+                0 26px 80px rgba(0, 0, 0, 0.32),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+
+        .sync-lab.axo-scene::before {
+            z-index: 0;
+            inset: 0;
+            background:
+                linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 1;
+            transform: none;
+        }
+
+        .sync-lab.axo-scene::after {
+            z-index: 3;
+            background: linear-gradient(110deg, transparent 0 40%, rgba(217, 119, 87, 0.1) 50%, transparent 60% 100%);
+            transform: translateX(calc(-110% + var(--hero-progress) * 220%));
+            opacity: 0.42;
+        }
+
+        .axo-map {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .axo-grid path {
+            stroke: rgba(255, 255, 255, 0.045);
+            stroke-width: 1;
+        }
+
+        .axo-flows use {
+            fill: none;
+            stroke: rgba(217, 119, 87, 0.58);
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-dasharray: 2 8;
+            animation: axoDash 8s linear infinite;
+        }
+
+        .axo-pulses circle {
+            fill: #F08A62;
+            filter: drop-shadow(0 0 9px rgba(217, 119, 87, 0.95));
+        }
+
+        .axo-brand {
+            fill: #D97757;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            paint-order: stroke;
+            stroke: rgba(0, 0, 0, 0.65);
+            stroke-width: 3;
+            stroke-linejoin: round;
+            text-transform: uppercase;
+            filter: drop-shadow(0 0 10px rgba(217, 119, 87, 0.28));
+        }
+
+        .axo-brand-pill {
+            fill: rgba(10, 10, 10, 0.78);
+            stroke: rgba(217, 119, 87, 0.38);
+            stroke-width: 1;
+        }
+
+        .axo-brand-dot {
+            fill: #D97757;
+            filter: drop-shadow(0 0 8px rgba(217, 119, 87, 0.85));
+        }
+
+        .axo-caption {
+            fill: rgba(255, 236, 226, 0.92);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        .axo-caption-sub {
+            fill: rgba(255, 255, 255, 0.5);
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .axo-cube {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: axoBreath 4.5s ease-in-out infinite;
+        }
+
+        .axo-core-cube {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: axoCore 2.4s ease-in-out infinite;
+        }
+
+        .axo-node circle {
+            fill: rgba(12, 12, 12, 0.74);
+            stroke: rgba(217, 119, 87, 0.78);
+            stroke-width: 2;
+            filter: drop-shadow(0 0 18px rgba(217, 119, 87, 0.12));
+        }
+
+        .axo-node path {
+            fill: none;
+            stroke: #D97757;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .axo-node text {
+            fill: rgba(255, 255, 255, 0.66);
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            text-anchor: middle;
+        }
+
+        @keyframes axoDash {
+            to {
+                stroke-dashoffset: -120;
+            }
+        }
+
+        @keyframes axoBreath {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes axoCore {
+            0%, 100% {
+                opacity: 0.72;
+            }
+
+            50% {
+                opacity: 1;
+                filter: drop-shadow(0 0 18px rgba(217, 119, 87, 0.9));
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .sync-wire,
+            .sync-core::before,
+            .sync-core::after,
+            .sync-node,
+            .scroll-compass i::before,
+            .axo-flows use,
+            .axo-cube,
+            .axo-core-cube,
+            .page-cable-pulse {
+                animation: none !important;
+            }
+        }
+
         /* ---------- BUTTONS ---------- */
         .btn-primary {
             background: #D97757;
@@ -166,18 +788,25 @@
         .service-card {
             background: #121212;
             border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 1.5rem;
+            border-radius: 8px;
             padding: 2.25rem;
             transition: border-color .3s ease, transform .3s ease, background .3s ease, box-shadow .3s ease;
             height: 100%;
             position: relative;
+            z-index: 80;
+            isolation: isolate;
+        }
+
+        .service-card > * {
+            position: relative;
+            z-index: 2;
         }
 
         .service-card::before {
             content: "";
             position: absolute;
             inset: -1px;
-            border-radius: 1.5rem;
+            border-radius: 8px;
             padding: 1px;
             background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(217, 119, 87, 0.35), transparent 60%);
             -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -187,10 +816,25 @@
             opacity: 0;
             transition: opacity .3s ease;
             pointer-events: none;
+            z-index: 4;
+        }
+
+        .service-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            background: #121212;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .service-card:hover::before {
             opacity: 1;
+        }
+
+        .service-card[style*="linear-gradient"]::after {
+            background: linear-gradient(160deg, #1a120e 0%, #0F0A08 100%);
         }
 
         .service-card:hover {
@@ -200,10 +844,19 @@
             box-shadow: 0 20px 60px -20px rgba(217, 119, 87, 0.25), 0 0 40px -10px rgba(217, 119, 87, 0.15);
         }
 
+        .service-card.route-active {
+            border-color: rgba(217, 119, 87, 0.5);
+            box-shadow: 0 0 0 1px rgba(217, 119, 87, 0.16), 0 18px 70px -28px rgba(217, 119, 87, 0.7);
+        }
+
+        .service-card.route-active::after {
+            background: linear-gradient(160deg, #18100d, #0e0e0e);
+        }
+
         .service-icon {
             width: 48px;
             height: 48px;
-            border-radius: 12px;
+            border-radius: 8px;
             background: rgba(217, 119, 87, 0.1);
             border: 1px solid rgba(217, 119, 87, 0.25);
             color: #D97757;
@@ -335,6 +988,12 @@
             max-width: 780px;
             margin: 0 auto;
             padding-left: 64px;
+            z-index: 80;
+        }
+
+        #proceso .fade-up {
+            position: relative;
+            z-index: 80;
         }
 
         .timeline::before {
@@ -374,6 +1033,16 @@
 
         .timeline-step.active {
             opacity: 1;
+        }
+
+        .timeline-step.route-active {
+            opacity: 1;
+        }
+
+        .timeline-step.route-active::before {
+            background: #D97757;
+            border-color: #D97757;
+            box-shadow: 0 0 0 6px rgba(217, 119, 87, 0.15), 0 0 20px rgba(217, 119, 87, 0.6);
         }
 
         .timeline-step::before {
@@ -457,6 +1126,10 @@
             color: #fff;
         }
 
+        .site-nav {
+            z-index: 300;
+        }
+
         /* ---------- FADE IN ---------- */
         .fade-up {
             opacity: 0;
@@ -470,19 +1143,104 @@
         }
 
         /* ---------- RESPONSIVE HERO ---------- */
+        .hero-grid {
+            grid-template-columns: minmax(0, 0.86fr) minmax(500px, 1.14fr) !important;
+            column-gap: clamp(2.5rem, 4vw, 5rem);
+        }
+
         @media (max-width: 960px) {
             .hero-grid {
                 grid-template-columns: 1fr !important;
+                row-gap: 3rem;
             }
 
             .schematic {
                 max-width: 420px;
+                width: min(100%, 420px);
+                justify-self: center;
+            }
+
+            .sync-core {
+                width: 132px;
+                height: 132px;
+            }
+
+            .sync-mark {
+                font-size: 3.8rem;
+            }
+
+            .sync-node {
+                width: 112px;
+                min-height: 62px;
+                padding: 9px;
+            }
+
+            .sync-node-top {
+                font-size: 0.72rem;
+                gap: 7px;
+            }
+
+            .sync-node small {
+                font-size: 0.62rem;
+            }
+
+            .sync-status {
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .sync-node {
+                width: 104px;
+                min-height: 46px;
+            }
+
+            .sync-node small {
+                display: none;
+            }
+
+            .sync-core {
+                width: 112px;
+                height: 112px;
+            }
+
+            .sync-mark {
+                font-size: 3.2rem;
+            }
+
+            .sync-core-label {
+                bottom: 14px;
+                font-size: 0.62rem;
+            }
+
+            .sync-status {
+                grid-template-columns: 1fr;
+                gap: 3px;
+                padding: 10px 12px;
+            }
+
+            .sync-status strong {
+                font-size: 0.95rem;
             }
         }
     </style>
 </head>
 
 <body>
+    <div class="scroll-beam" aria-hidden="true">
+        <div class="scroll-beam-fill" id="scrollBeamFill"></div>
+    </div>
+    <svg class="page-cable-layer" id="pageCableLayer" aria-hidden="true">
+        <path class="page-cable-shadow" id="pageCableShadow"></path>
+        <path class="page-cable-main" id="pageCableMain"></path>
+        <path class="page-cable-progress" id="pageCableProgress"></path>
+        <path class="page-cable-pulse" id="pageCablePulse"></path>
+    </svg>
+    <svg class="page-cable-orb-layer" id="pageCableOrbLayer" aria-hidden="true">
+        <circle class="page-cable-orb-top" id="pageCableOrb" r="6"></circle>
+    </svg>
 
     <!-- GLOBAL PAGE RAIL -->
     <aside class="page-rail" id="pageRail" aria-hidden="true">
@@ -497,11 +1255,11 @@
     </aside>
 
     <!-- NAV -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-white/5"
+    <nav class="site-nav fixed top-0 left-0 right-0 backdrop-blur-xl border-b border-white/5"
         style="background: rgba(10,10,10,0.7);">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="text-2xl font-semibold tracking-tight">
-                Sincro AI<span class="font-light" style="color:#D97757">.</span>
+                SINCRO AI<span class="font-light" style="color:#D97757">.</span>
             </a>
             <div class="hidden md:flex items-center gap-8">
                 <a href="#servicios" class="nav-link">Servicios</a>
@@ -537,10 +1295,12 @@
                     </h1>
 
                     <p class="text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-4 max-w-xl">
-                        Para comercios, PyMEs y profesionales que pierden horas cada semana haciendo tareas repetitivas.
+                        Convertimos pedidos, stock, presupuestos, facturación y clientes en un flujo conectado que
+                        trabaja mientras vos vendés.
                     </p>
                     <p class="text-base text-gray-500 font-light mb-10 max-w-xl">
-                        Todo tu negocio sincronizado automaticamente.
+                        Para comercios, PyMEs y profesionales que ya crecieron lo suficiente como para dejar de operar
+                        todo a mano.
                     </p>
 
                     <a href="#auditoria" class="btn-primary text-base">
@@ -564,10 +1324,121 @@
                             Respuesta en 24h
                         </div>
                     </div>
+
+                    <a href="#servicios" class="scroll-compass" aria-label="Ver servicios">
+                        <i aria-hidden="true"></i>
+                        Ver cómo se sincroniza
+                    </a>
                 </div>
 
                 <!-- Right: schematic diagram -->
                 <div class="schematic">
+                    <div class="sync-lab axo-scene" id="syncLab" aria-hidden="true">
+                        <svg class="axo-map" viewBox="0 0 720 560" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="axoGlow" x="-45%" y="-45%" width="190%" height="190%">
+                                    <feGaussianBlur stdDeviation="4" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                                <linearGradient id="cubeTop" x1="250" y1="210" x2="375" y2="300" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#D97757" stop-opacity="0.18" />
+                                    <stop offset="1" stop-color="#D97757" stop-opacity="0.03" />
+                                </linearGradient>
+                                <linearGradient id="cubeFace" x1="245" y1="250" x2="400" y2="375" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0" stop-color="#D97757" stop-opacity="0.2" />
+                                    <stop offset="1" stop-color="#090706" stop-opacity="0.58" />
+                                </linearGradient>
+                                <path id="flowPedidos" d="M98 218 C154 220 236 244 326 306" />
+                                <path id="flowFacturas" d="M190 128 C224 176 268 238 326 306" />
+                                <path id="flowTareas" d="M300 82 C310 152 318 230 326 306" />
+                                <path id="flowInventario" d="M410 72 C394 140 366 232 326 306" />
+                                <path id="flowFacturacion" d="M512 116 C464 178 404 244 326 306" />
+                                <path id="flowCRM" d="M604 184 C522 214 430 258 326 306" />
+                                <path id="flowEquipo" d="M626 276 C536 272 438 286 326 306" />
+                            </defs>
+
+                            <g class="axo-grid">
+                                <path d="M0 40H720M0 80H720M0 120H720M0 160H720M0 200H720M0 240H720M0 280H720M0 320H720M0 360H720M0 400H720M0 440H720M0 480H720M0 520H720" />
+                                <path d="M40 0V560M80 0V560M120 0V560M160 0V560M200 0V560M240 0V560M280 0V560M320 0V560M360 0V560M400 0V560M440 0V560M480 0V560M520 0V560M560 0V560M600 0V560M640 0V560M680 0V560" />
+                            </g>
+
+                            <g class="axo-flows">
+                                <use href="#flowPedidos" />
+                                <use href="#flowFacturas" />
+                                <use href="#flowTareas" />
+                                <use href="#flowInventario" />
+                                <use href="#flowFacturacion" />
+                                <use href="#flowCRM" />
+                                <use href="#flowEquipo" />
+                            </g>
+
+                            <g class="axo-pulses" filter="url(#axoGlow)">
+                                <circle r="4"><animateMotion dur="3.1s" repeatCount="indefinite" begin="0s"><mpath href="#flowPedidos" /></animateMotion></circle>
+                                <circle r="4"><animateMotion dur="3.2s" repeatCount="indefinite" begin=".45s"><mpath href="#flowFacturas" /></animateMotion></circle>
+                                <circle r="4"><animateMotion dur="3.4s" repeatCount="indefinite" begin=".9s"><mpath href="#flowTareas" /></animateMotion></circle>
+                                <circle r="4"><animateMotion dur="2.9s" repeatCount="indefinite" begin=".2s"><mpath href="#flowInventario" /></animateMotion></circle>
+                                <circle r="4"><animateMotion dur="3s" repeatCount="indefinite" begin=".7s"><mpath href="#flowFacturacion" /></animateMotion></circle>
+                                <circle r="4"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.1s"><mpath href="#flowCRM" /></animateMotion></circle>
+                                <circle r="4"><animateMotion dur="3.35s" repeatCount="indefinite" begin="1.45s"><mpath href="#flowEquipo" /></animateMotion></circle>
+                            </g>
+
+                            <g class="axo-brand-lockup" transform="translate(394 470)">
+                                <text class="axo-caption" x="0" y="0">Sincronizamos tus areas de trabajo</text>
+                                <text class="axo-caption-sub" x="0" y="24">Pedidos, ventas, stock y operacion conectados.</text>
+                            </g>
+
+                            <g class="axo-cube" filter="url(#axoGlow)">
+                                <polygon points="250,250 326,210 404,250 326,292" fill="url(#cubeTop)" />
+                                <polygon points="250,250 326,292 326,382 250,340" fill="url(#cubeFace)" />
+                                <polygon points="326,292 404,250 404,340 326,382" fill="rgba(217,119,87,.07)" />
+                                <polyline points="250,250 326,210 404,250 404,340 326,382 250,340 250,250 326,292 404,250" fill="none" stroke="#D97757" stroke-width="2" stroke-linejoin="round" />
+                                <line x1="326" y1="292" x2="326" y2="382" stroke="#D97757" stroke-width="2" opacity=".8" />
+                                <polygon class="axo-core-cube" points="300,290 326,276 354,290 326,306" fill="#D97757" />
+                                <polygon class="axo-core-cube" points="300,290 326,306 326,338 300,322" fill="#D97757" opacity=".84" />
+                                <polygon class="axo-core-cube" points="326,306 354,290 354,322 326,338" fill="#D97757" opacity=".62" />
+                                <circle id="syncCoreAnchor" cx="326" cy="306" r="2" fill="transparent" />
+                            </g>
+
+                            <g class="axo-node" transform="translate(98 218)">
+                                <circle r="34" />
+                                <path d="M-14 -10h7l4 19h17l4-13H-2M1 17h.1M14 17h.1" />
+                                <text y="58">Pedidos</text>
+                            </g>
+                            <g class="axo-node" transform="translate(190 128)">
+                                <circle r="34" />
+                                <path d="M-9 -17H5l10 10v24H-9zM5 -17v10h10M-3 1H8M-3 8H8" />
+                                <text y="58">Presupuestos</text>
+                            </g>
+                            <g class="axo-node" transform="translate(300 82)">
+                                <circle r="34" />
+                                <path d="M-10 -3l7 7 16-16M13 0v14H-14v-27h18" />
+                                <text y="58">Tareas</text>
+                            </g>
+                            <g class="axo-node" transform="translate(410 72)">
+                                <circle r="34" />
+                                <path d="M0 -17l16 9v18L0 19l-16-9V-8zM-16 -8L0 1l16-9M0 1v18" />
+                                <text y="58">Inventario</text>
+                            </g>
+                            <g class="axo-node" transform="translate(512 116)">
+                                <circle r="34" />
+                                <path d="M-12 -18H5l9 9v27h-26zM5 -18v9h9M-5 0H7M-5 8H7" />
+                                <text y="58">Facturación</text>
+                            </g>
+                            <g class="axo-node" transform="translate(604 184)">
+                                <circle r="34" />
+                                <path d="M-12 12v-3a9 9 0 0118 0v3M-3 -2a8 8 0 100-16 8 8 0 000 16M12 10v-2c0-5-3-8-7-9M8 -18a7 7 0 010 14" />
+                                <text y="58">CRM</text>
+                            </g>
+                            <g class="axo-node" transform="translate(626 276)">
+                                <circle r="34" />
+                                <path d="M-10 -16h20v30h-20zM-3 -20h6v8h-6zM-3 -4h6M-3 4h6" />
+                                <text y="58">Equipo</text>
+                            </g>
+                        </svg>
+                    </div>
                     
 
 
@@ -1081,6 +1952,429 @@
                 card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
             });
         });
+
+        // Global scroll + hero kinetics
+        (function () {
+            const root = document.documentElement;
+            const hero = document.getElementById('hero');
+            const syncPercent = document.getElementById('syncPercent');
+
+            function clamp(value, min, max) {
+                return Math.max(min, Math.min(max, value));
+            }
+
+            function update() {
+                const doc = document.documentElement;
+                const maxScroll = Math.max(1, doc.scrollHeight - window.innerHeight);
+                const pageProgress = clamp(window.scrollY / maxScroll, 0, 1);
+                root.style.setProperty('--scroll-progress', pageProgress.toFixed(4));
+
+                if (hero) {
+                    const rect = hero.getBoundingClientRect();
+                    const heroProgress = clamp((window.innerHeight - rect.top) / (rect.height + window.innerHeight), 0, 1);
+                    root.style.setProperty('--hero-progress', heroProgress.toFixed(4));
+                    if (syncPercent) syncPercent.textContent = String(Math.round(heroProgress * 100)).padStart(2, '0') + '%';
+                }
+            }
+
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+            update();
+
+            if (!hero) return;
+            hero.addEventListener('pointermove', (event) => {
+                const rect = hero.getBoundingClientRect();
+                const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+                const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+                root.style.setProperty('--pointer-x', clamp(x, -1, 1).toFixed(3));
+                root.style.setProperty('--pointer-y', clamp(y, -1, 1).toFixed(3));
+            });
+            hero.addEventListener('pointerleave', () => {
+                root.style.setProperty('--pointer-x', '0');
+                root.style.setProperty('--pointer-y', '0');
+            });
+        })();
+
+        // Canvas signal flow inside the hero system
+        (function () {
+            const lab = document.getElementById('syncLab');
+            const canvas = document.getElementById('signalCanvas');
+            if (!lab || !canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let width = 0;
+            let height = 0;
+            let dpr = 1;
+            let visible = true;
+
+            const paths = [
+                { p0: [0.14, 0.20], p1: [0.30, 0.18], p2: [0.36, 0.40], p3: [0.50, 0.52], color: '#D97757', speed: 0.00019, offset: 0.05 },
+                { p0: [0.12, 0.51], p1: [0.26, 0.46], p2: [0.36, 0.52], p3: [0.50, 0.52], color: '#D97757', speed: 0.00022, offset: 0.35 },
+                { p0: [0.20, 0.80], p1: [0.35, 0.74], p2: [0.36, 0.60], p3: [0.50, 0.52], color: '#D97757', speed: 0.00017, offset: 0.7 },
+                { p0: [0.50, 0.52], p1: [0.64, 0.38], p2: [0.70, 0.22], p3: [0.84, 0.17], color: '#42D6B5', speed: 0.0002, offset: 0.2 },
+                { p0: [0.50, 0.52], p1: [0.66, 0.50], p2: [0.72, 0.52], p3: [0.86, 0.53], color: '#8FB7FF', speed: 0.00018, offset: 0.48 },
+                { p0: [0.50, 0.52], p1: [0.62, 0.66], p2: [0.70, 0.77], p3: [0.82, 0.83], color: '#42D6B5', speed: 0.00021, offset: 0.82 }
+            ];
+
+            function resize() {
+                const rect = lab.getBoundingClientRect();
+                dpr = Math.min(window.devicePixelRatio || 1, 2);
+                width = Math.max(1, rect.width);
+                height = Math.max(1, rect.height);
+                canvas.width = Math.round(width * dpr);
+                canvas.height = Math.round(height * dpr);
+                canvas.style.width = width + 'px';
+                canvas.style.height = height + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+
+            function cubic(path, t) {
+                const u = 1 - t;
+                const tt = t * t;
+                const uu = u * u;
+                const uuu = uu * u;
+                const ttt = tt * t;
+                const x = uuu * path.p0[0] + 3 * uu * t * path.p1[0] + 3 * u * tt * path.p2[0] + ttt * path.p3[0];
+                const y = uuu * path.p0[1] + 3 * uu * t * path.p1[1] + 3 * u * tt * path.p2[1] + ttt * path.p3[1];
+                return [x * width, y * height];
+            }
+
+            function draw(timestamp) {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalCompositeOperation = 'lighter';
+
+                paths.forEach((path) => {
+                    const t = prefersReduced ? path.offset : (timestamp * path.speed + path.offset) % 1;
+                    const point = cubic(path, t);
+                    const tail = cubic(path, Math.max(0, t - 0.055));
+                    const head = cubic(path, Math.min(1, t + 0.025));
+
+                    const gradient = ctx.createLinearGradient(tail[0], tail[1], head[0], head[1]);
+                    gradient.addColorStop(0, 'rgba(255,255,255,0)');
+                    gradient.addColorStop(0.45, path.color + '88');
+                    gradient.addColorStop(1, '#ffffffcc');
+
+                    ctx.strokeStyle = gradient;
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.moveTo(tail[0], tail[1]);
+                    ctx.lineTo(head[0], head[1]);
+                    ctx.stroke();
+
+                    ctx.fillStyle = path.color;
+                    ctx.shadowColor = path.color;
+                    ctx.shadowBlur = 18;
+                    ctx.beginPath();
+                    ctx.arc(point[0], point[1], 4.2, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                });
+
+                if (!prefersReduced && visible) requestAnimationFrame(draw);
+            }
+
+            const visibilityObserver = new IntersectionObserver((entries) => {
+                visible = entries.some(entry => entry.isIntersecting);
+                if (visible && !prefersReduced) requestAnimationFrame(draw);
+            }, { threshold: 0.1 });
+
+            const resizeObserver = new ResizeObserver(() => {
+                resize();
+                requestAnimationFrame(draw);
+            });
+
+            resizeObserver.observe(lab);
+            visibilityObserver.observe(lab);
+            resize();
+            requestAnimationFrame(draw);
+        })();
+
+        // Page cable: the Sincro core becomes a scroll-driven route across the work.
+        (function () {
+            const layer = document.getElementById('pageCableLayer');
+            const orbLayer = document.getElementById('pageCableOrbLayer');
+            const shadow = document.getElementById('pageCableShadow');
+            const main = document.getElementById('pageCableMain');
+            const progressPath = document.getElementById('pageCableProgress');
+            const pulse = document.getElementById('pageCablePulse');
+            const orb = document.getElementById('pageCableOrb');
+            const source = document.getElementById('syncLab');
+            const timeline = document.getElementById('timeline');
+            if (!layer || !orbLayer || !shadow || !main || !progressPath || !pulse || !orb || !source || !timeline) return;
+
+            let ticking = false;
+            let routeItems = [];
+            let lastActiveLen = 0;
+            let lastScrollY = window.scrollY;
+            let renderedLen = 0;
+            let targetLen = 0;
+            let rafId = 0;
+
+            function clamp(value, min, max) {
+                return Math.max(min, Math.min(max, value));
+            }
+
+            function docPoint(el, fx, fy) {
+                const rect = el.getBoundingClientRect();
+                return {
+                    x: rect.left + window.scrollX + rect.width * fx,
+                    y: rect.top + window.scrollY + rect.height * fy
+                };
+            }
+
+            function elementCenter(el) {
+                const rect = el.getBoundingClientRect();
+                return {
+                    x: rect.left + window.scrollX + rect.width / 2,
+                    y: rect.top + window.scrollY + rect.height / 2
+                };
+            }
+
+            function iconPoint(el) {
+                const rect = el.getBoundingClientRect();
+                const docLeft = rect.left + window.scrollX;
+                const docTop = rect.top + window.scrollY;
+                const twoColumns = rect.width < window.innerWidth * 0.72 && window.innerWidth >= 900;
+                const isLeft = docLeft + rect.width / 2 < window.innerWidth / 2;
+                return {
+                    x: docLeft + (twoColumns ? (isLeft ? 58 : rect.width - 58) : 58),
+                    y: docTop + 58
+                };
+            }
+
+            function timelinePoint(el) {
+                const rect = el.getBoundingClientRect();
+                const dot = window.getComputedStyle(el, '::before');
+                const left = Number.parseFloat(dot.left);
+                const top = Number.parseFloat(dot.top);
+                const width = Number.parseFloat(dot.width);
+                const height = Number.parseFloat(dot.height);
+                const borderLeft = Number.parseFloat(dot.borderLeftWidth) || 0;
+                const borderRight = Number.parseFloat(dot.borderRightWidth) || 0;
+                const borderTop = Number.parseFloat(dot.borderTopWidth) || 0;
+                const borderBottom = Number.parseFloat(dot.borderBottomWidth) || 0;
+                if ([left, top, width, height].every(Number.isFinite)) {
+                    return {
+                        x: rect.left + window.scrollX + left + (width + borderLeft + borderRight) / 2,
+                        y: rect.top + window.scrollY + top + (height + borderTop + borderBottom) / 2
+                    };
+                }
+                return {
+                    x: rect.left + window.scrollX - (window.innerWidth < 700 ? 32 : 42),
+                    y: rect.top + window.scrollY + 18
+                };
+            }
+
+            function smoothPath(points) {
+                if (points.length < 2) return '';
+                const d = [`M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)}`];
+                for (let i = 0; i < points.length - 1; i++) {
+                    const current = points[i];
+                    const next = points[i + 1];
+                    const prev = points[i - 1] || current;
+                    const after = points[i + 2] || next;
+                    const cp1 = {
+                        x: current.x + (next.x - prev.x) * 0.18,
+                        y: current.y + (next.y - prev.y) * 0.18
+                    };
+                    const cp2 = {
+                        x: next.x - (after.x - current.x) * 0.18,
+                        y: next.y - (after.y - current.y) * 0.18
+                    };
+                    d.push(`C ${cp1.x.toFixed(1)} ${cp1.y.toFixed(1)}, ${cp2.x.toFixed(1)} ${cp2.y.toFixed(1)}, ${next.x.toFixed(1)} ${next.y.toFixed(1)}`);
+                }
+                return d.join(' ');
+            }
+
+            function trackTargetLength(path, length, guideY) {
+                const samples = 320;
+                let bestLen = 0;
+                let bestScore = Infinity;
+
+                for (let i = 0; i <= samples; i++) {
+                    const candidateLen = length * (i / samples);
+                    const point = path.getPointAtLength(candidateLen);
+                    const score = Math.abs(point.y - guideY);
+                    if (score < bestScore) {
+                        bestScore = score;
+                        bestLen = candidateLen;
+                    }
+                }
+
+                return bestLen;
+            }
+
+            function visibleTrackLength(path, length, startY, endY) {
+                const guideY = window.scrollY + window.innerHeight * 0.58;
+                const anchorHold = Math.min(140, Math.max(88, window.innerHeight * 0.11));
+                if (guideY <= startY + anchorHold) {
+                    lastActiveLen = 0;
+                    lastScrollY = window.scrollY;
+                    return 0;
+                }
+                if (guideY >= endY) {
+                    lastActiveLen = length;
+                    lastScrollY = window.scrollY;
+                    return length;
+                }
+
+                const scrollingUp = window.scrollY < lastScrollY;
+                const targetLen = trackTargetLength(path, length, guideY);
+                const easing = scrollingUp ? 0.18 : 0.14;
+                lastActiveLen = clamp(lastActiveLen + (targetLen - lastActiveLen) * easing, 0, length);
+                lastScrollY = window.scrollY;
+                return lastActiveLen;
+            }
+
+            function pathLengthAtY(path, length, targetY) {
+                const samples = 220;
+                let bestLen = 0;
+                let bestScore = Infinity;
+                for (let i = 0; i <= samples; i++) {
+                    const candidateLen = length * (i / samples);
+                    const point = path.getPointAtLength(candidateLen);
+                    const score = Math.abs(point.y - targetY);
+                    if (score < bestScore) {
+                        bestScore = score;
+                        bestLen = candidateLen;
+                    }
+                }
+                return bestLen;
+            }
+
+            function drawProgress(length, activeLen, visible, firstStepPoint, cardPoints) {
+                const orbPoint = main.getPointAtLength(activeLen);
+                const progress = clamp(activeLen / length, 0, 1);
+
+                progressPath.style.strokeDasharray = length;
+                progressPath.style.strokeDashoffset = length - activeLen;
+                shadow.style.strokeDashoffset = length - activeLen;
+                pulse.style.strokeDasharray = `18 ${length}`;
+                pulse.style.strokeDashoffset = -activeLen;
+                orb.setAttribute('cx', orbPoint.x);
+                orb.setAttribute('cy', orbPoint.y);
+
+                const revealLen = pathLengthAtY(main, length, exitCache.y - 10);
+                const isDocked = firstStepPoint
+                    ? Math.hypot(orbPoint.x - firstStepPoint.x, orbPoint.y - firstStepPoint.y) < 18 || progress > 0.985
+                    : false;
+                const isHiddenInCube = activeLen <= revealLen;
+                orb.style.opacity = isDocked || isHiddenInCube ? '0' : '1';
+                layer.style.setProperty('--page-cable-opacity', visible ? Math.min(1, 0.34 + progress * 0.9) : 0);
+                orbLayer.style.setProperty('--page-cable-opacity', visible ? 1 : 0);
+
+                routeItems.forEach(item => item.el.classList.remove('route-active'));
+                routeItems = [
+                    ...document.querySelectorAll('.service-card')
+                ].map((el, index) => ({ el, y: cardPoints[index]?.y || 0 }))
+                    .concat(stepsCache[0] && firstStepPoint ? [{ el: stepsCache[0], y: firstStepPoint.y }] : []);
+                const activeY = orbPoint.y;
+                const activeItem = routeItems
+                    .map(item => ({ item, distance: Math.abs(item.y - activeY) }))
+                    .sort((a, b) => a.distance - b.distance)[0];
+                if (activeItem && activeItem.distance < window.innerHeight * 0.35) {
+                    activeItem.item.el.classList.add('route-active');
+                }
+            }
+
+            let exitCache = { x: 0, y: 0 };
+            let stepsCache = [];
+
+            function animateCable() {
+                const delta = targetLen - renderedLen;
+                if (Math.abs(delta) < 0.35) {
+                    renderedLen = targetLen;
+                } else {
+                    renderedLen += delta * 0.216;
+                }
+
+                if (mainCacheLength > 0) {
+                    drawProgress(mainCacheLength, renderedLen, visibleCache, firstStepCache, cardPointsCache);
+                }
+
+                if (Math.abs(targetLen - renderedLen) >= 0.35) {
+                    rafId = requestAnimationFrame(animateCable);
+                } else {
+                    rafId = 0;
+                }
+            }
+
+            let mainCacheLength = 0;
+            let visibleCache = false;
+            let firstStepCache = null;
+            let cardPointsCache = [];
+
+            function drawCable() {
+                ticking = false;
+                const doc = document.documentElement;
+                const pageHeight = Math.max(doc.scrollHeight, document.body.scrollHeight);
+                const width = window.innerWidth;
+                layer.setAttribute('viewBox', `0 0 ${width} ${pageHeight}`);
+                orbLayer.setAttribute('viewBox', `0 0 ${width} ${pageHeight}`);
+                layer.style.setProperty('--page-cable-height', pageHeight + 'px');
+                orbLayer.style.setProperty('--page-cable-height', pageHeight + 'px');
+
+                const cards = Array.from(document.querySelectorAll('.service-card'));
+                const steps = Array.from(document.querySelectorAll('.timeline-step'));
+                stepsCache = steps;
+                const start = docPoint(source, 333 / 720, 300 / 560);
+                const exit = {
+                    x: start.x,
+                    y: start.y + Math.min(210, Math.max(145, window.innerHeight * 0.18))
+                };
+                exitCache = exit;
+                let orderedCards = cards;
+                const cardPoints = orderedCards.map(iconPoint);
+                cardPointsCache = cardPoints;
+                const rightLaneX = Math.min(width - 180, Math.max(exit.x + 120, width * 0.72));
+                const firstStepPoint = steps[0] ? timelinePoint(steps[0]) : null;
+                const stepPoints = firstStepPoint
+                    ? [
+                        { x: rightLaneX, y: firstStepPoint.y - Math.min(320, Math.max(250, window.innerHeight * 0.34)) },
+                        { x: firstStepPoint.x, y: firstStepPoint.y - Math.min(320, Math.max(240, window.innerHeight * 0.32)) },
+                        { x: firstStepPoint.x, y: firstStepPoint.y - Math.min(180, Math.max(120, window.innerHeight * 0.18)) },
+                        firstStepPoint
+                    ]
+                    : [];
+                const serviceEntry = cardPoints[0]
+                    ? { x: rightLaneX, y: Math.max(exit.y + 220, cardPoints[0].y - 150) }
+                    : { x: rightLaneX, y: exit.y + 320 };
+                const points = [start, exit, serviceEntry, ...cardPoints, ...stepPoints];
+                const d = smoothPath(points);
+
+                shadow.setAttribute('d', d);
+                main.setAttribute('d', d);
+                progressPath.setAttribute('d', d);
+                pulse.setAttribute('d', d);
+
+                const length = Math.max(1, main.getTotalLength());
+                mainCacheLength = length;
+                const routeEnd = firstStepPoint?.y || exit.y;
+                targetLen = visibleTrackLength(main, length, start.y, routeEnd);
+                const guideY = window.scrollY + window.innerHeight * 0.58;
+                const visible = guideY >= start.y - 8 && window.scrollY < routeEnd + window.innerHeight * 1.15;
+                main.style.strokeDasharray = '2 10';
+                shadow.style.strokeDasharray = length;
+                visibleCache = visible;
+                firstStepCache = firstStepPoint;
+
+                if (!rafId) {
+                    rafId = requestAnimationFrame(animateCable);
+                }
+            }
+
+            function requestDraw() {
+                if (!ticking) {
+                    ticking = true;
+                    requestAnimationFrame(drawCable);
+                }
+            }
+
+            window.addEventListener('scroll', requestDraw, { passive: true });
+            window.addEventListener('resize', requestDraw);
+            requestDraw();
+        })();
 
         // Global page rail (left vertical progress, hero → footer)
         (function () {
