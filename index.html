@@ -1,2095 +1,2108 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sincro — Automatizamos los procesos manuales de tu negocio</title>
-    <meta name="description"
-        content="Control de stock, presupuestos automáticos, pedidos por WhatsApp, páginas web y SEO. Empezá con una auditoría gratis.">
+    <title>Sincro AI | Automatizacion de procesos para negocios</title>
+    <meta name="description" content="Sincro AI automatiza procesos manuales con control de stock, pedidos por WhatsApp, presupuestos automaticos, OCR, facturacion y seguimiento comercial.">
+    <meta name="keywords" content="automatizacion de procesos, automatizacion operativa, control de stock, pedidos por WhatsApp, presupuestos automaticos, OCR inteligente, facturacion, inventario, seguimiento comercial, SEO, Sincro AI">
+    <meta name="author" content="Sincro AI">
+    <meta name="application-name" content="Sincro AI">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#faf8f6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#12131b" media="(prefers-color-scheme: dark)">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sincro AI">
+    <meta property="og:title" content="Sincro AI | Automatizacion de procesos para negocios">
+    <meta property="og:description" content="Sincro AI automatiza procesos manuales con control de stock, pedidos por WhatsApp, presupuestos automaticos, OCR, facturacion y seguimiento comercial.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sincro AI | Automatizacion de procesos para negocios">
+    <meta name="twitter:description" content="Sincro AI automatiza procesos manuales con control de stock, pedidos por WhatsApp, presupuestos automaticos, OCR, facturacion y seguimiento comercial.">
     <link rel="icon" type="image/svg+xml" href="sincro_s_clean.svg">
-
+    <link rel="preload" as="image" href="sincro_s_clean.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            DEFAULT: '#D97757',
-                            dark: '#C45A3A',
-                            light: '#E89375',
-                            soft: '#F5E6DE'
-                        },
-                        ink: {
-                            DEFAULT: '#0A0A0A',
-                            soft: '#141414',
-                            muted: '#1C1C1C'
-                        }
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "name": "Sincro AI",
+                    "description": "Sincro AI automatiza procesos manuales para negocios con control de stock, pedidos por WhatsApp, presupuestos automaticos, OCR y seguimiento comercial.",
+                    "knowsAbout": [
+                        "Automatizacion de procesos",
+                        "Control de stock",
+                        "Pedidos por WhatsApp",
+                        "Presupuestos automaticos",
+                        "OCR inteligente",
+                        "Facturacion e inventario",
+                        "Seguimiento comercial",
+                        "SEO"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "name": "Sincro AI",
+                    "description": "Sincro AI automatiza procesos manuales para negocios con control de stock, pedidos por WhatsApp, presupuestos automaticos, OCR y seguimiento comercial.",
+                    "inLanguage": "es-AR"
+                },
+                {
+                    "@type": "WebPage",
+                    "name": "Sincro AI | Automatizacion de procesos para negocios",
+                    "description": "Sincro AI automatiza procesos manuales con control de stock, pedidos por WhatsApp, presupuestos automaticos, OCR, facturacion y seguimiento comercial.",
+                    "inLanguage": "es-AR",
+                    "dateModified": "2026-04-29",
+                    "about": {
+                        "@type": "Organization",
+                        "name": "Sincro AI"
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "name": "Automatizacion operativa para negocios",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Sincro AI"
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    "audience": {
+                        "@type": "Audience",
+                        "audienceType": "Negocios, operaciones y equipos comerciales"
                     },
+                    "serviceType": [
+                        "Automatizacion de procesos manuales",
+                        "Control de stock automatizado",
+                        "Pedidos por WhatsApp",
+                        "Presupuestos automaticos",
+                        "OCR inteligente",
+                        "Facturacion e inventario conectados",
+                        "Web, SEO y seguimiento comercial"
+                    ],
+                    "description": "Servicio de automatizacion para negocios con control de stock, pedidos por WhatsApp, presupuestos automaticos, OCR, facturacion, inventario y seguimiento comercial."
                 }
-            }
+            ]
         }
     </script>
-
     <style>
+        :root {
+            --bg: #faf8f6;
+            --bg-soft: #f3f1ee;
+            --paper: rgba(255, 255, 255, 0.78);
+            --paper-strong: rgba(255, 255, 255, 0.92);
+            --line: #d7d3db;
+            --text: #252541;
+            --muted: #666983;
+            --muted-2: #878aa1;
+            --accent: #ff574b;
+            --accent-soft: rgba(255, 87, 75, 0.08);
+            --shadow: 0 24px 60px rgba(120, 120, 150, 0.08);
+            --header-bg: rgba(255, 253, 251, 0.74);
+            --header-border: rgba(198, 194, 201, 0.6);
+            --icon-bg: rgba(255, 255, 255, 0.7);
+            --icon-border: rgba(196, 192, 201, 0.7);
+            --icon-fg: #625f77;
+            --button-secondary-bg: rgba(255, 255, 255, 0.62);
+            --button-secondary-border: rgba(202, 198, 206, 0.9);
+            --button-secondary-fg: #50536b;
+            --surface-soft: rgba(243, 241, 238, 0.68);
+            --surface-strong: rgba(255, 255, 255, 0.72);
+            --surface-muted: rgba(244, 242, 240, 0.72);
+            --surface-line: rgba(202, 197, 206, 0.9);
+            --title-strong: #232542;
+            --title-soft: #24243f;
+            --max: 1260px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         html {
             scroll-behavior: smooth;
         }
 
         body {
-            background: #0A0A0A;
-            color: #FFF;
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-            position: relative;
+            margin: 0;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 84% 4%, rgba(255, 87, 75, 0.15), transparent 18%),
+                radial-gradient(circle at 18% 84%, rgba(124, 169, 255, 0.12), transparent 16%),
+                linear-gradient(180deg, #fefdfc 0%, #faf8f6 100%);
+            overflow-x: hidden;
+            transition: background 0.35s ease, color 0.35s ease;
         }
 
-        /* ---------- HERO SCHEMATIC ---------- */
-        .schematic {
-            position: relative;
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at center, rgba(255, 255, 255, 0.74), transparent 78%),
+                linear-gradient(90deg, rgba(255, 87, 75, 0.02), rgba(255, 255, 255, 0), rgba(111, 154, 255, 0.02));
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(rgba(255, 87, 75, 0.11) 0.6px, transparent 0.6px);
+            background-size: 22px 22px;
+            opacity: 0.045;
+            pointer-events: none;
+            mask-image: radial-gradient(circle at center, black 42%, transparent 94%);
+            z-index: -1;
+        }
+
+        body.theme-dark {
+            --bg: #12131b;
+            --bg-soft: #1a1c27;
+            --paper: rgba(28, 30, 42, 0.78);
+            --paper-strong: rgba(30, 32, 44, 0.92);
+            --line: #2a2d3b;
+            --text: #f3f4f8;
+            --muted: #b3b7ca;
+            --muted-2: #8d93ab;
+            --accent-soft: rgba(255, 87, 75, 0.12);
+            --shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+            --header-bg: rgba(18, 19, 27, 0.78);
+            --header-border: rgba(255, 255, 255, 0.08);
+            --icon-bg: rgba(255, 255, 255, 0.04);
+            --icon-border: rgba(255, 255, 255, 0.1);
+            --icon-fg: #d4d8e8;
+            --button-secondary-bg: rgba(255, 255, 255, 0.05);
+            --button-secondary-border: rgba(255, 255, 255, 0.1);
+            --button-secondary-fg: #d8dbeb;
+            --surface-soft: rgba(255, 255, 255, 0.04);
+            --surface-strong: rgba(255, 255, 255, 0.05);
+            --surface-muted: rgba(255, 255, 255, 0.03);
+            --surface-line: rgba(255, 255, 255, 0.1);
+            --title-strong: #f4f5f8;
+            --title-soft: #eef0f7;
+            background:
+                radial-gradient(circle at 84% 4%, rgba(255, 87, 75, 0.18), transparent 20%),
+                radial-gradient(circle at 18% 84%, rgba(103, 139, 219, 0.14), transparent 18%),
+                linear-gradient(180deg, #151721 0%, #101119 100%);
+            color-scheme: dark;
+        }
+
+        body.theme-dark::before {
+            background:
+                radial-gradient(circle at center, rgba(255, 255, 255, 0.03), transparent 74%),
+                linear-gradient(90deg, rgba(255, 87, 75, 0.03), rgba(255, 255, 255, 0), rgba(111, 154, 255, 0.03));
+        }
+
+        body.theme-dark::after {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.22) 0.6px, transparent 0.6px);
+            opacity: 0.08;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        canvas#trail {
+            position: fixed;
+            inset: 0;
             width: 100%;
-            aspect-ratio: 1 / 1;
-            max-width: 560px;
+            height: 100%;
+            pointer-events: none;
+            z-index: 70;
+        }
+
+        .wrap {
+            width: min(var(--max), calc(100% - 48px));
             margin: 0 auto;
         }
 
-        .schematic svg {
-            width: 100%;
-            height: 100%;
-            overflow: visible;
-        }
-
-        .core {
-            transform-origin: center;
-            animation: corePulse 2.6s ease-in-out infinite;
-        }
-
-        @keyframes corePulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                filter: drop-shadow(0 0 16px rgba(217, 119, 87, 0.5));
-            }
-
-            50% {
-                transform: scale(1.06);
-                filter: drop-shadow(0 0 36px rgba(217, 119, 87, 0.9));
-            }
-        }
-
-        .wire {
-            stroke: rgba(255, 255, 255, 0.12);
-            stroke-width: 1.2;
-            fill: none;
-        }
-
-        .pulse {
-            fill: #D97757;
-            filter: drop-shadow(0 0 6px rgba(217, 119, 87, 0.9));
-        }
-
-        .node-card {
-            fill: #141414;
-            stroke: rgba(255, 255, 255, 0.08);
-            stroke-width: 1;
-        }
-
-        .node-card.active {
-            stroke: rgba(217, 119, 87, 0.5);
-        }
-
-        .node-label {
-            fill: #E5E5E5;
-            font-size: 10px;
-            font-weight: 500;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .node-sub {
-            fill: #888;
-            font-size: 8px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .source-label {
-            fill: #AAA;
-            font-size: 10px;
-            font-weight: 500;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .grid-bg {
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-            background-size: 48px 48px;
-        }
-
-        /* ---------- HERO UPGRADE ---------- */
-        :root {
-            --scroll-progress: 0;
-            --hero-progress: 0;
-            --pointer-x: 0;
-            --pointer-y: 0;
-        }
-
-        .scroll-beam {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            z-index: 80;
-            background: rgba(255, 255, 255, 0.06);
-            pointer-events: none;
-        }
-
-        .scroll-beam-fill {
-            width: calc(var(--scroll-progress) * 100%);
-            height: 100%;
-            background: linear-gradient(90deg, #D97757, #42D6B5, #8FB7FF);
-            box-shadow: 0 0 18px rgba(217, 119, 87, 0.65);
-        }
-
-        #servicios .fade-up,
-        #proceso .fade-up,
-        #auditoria .fade-up,
-        footer {
+        .section {
+            padding: 92px 0;
             position: relative;
-            z-index: 80;
+            scroll-margin-top: 96px;
         }
 
-        #servicios .fade-up {
-            opacity: 1;
-            transform: none;
-            transition: none;
-        }
-
-        #hero {
-            isolation: isolate;
-        }
-
-        #hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background:
-                linear-gradient(120deg, rgba(66, 214, 181, 0.08), transparent 32%),
-                linear-gradient(300deg, rgba(143, 183, 255, 0.08), transparent 38%);
-            opacity: calc(0.35 + var(--hero-progress) * 0.45);
-            pointer-events: none;
-            mix-blend-mode: screen;
-        }
-
-        .schematic {
-            max-width: 720px;
-            width: min(112%, 720px);
-            justify-self: end;
-            transform:
-                translateY(calc(var(--hero-progress) * -18px))
-                rotateX(calc(var(--pointer-y) * -5deg))
-                rotateY(calc(var(--pointer-x) * 5deg));
-            transform-style: preserve-3d;
-            transition: transform .18s ease-out;
-        }
-
-        .schematic > svg:not(.sync-wires) {
-            display: none;
-        }
-
-        .sync-lab {
-            position: absolute;
-            inset: 0;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            overflow: hidden;
-            background:
-                linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015)),
-                repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 34px),
-                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 34px),
-                #080808;
-            box-shadow:
-                0 28px 90px rgba(0, 0, 0, 0.45),
-                inset 0 1px 0 rgba(255, 255, 255, 0.08);
-        }
-
-        .sync-lab::before {
-            content: "";
-            position: absolute;
-            inset: -20%;
-            z-index: 0;
-            background:
-                conic-gradient(from 130deg at 50% 52%, transparent 0 18%, rgba(217, 119, 87, 0.24) 22%, transparent 30% 53%, rgba(66, 214, 181, 0.18) 58%, transparent 66% 100%);
-            opacity: 0.52;
-            transform: rotate(calc(var(--scroll-progress) * 120deg));
-            pointer-events: none;
-        }
-
-        .sync-lab::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 3;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-            transform: translateX(calc(-90% + var(--hero-progress) * 180%));
-            opacity: 0.65;
-            pointer-events: none;
-        }
-
-        .signal-canvas,
-        .sync-wires {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .signal-canvas {
-            z-index: 1;
-        }
-
-        .sync-wires {
-            z-index: 2;
-        }
-
-        .sync-wire {
-            fill: none;
-            stroke: rgba(255, 255, 255, 0.12);
-            stroke-width: 1.2;
-            stroke-linecap: round;
-            stroke-dasharray: 3 10;
-            animation: wireMarch 8s linear infinite;
-        }
-
-        .sync-wire.hot {
-            stroke: rgba(217, 119, 87, 0.42);
-        }
-
-        .sync-wire.cool {
-            stroke: rgba(66, 214, 181, 0.32);
-        }
-
-        @keyframes wireMarch {
-            to {
-                stroke-dashoffset: -130;
-            }
-        }
-
-        .sync-core {
-            position: absolute;
-            left: 50%;
-            top: 52%;
-            z-index: 6;
-            width: 168px;
-            height: 168px;
-            border-radius: 8px;
-            display: grid;
-            place-items: center;
-            transform: translate(-50%, -50%) translateZ(42px);
-            background:
-                linear-gradient(145deg, rgba(217, 119, 87, 0.18), rgba(66, 214, 181, 0.08)),
-                rgba(10, 10, 10, 0.86);
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            box-shadow:
-                0 0 0 1px rgba(217, 119, 87, 0.12),
-                0 26px 80px rgba(217, 119, 87, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-
-        .sync-core::before,
-        .sync-core::after {
-            content: "";
-            position: absolute;
-            inset: -18px;
-            border-radius: 8px;
-            border: 1px solid rgba(217, 119, 87, 0.28);
-            animation: coreScan 4s ease-in-out infinite;
-        }
-
-        .sync-core::after {
-            inset: -34px;
-            border-color: rgba(66, 214, 181, 0.18);
-            animation-delay: -1.2s;
-        }
-
-        @keyframes coreScan {
-            0%, 100% {
-                transform: scale(0.95);
-                opacity: 0.35;
-            }
-
-            50% {
-                transform: scale(1.05);
-                opacity: 0.9;
-            }
-        }
-
-        .sync-mark {
-            font-size: 4.8rem;
-            line-height: 1;
-            font-weight: 800;
-            color: #fff;
-            text-shadow: 0 0 30px rgba(217, 119, 87, 0.65);
-        }
-
-        .sync-core-label {
-            position: absolute;
-            left: 50%;
-            bottom: 22px;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
-            font-size: 0.72rem;
-            color: rgba(255, 255, 255, 0.68);
-        }
-
-        .status-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: #42D6B5;
-            box-shadow: 0 0 12px rgba(66, 214, 181, 0.95);
-        }
-
-        .sync-node {
-            position: absolute;
-            left: var(--x);
-            top: var(--y);
-            z-index: 5;
-            width: min(34vw, 154px);
-            min-height: 72px;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(12, 12, 12, 0.82);
-            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-            backdrop-filter: blur(14px);
-            transform:
-                translate(-50%, -50%)
-                translate3d(calc(var(--pointer-x) * var(--depth, 10px)), calc(var(--pointer-y) * var(--depth, 10px)), 22px);
-            animation: nodeFloat 6s ease-in-out infinite;
-            animation-delay: var(--delay, 0s);
-        }
-
-        .sync-node.output {
-            border-color: rgba(66, 214, 181, 0.18);
-        }
-
-        @keyframes nodeFloat {
-            0%, 100% {
-                margin-top: 0;
-            }
-
-            50% {
-                margin-top: -8px;
-            }
-        }
-
-        .sync-node-top {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            color: #fff;
-            font-size: 0.82rem;
-            font-weight: 700;
-            letter-spacing: 0;
-        }
-
-        .sync-node svg {
-            width: 20px;
-            height: 20px;
-            color: #D97757;
-            flex: 0 0 auto;
-        }
-
-        .sync-node.output svg {
-            color: #42D6B5;
-        }
-
-        .sync-node small {
-            display: block;
-            color: rgba(255, 255, 255, 0.44);
-            font-size: 0.68rem;
-            margin-top: 7px;
-            line-height: 1.25;
-        }
-
-        .sync-status {
-            position: absolute;
-            left: 24px;
-            right: 24px;
-            bottom: 22px;
-            z-index: 8;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 16px;
-            align-items: center;
-            padding: 12px 14px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.09);
-            background: rgba(5, 5, 5, 0.78);
-            backdrop-filter: blur(18px);
-        }
-
-        .sync-status span {
-            color: rgba(255, 255, 255, 0.62);
-            font-size: 0.78rem;
-        }
-
-        .sync-status strong {
-            color: #fff;
-            font-size: 1.15rem;
-            font-weight: 800;
-        }
-
-        .sync-rail {
-            position: absolute;
-            left: 14px;
-            top: 18px;
-            bottom: 86px;
-            width: 2px;
-            z-index: 4;
-            background: rgba(255, 255, 255, 0.08);
-            overflow: hidden;
-        }
-
-        .sync-rail::before {
-            content: "";
-            display: block;
-            height: calc(18% + var(--hero-progress) * 82%);
-            background: linear-gradient(180deg, #D97757, #42D6B5);
-            box-shadow: 0 0 14px rgba(66, 214, 181, 0.55);
-        }
-
-        .scroll-compass {
-            display: none;
+        .eyebrow {
+            display: inline-flex;
             align-items: center;
             gap: 10px;
-            margin-top: 28px;
-            color: rgba(255, 255, 255, 0.48);
-            font-size: 0.82rem;
-            transition: color .2s ease, transform .2s ease;
-        }
-
-        .scroll-compass:hover {
-            color: #fff;
-            transform: translateY(2px);
-        }
-
-        .scroll-compass i {
-            width: 18px;
-            height: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.22);
+            padding: 8px 14px;
             border-radius: 999px;
-            position: relative;
-        }
-
-        .scroll-compass i::before {
-            content: "";
-            position: absolute;
-            left: 50%;
-            top: 7px;
-            width: 4px;
-            height: 4px;
-            border-radius: 999px;
-            background: #D97757;
-            transform: translateX(-50%);
-            animation: scrollDot 1.7s ease-in-out infinite;
-        }
-
-        @keyframes scrollDot {
-            0%, 100% {
-                transform: translate(-50%, 0);
-                opacity: 0.35;
-            }
-
-            50% {
-                transform: translate(-50%, 10px);
-                opacity: 1;
-            }
-        }
-
-        .sync-lab.axo-scene {
-            border-color: rgba(217, 119, 87, 0.055);
-            border-radius: 8px;
-            background:
-                linear-gradient(180deg, rgba(16, 10, 8, 0.72), rgba(5, 5, 5, 0.86)),
-                #080808;
-            box-shadow:
-                0 26px 80px rgba(0, 0, 0, 0.32),
-                inset 0 1px 0 rgba(255, 255, 255, 0.06);
-        }
-
-        .sync-lab.axo-scene::before {
-            z-index: 0;
-            inset: 0;
-            background:
-                linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
-            background-size: 40px 40px;
-            opacity: 1;
-            transform: none;
-        }
-
-        .sync-lab.axo-scene::after {
-            z-index: 3;
-            background: linear-gradient(110deg, transparent 0 40%, rgba(217, 119, 87, 0.1) 50%, transparent 60% 100%);
-            transform: translateX(calc(-110% + var(--hero-progress) * 220%));
-            opacity: 0.42;
-        }
-
-        .axo-map {
-            position: absolute;
-            inset: 0;
-            z-index: 2;
-            width: 100%;
-            height: 100%;
-            overflow: visible;
-        }
-
-        .axo-grid path {
-            stroke: rgba(255, 255, 255, 0.045);
-            stroke-width: 1;
-        }
-
-        .axo-flows use {
-            fill: none;
-            stroke: rgba(217, 119, 87, 0.58);
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-dasharray: 2 8;
-            animation: axoDash 8s linear infinite;
-        }
-
-        .axo-pulses circle {
-            fill: #F08A62;
-            filter: drop-shadow(0 0 9px rgba(217, 119, 87, 0.95));
-        }
-
-        .axo-brand {
-            fill: #D97757;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            paint-order: stroke;
-            stroke: rgba(0, 0, 0, 0.65);
-            stroke-width: 3;
-            stroke-linejoin: round;
-            text-transform: uppercase;
-            filter: drop-shadow(0 0 10px rgba(217, 119, 87, 0.28));
-        }
-
-        .axo-brand-pill {
-            fill: rgba(10, 10, 10, 0.78);
-            stroke: rgba(217, 119, 87, 0.38);
-            stroke-width: 1;
-        }
-
-        .axo-brand-dot {
-            fill: #D97757;
-            filter: drop-shadow(0 0 8px rgba(217, 119, 87, 0.85));
-        }
-
-        .axo-caption {
-            fill: rgba(255, 236, 226, 0.92);
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            font-weight: 600;
-            letter-spacing: 0.01em;
-        }
-
-        .axo-caption-sub {
-            fill: rgba(255, 255, 255, 0.5);
-            font-family: 'Inter', sans-serif;
+            border: 1px solid #efebef;
+            background: rgba(255, 255, 255, 0.76);
+            color: var(--accent);
             font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
         }
 
-        .axo-cube {
-            transform-box: fill-box;
-            transform-origin: center;
-            animation: axoBreath 4.5s ease-in-out infinite;
-        }
-
-        .axo-core-cube {
-            transform-box: fill-box;
-            transform-origin: center;
-            animation: axoCore 2.4s ease-in-out infinite;
-        }
-
-        .axo-node circle {
-            fill: rgba(12, 12, 12, 0.74);
-            stroke: rgba(217, 119, 87, 0.78);
-            stroke-width: 2;
-            filter: drop-shadow(0 0 18px rgba(217, 119, 87, 0.12));
-        }
-
-        .axo-node path {
-            fill: none;
-            stroke: #D97757;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .axo-node text {
-            fill: rgba(255, 255, 255, 0.66);
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            text-anchor: middle;
-        }
-
-        @keyframes axoDash {
-            to {
-                stroke-dashoffset: -120;
-            }
-        }
-
-        @keyframes axoBreath {
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-6px);
-            }
-        }
-
-        @keyframes axoCore {
-            0%, 100% {
-                opacity: 0.72;
-            }
-
-            50% {
-                opacity: 1;
-                filter: drop-shadow(0 0 18px rgba(217, 119, 87, 0.9));
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .sync-wire,
-            .sync-core::before,
-            .sync-core::after,
-            .sync-node,
-            .scroll-compass i::before,
-            .axo-flows use,
-            .axo-cube,
-            .axo-core-cube,
-            .page-cable-pulse {
-                animation: none !important;
-            }
-        }
-
-        /* ---------- BUTTONS ---------- */
-        .btn-primary {
-            background: #D97757;
-            color: #fff;
-            padding: 0.95rem 1.75rem;
-            border-radius: 999px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
-            box-shadow: 0 10px 30px -10px rgba(217, 119, 87, 0.6);
-        }
-
-        .btn-primary:hover {
-            background: #C45A3A;
-            transform: translateY(-2px);
-            box-shadow: 0 14px 34px -10px rgba(217, 119, 87, 0.8);
-        }
-
-        .btn-primary .arrow {
-            transition: transform .2s ease;
-        }
-
-        .btn-primary:hover .arrow {
-            transform: translateX(4px);
-        }
-
-        /* ---------- SERVICE CARDS ---------- */
-        .service-card {
-            background: #121212;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 8px;
-            padding: 2.25rem;
-            transition: border-color .3s ease, transform .3s ease, background .3s ease, box-shadow .3s ease;
-            height: 100%;
-            position: relative;
-            z-index: 80;
-            isolation: isolate;
-        }
-
-        .service-card > * {
-            position: relative;
-            z-index: 2;
-        }
-
-        .service-card::before {
-            content: "";
-            position: absolute;
-            inset: -1px;
-            border-radius: 8px;
-            padding: 1px;
-            background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(217, 119, 87, 0.35), transparent 60%);
-            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity .3s ease;
-            pointer-events: none;
-            z-index: 4;
-        }
-
-        .service-card::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: 8px;
-            background: #121212;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-card[style*="linear-gradient"]::after {
-            background: linear-gradient(160deg, #1a120e 0%, #0F0A08 100%);
-        }
-
-        .service-card:hover {
-            border-color: rgba(217, 119, 87, 0.25);
-            transform: translateY(-4px);
-            background: #161412;
-            box-shadow: 0 20px 60px -20px rgba(217, 119, 87, 0.25), 0 0 40px -10px rgba(217, 119, 87, 0.15);
-        }
-
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 8px;
-            background: rgba(217, 119, 87, 0.1);
-            border: 1px solid rgba(217, 119, 87, 0.25);
-            color: #D97757;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-        }
-
-        /* ---------- PROCESS STEPS ---------- */
-        .step-number {
-            width: 40px;
-            height: 40px;
-            border-radius: 999px;
-            background: rgba(217, 119, 87, 0.1);
-            border: 1px solid rgba(217, 119, 87, 0.4);
-            color: #D97757;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        /* ---------- GLOBAL PAGE RAIL (LEFT VERTICAL PROGRESS) ---------- */
-        .page-rail {
-            position: fixed;
-            left: 28px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 40;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .eyebrow.live {
             gap: 12px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .5s ease;
+            box-shadow: 0 12px 34px rgba(255, 87, 75, 0.11);
         }
 
-        .page-rail.show {
-            opacity: 1;
-            pointer-events: auto;
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 0 rgba(255, 87, 75, 0.46);
+            animation: pulse 1.8s infinite;
         }
 
-        .page-rail-line {
-            position: relative;
-            width: 2px;
-            height: 260px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 2px;
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 87, 75, 0.46); }
+            70% { box-shadow: 0 0 0 14px rgba(255, 87, 75, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 87, 75, 0); }
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 80;
+            backdrop-filter: blur(20px);
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--header-border);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .site-header .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            min-height: 78px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-weight: 800;
+            font-size: 1.02rem;
+            letter-spacing: -0.03em;
+            color: #1f2446;
+        }
+
+        .brand-mark {
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
             overflow: hidden;
         }
 
-        .page-rail-fill {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 0%;
-            background: linear-gradient(180deg, #D97757, #E89375);
-            border-radius: 2px;
-            transition: height .2s ease-out;
-            box-shadow: 0 0 12px rgba(217, 119, 87, 0.6);
+        .brand-mark img {
+            width: 100%;
+            height: 100%;
         }
 
-        .rail-dots {
+        .nav-links {
             display: flex;
-            flex-direction: column;
-            gap: 28px;
             align-items: center;
+            gap: 34px;
+            color: #555a77;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-button,
+        .button {
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .icon-button {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--icon-bg);
+            border-color: var(--icon-border);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--icon-fg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 50px;
+            padding: 0 26px;
+            border-radius: 9px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        #headerDemo .mobile-label {
+            display: none;
+        }
+
+        .button.primary {
+            background: linear-gradient(180deg, #ff6154, #ff4b40);
+            color: #fff;
+            box-shadow: 0 14px 30px rgba(255, 87, 75, 0.18);
+        }
+
+        .button.secondary {
+            background: var(--button-secondary-bg);
+            color: var(--button-secondary-fg);
+            border-color: var(--button-secondary-border);
+        }
+
+        .button:hover,
+        .icon-button:hover {
+            transform: translateY(-1px);
+        }
+
+        .button:focus-visible,
+        .icon-button:focus-visible {
+            outline: 2px solid rgba(255, 87, 75, 0.34);
+            outline-offset: 2px;
+        }
+
+        .theme-toggle svg {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .theme-toggle .icon-sun {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .theme-toggle .icon-moon {
+            opacity: 0;
+            transform: scale(0.75) rotate(-20deg);
+        }
+
+        body.theme-dark .theme-toggle .icon-sun {
+            opacity: 0;
+            transform: scale(0.75) rotate(20deg);
+        }
+
+        body.theme-dark .theme-toggle .icon-moon {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .hero {
+            padding: 68px 0 54px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .hero-copy {
+            max-width: 860px;
+        }
+
+        .hero-copy h1 {
+            margin: 14px 0 0;
+            max-width: 720px;
+            color: #4d4f6e;
+            font-size: clamp(2.45rem, 3.8vw, 3.55rem);
+            line-height: 1.14;
+            letter-spacing: -0.06em;
+            font-weight: 700;
+        }
+
+        .hero-wordmark {
+            margin: 16px 0 22px;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-wordmark strong {
+            color: var(--title-strong);
+            font-size: clamp(3.35rem, 6.1vw, 4.55rem);
+            line-height: 0.9;
+            letter-spacing: -0.095em;
+            font-weight: 800;
+        }
+
+        .hero-wordmark strong span {
+            color: var(--accent);
+        }
+
+        .hero-wordmark em {
+            font-style: normal;
+            color: #5a5c79;
+            font-size: clamp(1.28rem, 1.7vw, 1.72rem);
+            letter-spacing: -0.05em;
+            font-weight: 700;
+        }
+
+        .hero-copy p {
+            max-width: 720px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.68;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .hero-note {
+            margin-top: 18px;
+            color: #74788f;
+            font-size: 13px;
+        }
+
+        .logo-band {
+            border-top: 1px solid rgba(211, 206, 212, 0.72);
+            border-bottom: 1px solid rgba(211, 206, 212, 0.72);
+            background: rgba(255, 255, 255, 0.52);
+            overflow: hidden;
+        }
+
+        .logo-track {
+            display: flex;
+            gap: 56px;
+            width: max-content;
+            padding: 22px 0;
+            animation: marquee 24s linear infinite;
+        }
+
+        .logo-name {
+            color: #1f213e;
+            font-size: 1.2rem;
+            font-weight: 700;
+            white-space: nowrap;
+            opacity: 0.84;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .bench-section {
+            padding-top: 42px;
+            padding-bottom: 26px;
+        }
+
+        .bench-section .wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-bench {
+            min-height: 0;
+            width: min(1160px, 100%);
+            padding: 20px;
+            border-radius: 24px;
+            border: 1px solid rgba(202, 197, 206, 0.7);
+            background:
+                linear-gradient(160deg, rgba(255, 87, 75, 0.06), transparent 34%),
+                linear-gradient(210deg, rgba(108, 151, 255, 0.06), transparent 48%),
+                var(--surface-strong);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bench::before {
+            content: "";
             position: absolute;
             inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(120deg, rgba(255, 87, 75, 0.44), rgba(114, 152, 255, 0.44), rgba(255, 87, 75, 0.44));
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask-composite: exclude;
+            opacity: 0.7;
+        }
+
+        .hero-bench-head {
+            display: flex;
+            align-items: center;
             justify-content: space-between;
-            padding: 4px 0;
+            gap: 14px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
         }
 
-        .rail-dot {
-            position: relative;
-            width: 10px;
-            height: 10px;
+        .hero-bench-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 14px;
             border-radius: 999px;
-            background: #0A0A0A;
-            border: 1.5px solid rgba(255, 255, 255, 0.2);
-            transform: translateX(-4px);
-            transition: border-color .3s ease, background .3s ease, transform .3s ease;
-            cursor: pointer;
-        }
-
-        .rail-dot::after {
-            content: attr(data-label);
-            position: absolute;
-            left: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            white-space: nowrap;
-            font-size: 11px;
-            color: #888;
-            opacity: 0;
-            transition: opacity .2s ease, color .3s ease;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-        }
-
-        .rail-dot:hover::after {
-            opacity: 1;
-        }
-
-        .rail-dot.active {
-            background: #D97757;
-            border-color: #D97757;
-            box-shadow: 0 0 10px rgba(217, 119, 87, 0.7);
-        }
-
-        .rail-dot.active::after {
-            color: #D97757;
-            opacity: 1;
-        }
-
-        @media (max-width: 900px) {
-            .page-rail {
-                display: none;
-            }
-        }
-
-        /* ---------- PROCESS (VERTICAL TIMELINE) ---------- */
-        .timeline {
-            position: relative;
-            max-width: 780px;
-            margin: 0 auto;
-            padding-left: 64px;
-            z-index: 80;
-        }
-
-        #proceso .fade-up {
-            position: relative;
-            z-index: 80;
-        }
-
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 22px;
-            top: 6px;
-            bottom: 6px;
-            width: 2px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 2px;
-        }
-
-        .timeline-fill {
-            position: absolute;
-            left: 22px;
-            top: 6px;
-            width: 2px;
-            height: 0%;
-            background: linear-gradient(180deg, #D97757, #E89375);
-            border-radius: 2px;
-            box-shadow: 0 0 12px rgba(217, 119, 87, 0.6);
-            transition: height .2s ease-out;
-            z-index: 1;
-        }
-
-        .timeline-step {
-            position: relative;
-            padding-bottom: 4rem;
-            opacity: 0.35;
-            transition: opacity .5s ease;
-        }
-
-        .timeline-step:last-child {
-            padding-bottom: 0;
-        }
-
-        .timeline-step.active {
-            opacity: 1;
-        }
-
-        .timeline-step.route-active {
-            opacity: 1;
-        }
-
-        .timeline-step.route-active::before {
-            background: #D97757;
-            border-color: #D97757;
-            box-shadow: 0 0 0 6px rgba(217, 119, 87, 0.15), 0 0 20px rgba(217, 119, 87, 0.6);
-        }
-
-        .timeline-step::before {
-            content: "";
-            position: absolute;
-            left: -52px;
-            top: 8px;
-            width: 20px;
-            height: 20px;
-            border-radius: 999px;
-            background: #0A0A0A;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            z-index: 2;
-            transition: all .4s ease;
-        }
-
-        .timeline-step.active::before {
-            background: #D97757;
-            border-color: #D97757;
-            box-shadow: 0 0 0 6px rgba(217, 119, 87, 0.15), 0 0 20px rgba(217, 119, 87, 0.6);
-        }
-
-        .timeline-num {
-            display: inline-block;
-            padding: 0.35rem 0.85rem;
-            border-radius: 999px;
-            background: rgba(217, 119, 87, 0.1);
-            border: 1px solid rgba(217, 119, 87, 0.35);
-            color: #D97757;
+            border: 1px solid rgba(255, 87, 75, 0.16);
+            background: rgba(255, 87, 75, 0.06);
+            color: var(--accent);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
             font-weight: 700;
-            font-size: 0.78rem;
-            margin-bottom: 1rem;
+        }
+
+        .hero-bench-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 248px;
+            gap: 26px;
+            align-items: start;
+        }
+
+        .hero-bench-copy h2 {
+            margin: 0 0 14px;
+            color: var(--title-strong);
+            max-width: 420px;
+            font-size: clamp(2.3rem, 3.5vw, 2.9rem);
+            line-height: 0.96;
+            letter-spacing: -0.08em;
+            font-weight: 800;
+        }
+
+        .hero-bench-copy p {
+            margin: 0 0 14px;
+            color: #5f6381;
+            font-size: 0.95rem;
+            line-height: 1.58;
+        }
+
+        .hero-bench-copy p strong {
+            color: #2a2d4a;
+        }
+
+        .hero-bench-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 22px;
+        }
+
+        .hero-command {
+            margin-top: 16px;
+            padding: 16px 18px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 87, 75, 0.18);
+            background: var(--surface-strong);
+            color: #313452;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.92rem;
+        }
+
+        .hero-command .accent {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .measure-title {
+            margin: 6px 0 12px;
+            color: var(--accent);
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .measure-list {
+            display: grid;
+            gap: 8px;
+        }
+
+        .measure-item {
+            display: grid;
+            grid-template-columns: 58px 1fr;
+            gap: 10px;
+            padding: 13px 16px;
+            border-radius: 12px;
+            border: 1px solid var(--surface-line);
+            background: rgba(248, 246, 245, 0.76);
+            color: #6c708c;
+            font-size: 13px;
+            align-items: center;
+        }
+
+        .measure-item strong {
+            color: var(--accent);
+            font-size: 0.92rem;
             letter-spacing: 0.05em;
         }
 
-        @media (max-width: 640px) {
-            .timeline {
-                padding-left: 48px;
-            }
-
-            .timeline::before,
-            .timeline-fill {
-                left: 14px;
-            }
-
-            .timeline-step::before {
-                left: -40px;
-                width: 16px;
-                height: 16px;
-            }
+        .section-head {
+            margin-bottom: 34px;
         }
 
-        /* ---------- FORM ---------- */
-        .field {
-            background: #0A0A0A;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 0.75rem;
-            padding: 0.85rem 1rem;
-            color: #fff;
+        .section-head h2 {
+            margin: 18px 0 0;
+            max-width: 780px;
+            color: var(--title-soft);
+            font-size: clamp(2.35rem, 4.2vw, 3.45rem);
+            line-height: 1.1;
+            letter-spacing: -0.05em;
+            font-weight: 800;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 26px;
+        }
+
+        .tech-card {
+            min-height: 228px;
+            padding: 28px 28px;
+            border-radius: 14px;
+            border: 1px solid var(--surface-line);
+            background: var(--surface-soft);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.46);
+            transition: transform 0.22s ease, box-shadow 0.22s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px rgba(119, 118, 146, 0.08);
+        }
+
+        .tech-card h3 {
+            margin: 0 0 12px;
+            color: #2b2c47;
+            font-size: 1.62rem;
+            line-height: 1.12;
+            letter-spacing: -0.06em;
+        }
+
+        .tech-card p {
+            margin: 0;
+            color: #656987;
+            font-size: 0.94rem;
+            line-height: 1.62;
+        }
+
+        .tech-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 28px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .tech-card a::after {
+            content: "->";
+        }
+
+        .detail-stack {
+            display: none;
+            gap: 22px;
+            margin-top: 34px;
+        }
+
+        .detail-stack.is-open {
+            display: grid;
+        }
+
+        .detail-card {
+            display: none;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--surface-line);
+            background: var(--surface-strong);
+            box-shadow: var(--shadow);
+            scroll-margin-top: 110px;
+        }
+
+        .detail-card.is-open {
+            display: block;
+        }
+
+        .detail-card:target {
+            border-color: rgba(255, 87, 75, 0.45);
+            box-shadow: 0 18px 38px rgba(255, 87, 75, 0.08);
+        }
+
+        .detail-head h3 {
+            margin: 14px 0 10px;
+            color: var(--title-strong);
+            font-size: 2rem;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+
+        .detail-head p {
+            margin: 0;
+            color: #666983;
+            font-size: 0.96rem;
+            line-height: 1.65;
+            max-width: 840px;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+            gap: 26px;
+            margin-top: 22px;
+        }
+
+        .detail-box {
+            padding: 22px;
+            border-radius: 14px;
+            border: 1px solid var(--surface-line);
+            background: var(--surface-muted);
+        }
+
+        .detail-box h4 {
+            margin: 0 0 12px;
+            color: #2c2d48;
+            font-size: 1rem;
+            letter-spacing: -0.04em;
+        }
+
+        .detail-box p,
+        .detail-box li {
+            color: #636783;
+            font-size: 0.94rem;
+            line-height: 1.62;
+        }
+
+        .detail-box ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .detail-actions {
+            display: flex;
+            gap: 14px;
+            margin-top: 22px;
+            flex-wrap: wrap;
+        }
+
+        .results-wrap {
+            width: min(1180px, 100%);
+            margin: 0 auto;
+            display: grid;
+            gap: 26px;
+        }
+
+        .results-wrap .section-head {
+            margin-bottom: 18px;
+        }
+
+        .results-wrap .section-head h2 {
+            max-width: 760px;
+            font-size: clamp(2.15rem, 3.4vw, 2.95rem);
+            line-height: 1.08;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 24px;
             width: 100%;
-            transition: border-color .2s ease;
+            margin: 0 auto;
         }
 
-        .field:focus {
-            outline: none;
-            border-color: #D97757;
+        .metric {
+            cursor: pointer;
         }
 
-        .field::placeholder {
-            color: #555;
+        .metric strong {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--accent);
+            font-size: clamp(2.3rem, 3.8vw, 3.15rem);
+            line-height: 0.95;
+            letter-spacing: -0.08em;
+            font-weight: 800;
         }
 
-        /* ---------- NAV ---------- */
-        .nav-link {
-            font-size: 0.875rem;
-            color: #B0B0B0;
-            transition: color .15s ease;
+        .metric h3 {
+            margin: 0 0 8px;
+            color: #1f2440;
+            font-size: 0.9rem;
+            line-height: 1.3;
+            letter-spacing: -0.05em;
         }
 
-        .nav-link:hover {
+        .metric p {
+            margin: 0;
+            color: #626681;
+            font-size: 0.84rem;
+            line-height: 1.5;
+            max-width: 180px;
+        }
+
+        .testimonial-shell {
+            width: min(620px, 100%);
+            margin: 8px auto 0;
+        }
+
+        .testimonial-card {
+            position: relative;
+            min-height: 164px;
+            padding: 24px 40px;
+            border-radius: 12px;
+            border: 1px solid var(--surface-line);
+            background: linear-gradient(180deg, rgba(244, 242, 240, 0.92), rgba(247, 245, 244, 0.88));
+            box-shadow: 0 18px 34px rgba(124, 122, 144, 0.05);
+        }
+
+        .testimonial-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ff938c;
+            font-size: 1.4rem;
+            user-select: none;
+        }
+
+        .testimonial-arrow.left {
+            left: 16px;
+        }
+
+        .testimonial-arrow.right {
+            right: 16px;
+        }
+
+        .testimonial-quote {
+            margin: 0 0 16px;
+            color: #535776;
+            font-size: 0.94rem;
+            line-height: 1.62;
+        }
+
+        .testimonial-person {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .testimonial-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #c8ccd6, #9da5b7);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             color: #fff;
+            font-size: 0.82rem;
+            font-weight: 800;
         }
 
-        .site-nav {
-            z-index: 300;
+        .testimonial-person strong {
+            display: block;
+            color: #1f2340;
+            font-size: 0.94rem;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
         }
 
-        /* ---------- FADE IN ---------- */
-        .fade-up {
+        .testimonial-person span {
+            color: #7a7d98;
+            font-size: 0.84rem;
+        }
+
+        .testimonial-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .testimonial-dots span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #d4d4dd;
+        }
+
+        .testimonial-dots span.active {
+            width: 24px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .comparison-shell {
+            margin-top: 34px;
+            padding: 30px 30px;
+            border-radius: 16px;
+            border: 1px solid var(--surface-line);
+            background: rgba(255, 255, 255, 0.62);
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-shell h3 {
+            margin: 16px 0 10px;
+            color: var(--title-soft);
+            font-size: clamp(2rem, 3.2vw, 2.8rem);
+            line-height: 1.1;
+            letter-spacing: -0.045em;
+            font-weight: 800;
+        }
+
+        .comparison-table {
+            margin-top: 24px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--surface-line);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1.45fr 1fr 1fr;
+        }
+
+        .comparison-row div {
+            min-height: 66px;
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(217, 212, 219, 0.96);
+            color: #585d7a;
+            background: rgba(250, 248, 246, 0.72);
+            font-size: 0.92rem;
+        }
+
+        .comparison-row:last-child div {
+            border-bottom: 0;
+        }
+
+        .comparison-row.header div {
+            color: #8c8fa6;
+            font-size: 12px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.84);
+        }
+
+        .comparison-row div:nth-child(2) {
+            background: rgba(255, 87, 75, 0.08);
+            color: #202440;
+            font-weight: 600;
+        }
+
+        .comparison-row div:nth-child(3) {
+            background: rgba(245, 243, 242, 0.84);
+        }
+
+        .ok,
+        .mid {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ok::before,
+        .mid::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .ok::before {
+            background: var(--accent);
+            box-shadow: 0 0 12px rgba(255, 87, 75, 0.22);
+        }
+
+        .mid::before {
+            background: #b9bdc7;
+        }
+
+        .contact-cta {
+            padding-top: 72px;
+        }
+
+        .cta-shell {
+            padding: 40px;
+            border-radius: 18px;
+            border: 1px solid var(--surface-line);
+            background:
+                radial-gradient(circle at right top, rgba(255, 87, 75, 0.08), transparent 30%),
+                var(--surface-strong);
+            box-shadow: var(--shadow);
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .cta-copy h2 {
+            margin: 16px 0 14px;
+            color: var(--title-strong);
+            font-size: clamp(2.8rem, 4.5vw, 4rem);
+            line-height: 1.1;
+            letter-spacing: -0.045em;
+            font-weight: 800;
+        }
+
+        .cta-copy p {
+            margin: 0;
+            color: #626681;
+            font-size: 1.04rem;
+            line-height: 1.72;
+            max-width: 760px;
+        }
+
+        .cta-copy {
+            max-width: 900px;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 14px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .cta-side {
+            padding: 26px;
+            border-radius: 14px;
+            border: 1px solid rgba(205, 200, 208, 0.96);
+            background: rgba(244, 242, 240, 0.82);
+        }
+
+        .cta-side h3 {
+            margin: 0 0 10px;
+            color: #232542;
+            font-size: 1.5rem;
+            line-height: 1.08;
+            letter-spacing: -0.05em;
+        }
+
+        .cta-side ul {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0 0;
+            display: grid;
+            gap: 10px;
+            color: #646884;
+            font-size: 0.98rem;
+        }
+
+        .cta-side li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: 800;
+            margin-right: 8px;
+        }
+
+        .footer {
+            padding: 34px 0 50px;
+            color: #7f8298;
+        }
+
+        .footer-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            border-top: 1px solid var(--surface-line);
+            text-align: center;
+        }
+
+        body.theme-dark .brand,
+        body.theme-dark .hero-copy h1,
+        body.theme-dark .hero-wordmark em,
+        body.theme-dark .hero-bench-copy p strong,
+        body.theme-dark .tech-card h3,
+        body.theme-dark .detail-box h4,
+        body.theme-dark .metric h3,
+        body.theme-dark .testimonial-person strong,
+        body.theme-dark .comparison-row div:nth-child(2),
+        body.theme-dark .cta-side h3,
+        body.theme-dark .hero-command {
+            color: var(--title-strong);
+        }
+
+        body.theme-dark .nav-links,
+        body.theme-dark .hero-copy p,
+        body.theme-dark .hero-bench-copy p,
+        body.theme-dark .detail-head p,
+        body.theme-dark .detail-box p,
+        body.theme-dark .detail-box li,
+        body.theme-dark .metric p,
+        body.theme-dark .testimonial-quote,
+        body.theme-dark .testimonial-person span,
+        body.theme-dark .cta-copy p,
+        body.theme-dark .footer,
+        body.theme-dark .measure-item,
+        body.theme-dark .hero-note {
+            color: var(--muted);
+        }
+
+        body.theme-dark .site-header .brand span[style],
+        body.theme-dark .logo-name,
+        body.theme-dark .comparison-row.header div,
+        body.theme-dark .comparison-row div,
+        body.theme-dark .tech-card p,
+        body.theme-dark .measure-item span {
+            color: var(--muted-2) !important;
+        }
+
+        body.theme-dark .logo-band {
+            border-top-color: rgba(255, 255, 255, 0.08);
+            border-bottom-color: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        body.theme-dark .hero-bench,
+        body.theme-dark .comparison-shell {
+            background:
+                linear-gradient(160deg, rgba(255, 87, 75, 0.07), transparent 34%),
+                linear-gradient(210deg, rgba(108, 151, 255, 0.06), transparent 48%),
+                rgba(255, 255, 255, 0.04);
+        }
+
+        body.theme-dark .measure-item,
+        body.theme-dark .testimonial-card {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        body.theme-dark .comparison-row div {
+            border-bottom-color: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        body.theme-dark .comparison-row.header div {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        body.theme-dark .comparison-row div:nth-child(2) {
+            background: rgba(255, 87, 75, 0.14);
+        }
+
+        body.theme-dark .comparison-row div:nth-child(3) {
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        body.theme-dark .cta-shell {
+            background:
+                radial-gradient(circle at right top, rgba(255, 87, 75, 0.1), transparent 30%),
+                rgba(255, 255, 255, 0.04);
+        }
+
+        body.theme-dark .ok::before {
+            box-shadow: 0 0 12px rgba(255, 87, 75, 0.28);
+        }
+
+        body.theme-dark .mid::before,
+        body.theme-dark .testimonial-dots span {
+            background: #636879;
+        }
+
+        .reveal {
             opacity: 0;
-            transform: translateY(16px);
-            transition: opacity .7s ease, transform .7s ease;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        .fade-up.in {
+        .reveal.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* ---------- RESPONSIVE HERO ---------- */
-        .hero-grid {
-            grid-template-columns: minmax(0, 0.86fr) minmax(500px, 1.14fr) !important;
-            column-gap: clamp(2.5rem, 4vw, 5rem);
-        }
-
-        @media (max-width: 960px) {
-            .hero-grid {
-                grid-template-columns: 1fr !important;
-                row-gap: 3rem;
-            }
-
-            .schematic {
-                max-width: 420px;
-                width: min(100%, 420px);
-                justify-self: center;
-            }
-
-            .sync-core {
-                width: 132px;
-                height: 132px;
-            }
-
-            .sync-mark {
-                font-size: 3.8rem;
-            }
-
-            .sync-node {
-                width: 112px;
-                min-height: 62px;
-                padding: 9px;
-            }
-
-            .sync-node-top {
-                font-size: 0.72rem;
-                gap: 7px;
-            }
-
-            .sync-node small {
-                font-size: 0.62rem;
-            }
-
-            .sync-status {
-                left: 16px;
-                right: 16px;
-                bottom: 16px;
+        @media (max-width: 1180px) {
+            .hero-bench-grid,
+            .tech-grid,
+            .detail-grid,
+            .metric-grid,
+            .cta-grid {
+                grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 520px) {
-            .sync-node {
-                width: 104px;
-                min-height: 46px;
-            }
-
-            .sync-node small {
+        @media (max-width: 900px) {
+            .nav-links {
                 display: none;
             }
 
-            .sync-core {
-                width: 112px;
-                height: 112px;
-            }
-
-            .sync-mark {
-                font-size: 3.2rem;
-            }
-
-            .sync-core-label {
-                bottom: 14px;
-                font-size: 0.62rem;
-            }
-
-            .sync-status {
+            .hero-bench-grid {
                 grid-template-columns: 1fr;
-                gap: 3px;
-                padding: 10px 12px;
             }
 
-            .sync-status strong {
-                font-size: 0.95rem;
+            .comparison-row {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-row div {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .wrap {
+                width: min(var(--max), calc(100% - 24px));
+            }
+
+            .section {
+                padding: 74px 0;
+            }
+
+            .site-header .wrap {
+                min-height: 70px;
+                gap: 10px;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .brand {
+                gap: 10px;
+                font-size: 0.96rem;
+            }
+
+            .header-actions .button,
+            .header-actions .icon-button {
+                width: auto;
+            }
+
+            .header-actions {
+                gap: 8px;
+            }
+
+            .header-actions .button {
+                min-height: 42px;
+                padding: 0 18px;
+                font-size: 14px;
+            }
+
+            .header-actions .icon-button {
+                width: 34px;
+                height: 34px;
+                border-radius: 9px;
+            }
+
+            .hero-actions,
+            .hero-bench-actions,
+            .cta-actions {
+                flex-direction: column;
+            }
+
+            .hero-bench,
+            .comparison-shell,
+            .cta-shell {
+                padding: 20px;
+            }
+
+            .tech-card,
+            .testimonial-card {
+                padding: 24px 20px;
+            }
+
+            .hero-copy h1,
+            .section-head h2,
+            .cta-copy h2 {
+                line-height: 1.04;
+            }
+
+            .metric p {
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .site-header .wrap {
+                gap: 8px;
+            }
+
+            .brand {
+                gap: 8px;
+                font-size: 0.92rem;
+            }
+
+            .header-actions {
+                gap: 6px;
+            }
+
+            .header-actions .button {
+                min-height: 40px;
+                padding: 0 14px;
+                font-size: 13px;
+            }
+
+            #headerDemo {
+                display: none;
+            }
+
+            .header-actions .icon-button {
+                width: 32px;
+                height: 32px;
+            }
+
+            .theme-toggle svg {
+                width: 16px;
+                height: 16px;
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="scroll-beam" aria-hidden="true">
-        <div class="scroll-beam-fill" id="scrollBeamFill"></div>
-    </div>
+    <canvas id="trail" aria-hidden="true"></canvas>
 
-    <!-- GLOBAL PAGE RAIL -->
-    <aside class="page-rail" id="pageRail" aria-hidden="true">
-        <div class="page-rail-line">
-            <div class="page-rail-fill" id="railFill"></div>
-            <div class="rail-dots">
-                <a href="#servicios" class="rail-dot" data-section="servicios" data-label="Servicios"></a>
-                <a href="#proceso" class="rail-dot" data-section="proceso" data-label="Cómo trabajamos"></a>
-                <a href="#auditoria" class="rail-dot" data-section="auditoria" data-label="Auditoría gratis"></a>
-            </div>
-        </div>
-    </aside>
-
-    <!-- NAV -->
-    <nav class="site-nav fixed top-0 left-0 right-0 backdrop-blur-xl border-b border-white/5"
-        style="background: rgba(10,10,10,0.7);">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="text-2xl font-semibold tracking-tight">
-                SINCRO AI<span class="font-light" style="color:#D97757">.</span>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="#top">
+                <span class="brand-mark"><img src="sincro_s_clean.svg" alt="Logo de Sincro AI" width="26" height="26"></span>
+                <span>Sincro <span style="font-weight:600;color:#5f6381;">AI</span></span>
             </a>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#servicios" class="nav-link">Servicios</a>
-                <a href="#proceso" class="nav-link">Cómo trabajamos</a>
-                <a href="#auditoria" class="nav-link">Auditoría</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
-            </div>
-            <a href="#auditoria" class="btn-primary !py-2.5 !px-5 text-sm">
-                Auditoría gratis
-            </a>
-        </div>
-    </nav>
 
-    <!-- HERO -->
-    <section id="hero" class="min-h-screen flex items-center pt-24 pb-16 relative overflow-hidden grid-bg">
-        <div class="absolute inset-0 pointer-events-none"
-            style="background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(217,119,87,0.10) 0%, transparent 70%);">
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
-            <div class="hero-grid grid grid-cols-2 gap-12 items-center">
-
-                <!-- Left: headline -->
-                <div>
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-gray-300 mb-6">
-                        <span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse"></span>
-                        Auditorías gratuitas abiertas
-                    </div>
-
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6">
-                        Automatizamos los <span style="color:#D97757">procesos manuales</span> de tu negocio.
-                    </h1>
-
-                    <p class="text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-4 max-w-xl">
-                        Convertimos pedidos, stock, presupuestos, facturación y clientes en un flujo conectado que
-                        trabaja mientras vos vendés.
-                    </p>
-                    <p class="text-base text-gray-500 font-light mb-10 max-w-xl">
-                        Para comercios, PyMEs y profesionales que ya crecieron lo suficiente como para dejar de operar
-                        todo a mano.
-                    </p>
-
-                    <a href="#auditoria" class="btn-primary text-base">
-                        Solicitar auditoría gratis
-                        <span class="arrow">→</span>
-                    </a>
-
-                    <div class="flex items-center gap-6 mt-8 text-sm text-gray-500">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Sin costo inicial
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Respuesta en 24h
-                        </div>
-                    </div>
-
-                    <a href="#servicios" class="scroll-compass" aria-label="Ver servicios">
-                        <i aria-hidden="true"></i>
-                        Ver cómo se sincroniza
-                    </a>
-                </div>
-
-                <!-- Right: schematic diagram -->
-                <div class="schematic">
-                    <div class="sync-lab axo-scene" id="syncLab" aria-hidden="true">
-                        <svg class="axo-map" viewBox="0 0 720 560" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <filter id="axoGlow" x="-45%" y="-45%" width="190%" height="190%">
-                                    <feGaussianBlur stdDeviation="4" result="blur" />
-                                    <feMerge>
-                                        <feMergeNode in="blur" />
-                                        <feMergeNode in="SourceGraphic" />
-                                    </feMerge>
-                                </filter>
-                                <linearGradient id="cubeTop" x1="250" y1="210" x2="375" y2="300" gradientUnits="userSpaceOnUse">
-                                    <stop offset="0" stop-color="#D97757" stop-opacity="0.18" />
-                                    <stop offset="1" stop-color="#D97757" stop-opacity="0.03" />
-                                </linearGradient>
-                                <linearGradient id="cubeFace" x1="245" y1="250" x2="400" y2="375" gradientUnits="userSpaceOnUse">
-                                    <stop offset="0" stop-color="#D97757" stop-opacity="0.2" />
-                                    <stop offset="1" stop-color="#090706" stop-opacity="0.58" />
-                                </linearGradient>
-                                <path id="flowPedidos" d="M98 218 C154 220 236 244 326 306" />
-                                <path id="flowFacturas" d="M190 128 C224 176 268 238 326 306" />
-                                <path id="flowTareas" d="M300 82 C310 152 318 230 326 306" />
-                                <path id="flowInventario" d="M410 72 C394 140 366 232 326 306" />
-                                <path id="flowFacturacion" d="M512 116 C464 178 404 244 326 306" />
-                                <path id="flowCRM" d="M604 184 C522 214 430 258 326 306" />
-                                <path id="flowEquipo" d="M626 276 C536 272 438 286 326 306" />
-                            </defs>
-
-                            <g class="axo-grid">
-                                <path d="M0 40H720M0 80H720M0 120H720M0 160H720M0 200H720M0 240H720M0 280H720M0 320H720M0 360H720M0 400H720M0 440H720M0 480H720M0 520H720" />
-                                <path d="M40 0V560M80 0V560M120 0V560M160 0V560M200 0V560M240 0V560M280 0V560M320 0V560M360 0V560M400 0V560M440 0V560M480 0V560M520 0V560M560 0V560M600 0V560M640 0V560M680 0V560" />
-                            </g>
-
-                            <g class="axo-flows">
-                                <use href="#flowPedidos" />
-                                <use href="#flowFacturas" />
-                                <use href="#flowTareas" />
-                                <use href="#flowInventario" />
-                                <use href="#flowFacturacion" />
-                                <use href="#flowCRM" />
-                                <use href="#flowEquipo" />
-                            </g>
-
-                            <g class="axo-pulses" filter="url(#axoGlow)">
-                                <circle r="4"><animateMotion dur="3.1s" repeatCount="indefinite" begin="0s"><mpath href="#flowPedidos" /></animateMotion></circle>
-                                <circle r="4"><animateMotion dur="3.2s" repeatCount="indefinite" begin=".45s"><mpath href="#flowFacturas" /></animateMotion></circle>
-                                <circle r="4"><animateMotion dur="3.4s" repeatCount="indefinite" begin=".9s"><mpath href="#flowTareas" /></animateMotion></circle>
-                                <circle r="4"><animateMotion dur="2.9s" repeatCount="indefinite" begin=".2s"><mpath href="#flowInventario" /></animateMotion></circle>
-                                <circle r="4"><animateMotion dur="3s" repeatCount="indefinite" begin=".7s"><mpath href="#flowFacturacion" /></animateMotion></circle>
-                                <circle r="4"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.1s"><mpath href="#flowCRM" /></animateMotion></circle>
-                                <circle r="4"><animateMotion dur="3.35s" repeatCount="indefinite" begin="1.45s"><mpath href="#flowEquipo" /></animateMotion></circle>
-                            </g>
-
-                            <g class="axo-brand-lockup" transform="translate(394 470)">
-                                <text class="axo-caption" x="0" y="0">Sincronizamos tus areas de trabajo</text>
-                                <text class="axo-caption-sub" x="0" y="24">Pedidos, ventas, stock y operacion conectados.</text>
-                            </g>
-
-                            <g class="axo-cube" filter="url(#axoGlow)">
-                                <polygon points="250,250 326,210 404,250 326,292" fill="url(#cubeTop)" />
-                                <polygon points="250,250 326,292 326,382 250,340" fill="url(#cubeFace)" />
-                                <polygon points="326,292 404,250 404,340 326,382" fill="rgba(217,119,87,.07)" />
-                                <polyline points="250,250 326,210 404,250 404,340 326,382 250,340 250,250 326,292 404,250" fill="none" stroke="#D97757" stroke-width="2" stroke-linejoin="round" />
-                                <line x1="326" y1="292" x2="326" y2="382" stroke="#D97757" stroke-width="2" opacity=".8" />
-                                <polygon class="axo-core-cube" points="300,290 326,276 354,290 326,306" fill="#D97757" />
-                                <polygon class="axo-core-cube" points="300,290 326,306 326,338 300,322" fill="#D97757" opacity=".84" />
-                                <polygon class="axo-core-cube" points="326,306 354,290 354,322 326,338" fill="#D97757" opacity=".62" />
-                                <circle id="syncCoreAnchor" cx="326" cy="306" r="2" fill="transparent" />
-                            </g>
-
-                            <g class="axo-node" transform="translate(98 218)">
-                                <circle r="34" />
-                                <path d="M-14 -10h7l4 19h17l4-13H-2M1 17h.1M14 17h.1" />
-                                <text y="58">Pedidos</text>
-                            </g>
-                            <g class="axo-node" transform="translate(190 128)">
-                                <circle r="34" />
-                                <path d="M-9 -17H5l10 10v24H-9zM5 -17v10h10M-3 1H8M-3 8H8" />
-                                <text y="58">Presupuestos</text>
-                            </g>
-                            <g class="axo-node" transform="translate(300 82)">
-                                <circle r="34" />
-                                <path d="M-10 -3l7 7 16-16M13 0v14H-14v-27h18" />
-                                <text y="58">Tareas</text>
-                            </g>
-                            <g class="axo-node" transform="translate(410 72)">
-                                <circle r="34" />
-                                <path d="M0 -17l16 9v18L0 19l-16-9V-8zM-16 -8L0 1l16-9M0 1v18" />
-                                <text y="58">Inventario</text>
-                            </g>
-                            <g class="axo-node" transform="translate(512 116)">
-                                <circle r="34" />
-                                <path d="M-12 -18H5l9 9v27h-26zM5 -18v9h9M-5 0H7M-5 8H7" />
-                                <text y="58">Facturación</text>
-                            </g>
-                            <g class="axo-node" transform="translate(604 184)">
-                                <circle r="34" />
-                                <path d="M-12 12v-3a9 9 0 0118 0v3M-3 -2a8 8 0 100-16 8 8 0 000 16M12 10v-2c0-5-3-8-7-9M8 -18a7 7 0 010 14" />
-                                <text y="58">CRM</text>
-                            </g>
-                            <g class="axo-node" transform="translate(626 276)">
-                                <circle r="34" />
-                                <path d="M-10 -16h20v30h-20zM-3 -20h6v8h-6zM-3 -4h6M-3 4h6" />
-                                <text y="58">Equipo</text>
-                            </g>
-                        </svg>
-                    </div>
-                    
-
-
-
-
-
-
-
-
-<svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <filter id="glow">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
-
-        <!-- ORGANIC NERVOUS SYSTEM CURVED WIRES (MIRRORED SYMMETRY) -->
-        <!-- Inputs mirror the Outputs perfectly across the center (260, 260) -->
-        <path id="pathIn1" d="M 40 270 C 120 270, 120 320, 200 320 C 230 320, 230 290, 260 260" fill="none" />
-        <path id="pathIn2" d="M 100 400 C 150 400, 150 320, 200 320 C 230 320, 230 290, 260 260" fill="none" />
-        <path id="pathIn3" d="M 240 460 C 240 390, 200 390, 200 320 C 230 320, 230 290, 260 260" fill="none" />
-        
-        <!-- Outputs exit from Core to a Knot (320, 200), then flare open gracefully -->
-        <path id="pathOut1" d="M 260 260 C 290 230, 290 200, 320 200 C 345 185, 300 100, 280 55" fill="none" />
-        <path id="pathOut2" d="M 260 260 C 290 230, 290 200, 320 200 C 355 180, 370 120, 375 85" fill="none" />
-        <path id="pathOut3" d="M 260 260 C 290 230, 290 200, 320 200 C 370 195, 415 160, 445 155" fill="none" />
-        <path id="pathOut4" d="M 260 260 C 290 230, 290 200, 320 200 C 370 210, 435 240, 475 250" fill="none" />
-    </defs>
-
-    <!-- 1. SOLID CURVED WIRES BEHIND (uniform intensity: shared stubs drawn once) -->
-    <g stroke="rgba(217,119,87,0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="1 6">
-        <!-- Input branches -->
-        <path d="M 40 270 C 120 270, 120 320, 200 320" />
-        <path d="M 100 400 C 150 400, 150 320, 200 320" />
-        <path d="M 240 460 C 240 390, 200 390, 200 320" />
-        <!-- Shared input stub (knot -> core) drawn once -->
-        <path d="M 200 320 C 230 320, 230 290, 260 260" />
-        <!-- Shared output stub (core -> knot) drawn once -->
-        <path d="M 260 260 C 290 230, 290 200, 320 200" />
-        <!-- Output branches -->
-        <path d="M 320 200 C 345 185, 300 100, 280 55" />
-        <path d="M 320 200 C 355 180, 370 120, 375 85" />
-        <path d="M 320 200 C 370 195, 415 160, 445 155" />
-        <path d="M 320 200 C 370 210, 435 240, 475 250" />
-    </g>
-
-    <!-- 2. DATA PULSES -->
-    <g fill="#D97757" filter="url(#glow)">
-        <circle r="4"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"><mpath href="#pathIn1" /></animateMotion></circle>
-        <circle r="4"><animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s"><mpath href="#pathIn2" /></animateMotion></circle>
-        <circle r="4"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0.6s"><mpath href="#pathIn3" /></animateMotion></circle>
-        
-        <circle r="4"><animateMotion dur="2.2s" repeatCount="indefinite" begin="0.2s"><mpath href="#pathOut1" /></animateMotion></circle>
-        <circle r="4"><animateMotion dur="2.2s" repeatCount="indefinite" begin="0.8s"><mpath href="#pathOut2" /></animateMotion></circle>
-        <circle r="4"><animateMotion dur="2.2s" repeatCount="indefinite" begin="1.4s"><mpath href="#pathOut3" /></animateMotion></circle>
-        <circle r="4"><animateMotion dur="2.2s" repeatCount="indefinite" begin="2.0s"><mpath href="#pathOut4" /></animateMotion></circle>
-    </g>
-
-    <!-- 3. SINCRO GLASS BOX & INNER CORE -->
-    <g class="core">
-        <!-- Transparent Outer Box Faces (glass shell) -->
-        <path d="M 200 220 L 260 250 L 260 300 L 200 270 Z" fill="rgba(217,119,87,0.03)" stroke="rgba(217,119,87,0.6)" stroke-width="1.5" stroke-linejoin="round" />
-        <path d="M 260 250 L 320 220 L 320 270 L 260 300 Z" fill="rgba(217,119,87,0.01)" stroke="rgba(217,119,87,0.3)" stroke-width="1.5" stroke-linejoin="round" />
-        <path d="M 260 190 L 320 220 L 260 250 L 200 220 Z" fill="rgba(217,119,87,0.08)" stroke="none" />
-        <path d="M 200 220 L 260 190 L 320 220" fill="none" stroke="rgba(217,119,87,0.8)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" />
-
-        <!-- Inner solid cube on top of cables -->
-        <g filter="url(#glow)">
-            <path d="M 260 230 L 280 240 L 260 250 L 240 240 Z" fill="#D97757" />
-            <path d="M 240 240 L 260 250 L 260 270 L 240 260 Z" fill="#D97757" opacity="0.8" />
-            <path d="M 260 250 L 280 240 L 280 260 L 260 270 Z" fill="#D97757" opacity="0.6" />
-        </g>
-
-        <text x="260" y="155" dominant-baseline="central" text-anchor="middle" font-size="20" font-weight="700" fill="#fff" font-family="Inter" letter-spacing="0.05em">Sincro</text>
-    </g>
-
-    <!-- 4. INPUT NODES (MIRRORED POSITIONS): (40, 270) | (100, 400) | (240, 460) -->
-    <g class="icon-node">
-        <circle cx="40" cy="270" r="30" fill="#141414" stroke="rgba(217,119,87,0.45)" stroke-width="1.5" />
-        <g transform="translate(24 254)" fill="none" stroke="#D97757" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M3 4 L8 4 L11 22 L28 22 L31 10 L10 10" />
-            <circle cx="13" cy="29" r="2.2" fill="#D97757" stroke="none" />
-            <circle cx="25" cy="29" r="2.2" fill="#D97757" stroke="none" />
-        </g>
-        <text class="source-label" x="40" y="318" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter" font-weight="600">Pedidos</text>
-    </g>
-
-    <g class="icon-node">
-        <circle cx="100" cy="400" r="30" fill="#141414" stroke="rgba(217,119,87,0.45)" stroke-width="1.5" />
-        <g transform="translate(88 388)" fill="none" stroke="#D97757" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-            <polyline points="10 9 9 9 8 9"></polyline>
-        </g>
-        <text class="source-label" x="100" y="448" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter" font-weight="600">Facturas</text>
-    </g>
-
-    <g class="icon-node">
-        <circle cx="240" cy="460" r="30" fill="#141414" stroke="rgba(217,119,87,0.45)" stroke-width="1.5" />
-        <g transform="translate(228 448)" fill="none" stroke="#D97757" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
-            <polyline points="9 11 12 14 22 4"></polyline>
-            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-        </g>
-        <text class="source-label" x="240" y="508" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter" font-weight="600">Tareas</text>
-    </g>
-
-    <!-- 5. OUTPUT NODES: (280, 60) | (350, 90) | (420, 120) | (460, 180) | (480, 250) -->
-    <g class="icon-node">
-        <circle cx="280" cy="55" r="30" fill="#141414" stroke="rgba(217,119,87,0.5)" stroke-width="1.5" />
-        <g transform="translate(263 38)" fill="none" stroke="#D97757" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M17 2 L31 9 L31 25 L17 33 L3 25 L3 9 Z" />
-            <path d="M3 9 L17 17 L31 9" />
-            <path d="M17 17 L17 33" />
-        </g>
-        <text class="source-label" x="280" y="103" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter" font-weight="600">Inventario</text>
-    </g>
-
-    <g class="icon-node">
-        <circle cx="375" cy="85" r="30" fill="#141414" stroke="rgba(217,119,87,0.5)" stroke-width="1.5" />
-        <g transform="translate(360 67)" fill="none" stroke="#D97757" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M5 2 L22 2 L28 8 L28 34 L5 34 Z" />
-            <path d="M22 2 L22 8 L28 8" />
-            <line x1="10" y1="16" x2="23" y2="16" />
-            <line x1="10" y1="22" x2="23" y2="22" />
-            <line x1="10" y1="28" x2="19" y2="28" />
-        </g>
-        <text class="source-label" x="375" y="133" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter" font-weight="600">Facturación</text>
-    </g>
-
-    <g class="icon-node">
-        <circle cx="445" cy="155" r="30" fill="#141414" stroke="rgba(217,119,87,0.5)" stroke-width="1.5" />
-        <g transform="translate(433 143)" fill="none" stroke="#D97757" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-            <circle cx="9" cy="7" r="4"></circle>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-        </g>
-        <text class="source-label" x="445" y="203" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter" font-weight="600">CRM</text>
-    </g>
-
-    <g class="icon-node">
-        <circle cx="475" cy="250" r="30" fill="#141414" stroke="rgba(217,119,87,0.5)" stroke-width="1.5" />
-        <g transform="translate(463 238)" fill="none" stroke="#D97757" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-            <path d="M9 14h6"></path>
-            <path d="M9 18h6"></path>
-            <path d="M9 10h.01"></path>
-        </g>
-        <text class="source-label" x="475" y="298" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter" font-weight="600">Equipo</text>
-    </g>
-
-</svg>
-
-
-
-
-
-
-
-
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section id="servicios" class="py-24 border-t border-white/5" style="background:#060606;">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="max-w-2xl mb-16 fade-up">
-                <p class="text-sm font-medium mb-3" style="color:#D97757;">SERVICIOS</p>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-4">
-                    Las tareas que te comen el día, resueltas.
-                </h2>
-                <p class="text-lg text-gray-400 font-light">
-                    Cinco soluciones concretas. Las instalamos, las configuramos y quedan funcionando solas.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
-
-                <!-- 1. Stock -->
-                <div class="service-card fade-up">
-                    <div class="service-icon">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Control de stock automatizado</h3>
-                    <p class="text-gray-400 font-light leading-relaxed mb-4">
-                        Actualización en tiempo real, alertas por faltantes y reposición. Sin planillas rotas ni conteos
-                        manuales.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs text-brand font-medium">
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Stock en vivo</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Alertas
-                            Automáticas</span>
-                    </div>
-                </div>
-
-                <!-- 2. Presupuestos -->
-                <div class="service-card fade-up">
-                    <div class="service-icon">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Generador de presupuestos</h3>
-                    <p class="text-gray-400 font-light leading-relaxed mb-4">
-                        Cargás datos del cliente, el sistema arma el presupuesto profesional en PDF y lo envía en
-                        segundos.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs text-brand font-medium">
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">PDF Automático</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Envío Inmediato</span>
-                    </div>
-                </div>
-
-                <!-- 3. Pedidos WhatsApp -->
-                <div class="service-card fade-up">
-                    <div class="service-icon">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Pedidos automáticos por WhatsApp</h3>
-                    <p class="text-gray-400 font-light leading-relaxed mb-4">
-                        Tu cliente pide por WhatsApp, el sistema toma la orden, confirma stock, calcula total y deja
-                        todo registrado.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs text-brand font-medium">
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Bot WhatsApp</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Cálculo de
-                            Total</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Registro de
-                            Orden</span>
-                    </div>
-                </div>
-
-                <!-- 4. Web + SEO -->
-                <div class="service-card fade-up">
-                    <div class="service-icon">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Sitio Web + SEO</h3>
-                    <p class="text-gray-400 font-light leading-relaxed mb-4">
-                        Sitios rápidos, claros y optimizados para Google. Para que te encuentren cuando buscan lo que
-                        vendés.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs text-brand font-medium">
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Optimizado
-                            Google</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Carga Ultra
-                            Rápida</span>
-                    </div>
-                </div>
-
-                <!-- 5. OCR Inteligente -->
-                <div class="service-card fade-up">
-                    <div class="service-icon">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">OCR Inteligente</h3>
-                    <p class="text-gray-400 font-light leading-relaxed mb-4">
-                        Digitalizá y procesá facturas automáticamente. Extrae datos, valida con AFIP y carga
-                        directamente en tu ERP.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs text-brand font-medium">
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Validación AFIP</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Conexión ERP</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Extracción de
-                            Datos</span>
-                    </div>
-                </div>
-
-                <!-- 6. Facturación e Inventario -->
-                <div class="service-card fade-up">
-                    <div class="service-icon">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Facturación e Inventario</h3>
-                    <p class="text-gray-400 font-light leading-relaxed mb-4">
-                        Sistema integral de facturación y stock. Bots de facturación automáticos vía WhatsApp, Telegram
-                        o Email.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs text-brand font-medium">
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Auto
-                            Facturación</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Real-time Stock</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Multi Canal</span>
-                    </div>
-                </div>
-
-                <!-- 7. A medida -->
-                <div class="service-card fade-up">
-                    <div class="service-icon">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Soluciones a medida</h3>
-                    <p class="text-gray-400 font-light leading-relaxed mb-4">
-                        Si tu problema no entra en una caja, lo diseñamos desde cero. Arrancamos con una auditoría y
-                        armamos un plan propio.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs text-brand font-medium">
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Desarrollo a
-                            Medida</span>
-                        <span class="px-2.5 py-1 rounded-full bg-brand/10 border border-brand/20">Auditoría 1:1</span>
-                    </div>
-                </div>
-
-                <!-- 8. CTA Card -->
-                <div class="service-card fade-up flex flex-col justify-between"
-                    style="background: linear-gradient(160deg, #1a120e 0%, #0F0A08 100%); border-color: rgba(217,119,87,0.3);">
-                    <div>
-                        <div class="service-icon"
-                            style="background: rgba(217,119,87,0.2); border-color: rgba(217,119,87,0.5);">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">¿No sabés por dónde arrancar?</h3>
-                        <p class="text-gray-400 font-light leading-relaxed mb-6">
-                            En la auditoría gratis revisamos tus procesos y te mostramos qué se puede automatizar
-                            primero.
-                        </p>
-                    </div>
-                    <a href="#auditoria" class="btn-primary w-fit text-sm">
-                        Solicitar auditoría gratis
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- PROCESO (Vertical timeline) -->
-    <section id="proceso" class="py-24 border-t border-white/5">
-        <div class="max-w-6xl mx-auto px-6 md:px-12">
-            <div class="text-center mb-16 fade-up">
-                <p class="text-sm font-medium mb-3" style="color:#D97757;">CÓMO TRABAJAMOS</p>
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-4">
-                    De manual a automático en <span style="color:#D97757;">3 pasos.</span>
-                </h2>
-                <p class="text-lg text-gray-400 font-light max-w-2xl mx-auto">
-                    Todo 1:1. Sin plantillas genéricas. Te acompañamos desde el primer mensaje hasta que todo funciona
-                    solo.
-                </p>
-            </div>
-
-            <div class="timeline" id="timeline">
-                <div class="timeline-fill" id="timelineFill"></div>
-
-                <div class="timeline-step" data-step="0">
-                    <div class="timeline-num">PASO 01</div>
-                    <h3 class="text-2xl md:text-3xl font-semibold mb-3">Auditoría gratis</h3>
-                    <p class="text-gray-400 font-light leading-relaxed text-lg max-w-xl">
-                        Charlamos 30 minutos, miramos cómo trabajás hoy y detectamos los cuellos de botella que más
-                        tiempo te roban.
-                    </p>
-                </div>
-                <div class="timeline-step" data-step="1">
-                    <div class="timeline-num">PASO 02</div>
-                    <h3 class="text-2xl md:text-3xl font-semibold mb-3">Plan a medida</h3>
-                    <p class="text-gray-400 font-light leading-relaxed text-lg max-w-xl">
-                        Te armamos una propuesta concreta con qué vamos a automatizar, cuánto te va a ahorrar y cuánto
-                        sale.
-                    </p>
-                </div>
-                <div class="timeline-step" data-step="2">
-                    <div class="timeline-num">PASO 03</div>
-                    <h3 class="text-2xl md:text-3xl font-semibold mb-3">Implementación y soporte</h3>
-                    <p class="text-gray-400 font-light leading-relaxed text-lg max-w-xl">
-                        Instalamos todo, lo probamos con tu equipo y te acompañamos hasta que funcione sin vos. Ajustes
-                        incluidos.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AUDITORÍA (CTA BANNER) -->
-    <section id="auditoria" class="py-24 border-t border-white/5 relative overflow-hidden" style="background:#060606;">
-        <div class="absolute inset-0 pointer-events-none"
-            style="background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(217,119,87,0.15) 0%, transparent 70%);">
-        </div>
-
-        <div class="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10 fade-up">
-            <div
-                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand/30 bg-brand/10 text-xs text-brand mb-6 font-medium">
-                AUDITORÍA SIN COSTO
-            </div>
-            <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] mb-6">
-                30 minutos para saber <span style="color:#D97757;">qué automatizar primero.</span>
-            </h2>
-            <p class="text-lg md:text-xl text-gray-400 font-light mb-10 max-w-2xl mx-auto">
-                Sin compromiso. Si no vemos algo concreto que te ahorre tiempo o plata, te lo decimos.
-            </p>
-
-            <div class="max-w-md mx-auto fade-up">
-                <a href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20una%20auditor%C3%ADa%20gratis"
-                    target="_blank" class="btn-primary w-full justify-center text-lg py-4 shadow-lg hover:shadow-xl">
-                    Agendar auditoría por WhatsApp
-                    <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            <nav class="nav-links" aria-label="Principal">
+                <a href="#bench">Productos</a>
+                <a href="#sistema">Plataforma</a>
+                <a href="#resultados">Resultados</a>
+                <a href="#pricing">Comparativa</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="icon-button theme-toggle" type="button" aria-label="Cambiar a modo noche" aria-pressed="false" title="Cambiar a modo noche">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4.2"></circle>
+                        <path d="M12 2.5v2.1M12 19.4v2.1M4.9 4.9l1.5 1.5M17.6 17.6l1.5 1.5M2.5 12h2.1M19.4 12h2.1M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5"></path>
                     </svg>
-                </a>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.2 14.1A7.9 7.9 0 1 1 9.9 3.8a6.3 6.3 0 0 0 10.3 10.3Z"></path>
+                    </svg>
+                </button>
+                <a id="headerDemo" class="button primary" href="#demo"><span class="desktop-label">Pedir demo</span><span class="mobile-label">Demo</span></a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-white/5 py-12" style="background:#050505;">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-6">
-                <!-- Left: branding and vision -->
-                <div class="text-center md:text-left">
-                    <div class="text-2xl font-semibold tracking-tight mb-3">
-                        Sincro AI<span style="color:#D97757;">.</span>
+    <main id="top">
+        <section class="hero section">
+            <div class="wrap hero-grid">
+                <div class="hero-copy reveal">
+                    <h1>El sistema que coordina procesos, equipos y canales en una sola operacion:</h1>
+                    <div class="hero-wordmark">
+                        <strong>Multi<span>Operacion</span></strong>
+                        <em>by Sincro</em>
                     </div>
-                    <p class="text-sm text-gray-500 font-light max-w-sm mx-auto md:mx-0 leading-relaxed">
-                        Nuestra visión es potenciar el crecimiento de PyMEs, comercios y profesionales mediante
-                        Inteligencia Artificial y automatización, liberándolos de sus tareas operativas y repetitivas.
+                    <p>
+                        Sincro AI automatiza procesos manuales en negocios con control de stock, presupuestos automaticos,
+                        pedidos por WhatsApp, OCR inteligente, facturacion, inventario, paginas web, SEO y seguimiento comercial
+                        corriendo en una misma capa para ordenar la operacion y reducir la carga manual.
                     </p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="#demo">Pedir demo -></a>
+                        <a class="button secondary" href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20consultar%20por%20una%20auditoria%20gratuita%20para%20mi%20negocio." target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="logo-band">
+            <div class="wrap">
+                <div class="logo-track">
+                    <span class="logo-name">Mercado Pago</span>
+                    <span class="logo-name">Google Sheets</span>
+                    <span class="logo-name">Tienda Nube</span>
+                    <span class="logo-name">Notion</span>
+                    <span class="logo-name">PDF</span>
+                    <span class="logo-name">HubSpot</span>
+                    <span class="logo-name">SEO</span>
+                    <span class="logo-name">Mercado Pago</span>
+                    <span class="logo-name">Google Sheets</span>
+                    <span class="logo-name">Tienda Nube</span>
+                    <span class="logo-name">Notion</span>
+                    <span class="logo-name">PDF</span>
+                    <span class="logo-name">HubSpot</span>
+                    <span class="logo-name">SEO</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="bench" class="section bench-section">
+            <div class="wrap">
+                <aside class="hero-bench reveal">
+                    <div class="hero-bench-head">
+                        <div class="hero-bench-tags">
+                            <span class="eyebrow live"><span class="live-dot"></span>En vivo y abierto</span>
+                            <span class="tag">Por Sincro</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-bench-grid">
+                        <div class="hero-bench-copy">
+                            <h2>Banco<wbr>Operativo</h2>
+                            <p>La capa operativa para negocios con <strong>pedidos por WhatsApp</strong>, <strong>stock</strong>, <strong>presupuestos</strong>, <strong>web</strong>, <strong>SEO</strong> y <strong>seguimiento</strong> en el mismo flujo.</p>
+                            <p><strong>Lo que resolvemos:</strong> control de stock automatizado, presupuestos en PDF, pedidos automaticos por WhatsApp, paginas web, OCR inteligente, facturacion, inventario y seguimiento comercial sin perder contactos.</p>
+                            <p><strong>Como trabajamos:</strong> auditamos, disenamos el flujo y lo dejamos operando con una logica mas clara para tu negocio.</p>
+                            <div class="hero-bench-actions">
+                                <a class="button primary" href="#sistema" aria-label="Ir a la seccion Plataforma">Explorar soluciones</a>
+                            </div>
+                            <div class="hero-command">$ <span class="accent">flujo-sincro</span> listo-para-tu-negocio</div>
+                        </div>
+
+                        <div class="hero-bench-measures">
+                            <p class="measure-title">Que mide</p>
+                            <div class="measure-list">
+                                <div class="measure-item"><strong>Stock</strong><span>Control y alertas</span></div>
+                                <div class="measure-item"><strong>PDF</strong><span>Presupuestos automaticos</span></div>
+                                <div class="measure-item"><strong>WA</strong><span>Pedidos y consultas</span></div>
+                                <div class="measure-item"><strong>OCR</strong><span>Lectura de documentos</span></div>
+                                <div class="measure-item"><strong>CRM</strong><span>Seguimiento comercial</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="sistema" class="section">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Plataforma</span>
+                    <h2>La tecnologia detras de la diferencia</h2>
                 </div>
 
-                <!-- Right: contact and links -->
-                <div class="flex flex-col items-center md:items-end gap-3 text-sm text-gray-400 font-light">
-                    <a href="mailto:aisincro@gmail.com"
-                        class="hover:text-brand transition-colors flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        aisincro@gmail.com
-                    </a>
-                    <a href="https://wa.me/5491140682555"
-                        class="hover:text-brand transition-colors flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                        +54 9 11 4068 2555
-                    </a>
-                    <a href="https://www.instagram.com/sincro.ai" target="_blank"
-                        class="hover:text-brand transition-colors flex items-center gap-2 mt-1">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.337 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.351-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.947s-.014-3.667-.072-4.947c-.2-4.359-2.617-6.78-6.98-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                        </svg>
-                        @sincro.ai
-                    </a>
+                <div class="tech-grid">
+                    <article class="tech-card reveal">
+                        <h3>Control de stock automatizado</h3>
+                        <p>Actualizacion en tiempo real, alertas por faltantes y reposicion. Menos planillas rotas, menos conteos manuales y una operacion mas visible.</p>
+                        <a href="#detalle-stock" data-detail-open="detalle-stock">Conocer mas</a>
+                    </article>
+
+                    <article class="tech-card reveal">
+                        <h3>Pedidos automaticos por WhatsApp</h3>
+                        <p>El cliente escribe, el sistema ordena la entrada, registra el pedido y reduce el ida y vuelta manual. Ideal para operaciones con alto volumen de consultas.</p>
+                        <a href="#detalle-whatsapp" data-detail-open="detalle-whatsapp">Conocer mas</a>
+                    </article>
+
+                    <article class="tech-card reveal">
+                        <h3>Presupuestos automaticos</h3>
+                        <p>Tomamos datos, armamos el presupuesto profesional en PDF y dejamos una salida consistente. La velocidad mejora y el seguimiento comercial tambien.</p>
+                        <a href="#detalle-presupuestos" data-detail-open="detalle-presupuestos">Conocer mas</a>
+                    </article>
+
+                    <article class="tech-card reveal">
+                        <h3>OCR inteligente</h3>
+                        <p>Leemos facturas, remitos, listas y documentos para convertir texto suelto en datos utilizables sin recarga manual.</p>
+                        <a href="#detalle-ocr" data-detail-open="detalle-ocr">Conocer mas</a>
+                    </article>
+
+                    <article class="tech-card reveal">
+                        <h3>Facturacion e inventario conectados</h3>
+                        <p>La salida comercial impacta en el stock, deja historial y evita inconsistencias entre lo vendido, lo presupuestado y lo entregado.</p>
+                        <a href="#detalle-facturacion" data-detail-open="detalle-facturacion">Conocer mas</a>
+                    </article>
+
+                    <article class="tech-card reveal">
+                        <h3>Web, SEO y seguimiento comercial</h3>
+                        <p>Paginas web claras, posicionamiento SEO y un flujo de seguimiento para que los contactos no se enfrien y las oportunidades no se pierdan.</p>
+                        <a href="#detalle-web" data-detail-open="detalle-web">Conocer mas</a>
+                    </article>
+                </div>
+
+                <div id="detalles" class="detail-stack">
+                    <article id="detalle-stock" class="detail-card reveal">
+                        <div class="detail-head">
+                            <span class="eyebrow">Stock</span>
+                            <h3>Arquitectura y capacidades para control de stock</h3>
+                            <p>Una capa simple para ver entradas, salidas, alertas y reposicion sin depender de planillas desordenadas.</p>
+                        </div>
+                        <div class="detail-grid">
+                            <div class="detail-box">
+                                <h4>Arquitectura</h4>
+                                <p>Sincro recibe movimientos de venta, actualiza inventario, cruza reglas de disponibilidad y dispara alertas cuando un producto cae por debajo del minimo definido.</p>
+                            </div>
+                            <div class="detail-box">
+                                <h4>Capacidades</h4>
+                                <ul>
+                                    <li>Stock en tiempo real.</li>
+                                    <li>Alertas por faltantes.</li>
+                                    <li>Reposicion guiada.</li>
+                                    <li>Historial de movimientos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <a class="button primary" href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20hacer%20una%20consulta%20sobre%20control%20de%20stock%20automatizado%20para%20mi%20negocio." target="_blank" rel="noreferrer">Pedir demo para stock</a>
+                        </div>
+                    </article>
+
+                    <article id="detalle-whatsapp" class="detail-card reveal">
+                        <div class="detail-head">
+                            <span class="eyebrow">WhatsApp</span>
+                            <h3>Arquitectura y capacidades para pedidos por WhatsApp</h3>
+                            <p>Convertimos mensajes en pedidos legibles, ordenados y conectados con el resto de la operacion.</p>
+                        </div>
+                        <div class="detail-grid">
+                            <div class="detail-box">
+                                <h4>Arquitectura</h4>
+                                <p>Los mensajes entran, se interpretan, se registran y pueden activar validaciones de stock, seguimiento y tareas internas sin cortar la conversacion comercial.</p>
+                            </div>
+                            <div class="detail-box">
+                                <h4>Capacidades</h4>
+                                <ul>
+                                    <li>Captura de pedidos y consultas.</li>
+                                    <li>Registro estructurado.</li>
+                                    <li>Seguimiento de respuestas.</li>
+                                    <li>Menos perdida de mensajes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <a class="button primary" href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20hacer%20una%20consulta%20sobre%20pedidos%20automaticos%20por%20WhatsApp%20para%20mi%20negocio." target="_blank" rel="noreferrer">Pedir demo para WhatsApp</a>
+                        </div>
+                    </article>
+
+                    <article id="detalle-presupuestos" class="detail-card reveal">
+                        <div class="detail-head">
+                            <span class="eyebrow">Presupuestos</span>
+                            <h3>Arquitectura y capacidades para presupuestos automaticos</h3>
+                            <p>Una salida comercial mas rapida, prolija y consistente para equipos que hoy cotizan a mano.</p>
+                        </div>
+                        <div class="detail-grid">
+                            <div class="detail-box">
+                                <h4>Arquitectura</h4>
+                                <p>Sincro toma datos del cliente, arma una estructura estandar, genera el PDF y deja trazabilidad para el seguimiento posterior.</p>
+                            </div>
+                            <div class="detail-box">
+                                <h4>Capacidades</h4>
+                                <ul>
+                                    <li>Generacion de PDF automatica.</li>
+                                    <li>Menor tiempo de respuesta.</li>
+                                    <li>Formato consistente.</li>
+                                    <li>Integracion con seguimiento comercial.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <a class="button primary" href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20hacer%20una%20consulta%20sobre%20presupuestos%20automaticos%20para%20mi%20negocio." target="_blank" rel="noreferrer">Pedir demo para presupuestos</a>
+                        </div>
+                    </article>
+
+                    <article id="detalle-ocr" class="detail-card reveal">
+                        <div class="detail-head">
+                            <span class="eyebrow">OCR</span>
+                            <h3>Arquitectura y capacidades para OCR inteligente</h3>
+                            <p>Leemos documentos y los transformamos en datos utiles para que no haya que recargar informacion manualmente.</p>
+                        </div>
+                        <div class="detail-grid">
+                            <div class="detail-box">
+                                <h4>Arquitectura</h4>
+                                <p>Facturas, listas, remitos o comprobantes ingresan, se detectan, se extraen y se normalizan para alimentar otros flujos de stock, facturacion o seguimiento.</p>
+                            </div>
+                            <div class="detail-box">
+                                <h4>Capacidades</h4>
+                                <ul>
+                                    <li>Lectura de documentos frecuentes.</li>
+                                    <li>Extraccion de campos clave.</li>
+                                    <li>Menor carga manual.</li>
+                                    <li>Base para automatizaciones posteriores.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <a class="button primary" href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20hacer%20una%20consulta%20sobre%20OCR%20inteligente%20para%20mi%20negocio." target="_blank" rel="noreferrer">Pedir demo para OCR</a>
+                        </div>
+                    </article>
+
+                    <article id="detalle-facturacion" class="detail-card reveal">
+                        <div class="detail-head">
+                            <span class="eyebrow">Facturacion</span>
+                            <h3>Arquitectura y capacidades para facturacion e inventario</h3>
+                            <p>La salida comercial impacta en stock, deja registro y evita diferencias entre lo vendido y lo disponible.</p>
+                        </div>
+                        <div class="detail-grid">
+                            <div class="detail-box">
+                                <h4>Arquitectura</h4>
+                                <p>Cuando se confirma una operacion, Sincro puede disparar la factura, descontar inventario, registrar el movimiento y dejar la trazabilidad operativa.</p>
+                            </div>
+                            <div class="detail-box">
+                                <h4>Capacidades</h4>
+                                <ul>
+                                    <li>Facturacion conectada.</li>
+                                    <li>Impacto directo en inventario.</li>
+                                    <li>Historial centralizado.</li>
+                                    <li>Menos inconsistencias operativas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <a class="button primary" href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20hacer%20una%20consulta%20sobre%20facturacion%20e%20inventario%20conectados%20para%20mi%20negocio." target="_blank" rel="noreferrer">Pedir demo para facturacion</a>
+                        </div>
+                    </article>
+
+                    <article id="detalle-web" class="detail-card reveal">
+                        <div class="detail-head">
+                            <span class="eyebrow">Web y SEO</span>
+                            <h3>Arquitectura y capacidades para captacion y seguimiento</h3>
+                            <p>Una presencia digital conectada a la operacion comercial, en vez de una web aislada del resto del negocio.</p>
+                        </div>
+                        <div class="detail-grid">
+                            <div class="detail-box">
+                                <h4>Arquitectura</h4>
+                                <p>La web capta, el SEO trae demanda organica y Sincro convierte esas entradas en un flujo visible para seguimiento, contacto y respuesta comercial.</p>
+                            </div>
+                            <div class="detail-box">
+                                <h4>Capacidades</h4>
+                                <ul>
+                                    <li>Landing pages claras.</li>
+                                    <li>SEO enfocado en captacion.</li>
+                                    <li>Seguimiento de leads.</li>
+                                    <li>Continuidad comercial.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <a class="button primary" href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20hacer%20una%20consulta%20sobre%20web,%20SEO%20y%20seguimiento%20comercial%20para%20mi%20negocio." target="_blank" rel="noreferrer">Pedir demo para web y SEO</a>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-white/5 text-center text-sm text-gray-600 font-light">
-                &copy; 2026 Sincro · Todos los derechos reservados.
+        </section>
+
+        <section id="resultados" class="section">
+            <div class="results-wrap">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Resultados</span>
+                    <h2>Lo que cambia cuando Sincro ordena la operacion</h2>
+                </div>
+
+                <div class="metric-grid">
+                    <article class="metric reveal" data-kind="hours" data-target="42" data-decimals="0">
+                        <strong data-value>0h</strong>
+                        <h3>Tiempo ahorrado</h3>
+                        <p>Horas que tu equipo puede recuperar por semana</p>
+                    </article>
+                    <article class="metric reveal" data-kind="x" data-target="3.2" data-decimals="1">
+                        <strong data-value>0.0X</strong>
+                        <h3>Mas velocidad</h3>
+                        <p>En presupuestos, respuestas y seguimiento comercial</p>
+                    </article>
+                    <article class="metric reveal" data-kind="percent" data-target="68" data-decimals="0">
+                        <strong data-value>0%</strong>
+                        <h3>Menos carga manual</h3>
+                        <p>Procesos repetitivos que dejan de depender del equipo</p>
+                    </article>
+                    <article class="metric reveal" data-kind="percent" data-target="91" data-decimals="0">
+                        <strong data-value>0%</strong>
+                        <h3>Seguimiento a tiempo</h3>
+                        <p>Oportunidades que reciben respuesta y continuidad real</p>
+                    </article>
+                    <article class="metric reveal" data-kind="percent" data-target="57" data-decimals="0">
+                        <strong data-value>0%</strong>
+                        <h3>Menos errores</h3>
+                        <p>Fallos por carga manual, mensajes sueltos o falta de control</p>
+                    </article>
+                </div>
+
+                <div class="testimonial-shell reveal">
+                    <div class="testimonial-card">
+                        <span class="testimonial-arrow left"><</span>
+                        <span class="testimonial-arrow right">></span>
+                        <p class="testimonial-quote" id="testimonialQuote">"Sincro nos permitio bajar muchisimo el tiempo entre consulta, presupuesto y confirmacion. La operacion quedo bastante mas prolija."</p>
+                        <div class="testimonial-person">
+                            <span class="testimonial-avatar" id="testimonialAvatar">LP</span>
+                            <div>
+                                <strong id="testimonialName">Lucia Peralta</strong>
+                                <span id="testimonialRole">Co-founder, Nexo Hogar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                </div>
+
+                <div class="comparison-shell reveal" id="pricing">
+                    <span class="eyebrow">Comparativa</span>
+                    <h3>Sincro vs. las alternativas. No hay comparacion</h3>
+                    <div class="comparison-table">
+                        <div class="comparison-row header">
+                            <div>Capacidad</div>
+                            <div>Sincro</div>
+                            <div>Manual / disperso</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div>Pedidos por WhatsApp conectados</div>
+                            <div><span class="ok">Si, con registro y logica</span></div>
+                            <div><span class="mid">Mensajes sueltos</span></div>
+                        </div>
+                        <div class="comparison-row">
+                            <div>Presupuestos consistentes y rapidos</div>
+                            <div><span class="ok">PDF automatico</span></div>
+                            <div><span class="mid">Proceso manual</span></div>
+                        </div>
+                        <div class="comparison-row">
+                            <div>Control de stock y alertas</div>
+                            <div><span class="ok">Tiempo real</span></div>
+                            <div><span class="mid">Planillas y memoria</span></div>
+                        </div>
+                        <div class="comparison-row">
+                            <div>Seguimiento comercial</div>
+                            <div><span class="ok">CRM y tareas</span></div>
+                            <div><span class="mid">Depende del dueno</span></div>
+                        </div>
+                        <div class="comparison-row">
+                            <div>Captacion digital con web y SEO</div>
+                            <div><span class="ok">Integrado al sistema</span></div>
+                            <div><span class="mid">Canales aislados</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="demo" class="section contact-cta">
+            <div class="wrap">
+                <div class="cta-shell reveal">
+                    <div class="cta-grid">
+                        <div class="cta-copy">
+                            <span class="eyebrow">Listo para tu operacion conectada</span>
+                            <h2>Listo para tener tu operacion conectada, visible y menos manual?</h2>
+                            <p>
+                                Sincro resuelve control de stock, presupuestos automaticos, pedidos por WhatsApp, OCR inteligente,
+                                facturacion, inventario, paginas web, SEO y seguimiento comercial en un flujo mas claro,
+                                medible y menos dependiente del trabajo manual.
+                            </p>
+                            <div class="cta-actions">
+                                <a class="button primary" href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20consultar%20por%20una%20auditoria%20gratuita%20para%20mi%20negocio." target="_blank" rel="noreferrer">Pedir demo</a>
+                                <a class="button secondary" href="#sistema">Ver automatizaciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer-row">
+            <div>Sincro AI · Todos los derechos reservados</div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5491140682555?text=Hola%20Sincro,%20quiero%20una%20auditor%C3%ADa%20gratis" target="_blank"
-        class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(37,211,102,0.4)] transition-transform hover:scale-110"
-        style="background:#25D366;" title="WhatsApp">
-        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg>
-    </a>
-
-    <!-- Fade-up observer + form handler -->
     <script>
-        // Intersection observer for fade-up
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); } });
-        }, { threshold: 0.12 });
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        (() => {
+            const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            const themeToggle = document.getElementById("themeToggle");
+            const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+            const themeQuery = new URLSearchParams(window.location.search).get("theme");
+            const canUseQueryTheme = themeQuery === "dark" || themeQuery === "light";
+            const storageKey = "sincro-theme";
+            let savedTheme = null;
 
-        // Service cards: mouse-tracked glow
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const r = card.getBoundingClientRect();
-                card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
-                card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
-            });
-        });
-
-        // Global scroll + hero kinetics
-        (function () {
-            const root = document.documentElement;
-            const hero = document.getElementById('hero');
-            const syncPercent = document.getElementById('syncPercent');
-
-            function clamp(value, min, max) {
-                return Math.max(min, Math.min(max, value));
+            try {
+                savedTheme = localStorage.getItem(storageKey);
+            } catch (error) {
+                savedTheme = null;
             }
 
-            function update() {
-                const doc = document.documentElement;
-                const maxScroll = Math.max(1, doc.scrollHeight - window.innerHeight);
-                const pageProgress = clamp(window.scrollY / maxScroll, 0, 1);
-                root.style.setProperty('--scroll-progress', pageProgress.toFixed(4));
+            const setThemeMeta = (theme) => {
+                document.documentElement.style.colorScheme = theme === "dark" ? "dark" : "light";
+                if (!themeToggle) return;
+                const isDark = theme === "dark";
+                const nextLabel = isDark ? "Cambiar a modo dia" : "Cambiar a modo noche";
+                themeToggle.setAttribute("aria-pressed", String(isDark));
+                themeToggle.setAttribute("aria-label", nextLabel);
+                themeToggle.setAttribute("title", nextLabel);
+            };
 
-                if (hero) {
-                    const rect = hero.getBoundingClientRect();
-                    const heroProgress = clamp((window.innerHeight - rect.top) / (rect.height + window.innerHeight), 0, 1);
-                    root.style.setProperty('--hero-progress', heroProgress.toFixed(4));
-                    if (syncPercent) syncPercent.textContent = String(Math.round(heroProgress * 100)).padStart(2, '0') + '%';
+            const applyTheme = (theme) => {
+                document.body.classList.toggle("theme-dark", theme === "dark");
+                setThemeMeta(theme);
+            };
+
+            const initialTheme = canUseQueryTheme
+                ? themeQuery
+                : (savedTheme === "dark" || savedTheme === "light"
+                    ? savedTheme
+                    : (systemTheme.matches ? "dark" : "light"));
+
+            applyTheme(initialTheme);
+
+            if (themeToggle) {
+                themeToggle.addEventListener("click", () => {
+                    const nextTheme = document.body.classList.contains("theme-dark") ? "light" : "dark";
+                    applyTheme(nextTheme);
+                    try {
+                        localStorage.setItem(storageKey, nextTheme);
+                    } catch (error) {
+                        void error;
+                    }
+                });
+            }
+
+            systemTheme.addEventListener("change", (event) => {
+                if (canUseQueryTheme) return;
+                try {
+                    if (localStorage.getItem(storageKey)) return;
+                } catch (error) {
+                    void error;
                 }
+                applyTheme(event.matches ? "dark" : "light");
+            });
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.16 });
+
+            document.querySelectorAll(".reveal").forEach((node) => revealObserver.observe(node));
+
+            const formatMetric = (value, kind, decimals) => {
+                const rounded = Number(value).toFixed(decimals);
+                if (kind === "percent") return rounded + "%";
+                if (kind === "hours") return Math.round(Number(value)) + "h";
+                return rounded + "X";
+            };
+
+            const animateMetric = (metric) => {
+                const target = Number(metric.dataset.target);
+                const kind = metric.dataset.kind;
+                const decimals = Number(metric.dataset.decimals || "0");
+                const node = metric.querySelector("[data-value]");
+                const startTime = performance.now();
+                const duration = prefersReducedMotion ? 0 : 1500;
+
+                const step = (now) => {
+                    if (duration === 0) {
+                        node.textContent = formatMetric(target, kind, decimals);
+                        return;
+                    }
+
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const current = target * eased;
+                    node.textContent = formatMetric(current, kind, decimals);
+
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        node.textContent = formatMetric(target, kind, decimals);
+                    }
+                };
+
+                node.textContent = formatMetric(0, kind, decimals);
+                requestAnimationFrame(step);
+            };
+
+            const metrics = [...document.querySelectorAll(".metric")];
+            let metricsBooted = false;
+            const resultsSection = document.querySelector("#resultados");
+            if (resultsSection) {
+                const resultsObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting && !metricsBooted) {
+                            metricsBooted = true;
+                            metrics.forEach((metric, index) => {
+                                setTimeout(() => animateMetric(metric), index * 90);
+                            });
+                        }
+                    });
+                }, { threshold: 0.2 });
+                resultsObserver.observe(resultsSection);
             }
 
-            window.addEventListener('scroll', update, { passive: true });
-            window.addEventListener('resize', update);
-            update();
-
-            if (!hero) return;
-            hero.addEventListener('pointermove', (event) => {
-                const rect = hero.getBoundingClientRect();
-                const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
-                const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
-                root.style.setProperty('--pointer-x', clamp(x, -1, 1).toFixed(3));
-                root.style.setProperty('--pointer-y', clamp(y, -1, 1).toFixed(3));
+            metrics.forEach((metric) => {
+                metric.addEventListener("mouseenter", () => animateMetric(metric));
+                metric.addEventListener("focusin", () => animateMetric(metric));
             });
-            hero.addEventListener('pointerleave', () => {
-                root.style.setProperty('--pointer-x', '0');
-                root.style.setProperty('--pointer-y', '0');
-            });
-        })();
 
-        // Canvas signal flow inside the hero system
-        (function () {
-            const lab = document.getElementById('syncLab');
-            const canvas = document.getElementById('signalCanvas');
-            if (!lab || !canvas) return;
-
-            const ctx = canvas.getContext('2d');
-            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            let width = 0;
-            let height = 0;
-            let dpr = 1;
-            let visible = true;
-
-            const paths = [
-                { p0: [0.14, 0.20], p1: [0.30, 0.18], p2: [0.36, 0.40], p3: [0.50, 0.52], color: '#D97757', speed: 0.00019, offset: 0.05 },
-                { p0: [0.12, 0.51], p1: [0.26, 0.46], p2: [0.36, 0.52], p3: [0.50, 0.52], color: '#D97757', speed: 0.00022, offset: 0.35 },
-                { p0: [0.20, 0.80], p1: [0.35, 0.74], p2: [0.36, 0.60], p3: [0.50, 0.52], color: '#D97757', speed: 0.00017, offset: 0.7 },
-                { p0: [0.50, 0.52], p1: [0.64, 0.38], p2: [0.70, 0.22], p3: [0.84, 0.17], color: '#42D6B5', speed: 0.0002, offset: 0.2 },
-                { p0: [0.50, 0.52], p1: [0.66, 0.50], p2: [0.72, 0.52], p3: [0.86, 0.53], color: '#8FB7FF', speed: 0.00018, offset: 0.48 },
-                { p0: [0.50, 0.52], p1: [0.62, 0.66], p2: [0.70, 0.77], p3: [0.82, 0.83], color: '#42D6B5', speed: 0.00021, offset: 0.82 }
+            const testimonials = [
+                {
+                    quote: "\"Sincro nos permitio bajar muchisimo el tiempo entre consulta, presupuesto y confirmacion. La operacion quedo bastante mas prolija.\"",
+                    name: "Lucia Peralta",
+                    role: "Co-founder, Nexo Hogar",
+                    avatar: "LP"
+                },
+                {
+                    quote: "\"Antes habia demasiadas planillas y mensajes cruzados. Con Sincro el equipo sabe que hacer y el seguimiento no se corta.\"",
+                    name: "Tomas Rinaldi",
+                    role: "Director operativo, Brava Equipamientos",
+                    avatar: "TR"
+                },
+                {
+                    quote: "\"Despues de 1 mes con el sistema corriendo no podiamos creer la cantidad de pedidos que se procesaban sin intervencion, era literalmente ver llegar los pedidos sin estar pendiente al telefono todo el dia.\"",
+                    name: "Leandro Pereira",
+                    role: "Founder, LyM Sushi",
+                    avatar: "LP"
+                },
+                {
+                    quote: "\"Nos dio visibilidad real sobre pedidos, facturacion y stock. La diferencia no fue cosmetica, fue operativa.\"",
+                    name: "Federico Lagos",
+                    role: "Gerente comercial, Casa Norte",
+                    avatar: "FL"
+                }
             ];
 
-            function resize() {
-                const rect = lab.getBoundingClientRect();
-                dpr = Math.min(window.devicePixelRatio || 1, 2);
-                width = Math.max(1, rect.width);
-                height = Math.max(1, rect.height);
-                canvas.width = Math.round(width * dpr);
-                canvas.height = Math.round(height * dpr);
-                canvas.style.width = width + 'px';
-                canvas.style.height = height + 'px';
-                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-            }
+            const detailStack = document.getElementById("detalles");
+            const detailCards = [...document.querySelectorAll(".detail-card")];
+            const detailTriggers = [...document.querySelectorAll("[data-detail-open]")];
 
-            function cubic(path, t) {
-                const u = 1 - t;
-                const tt = t * t;
-                const uu = u * u;
-                const uuu = uu * u;
-                const ttt = tt * t;
-                const x = uuu * path.p0[0] + 3 * uu * t * path.p1[0] + 3 * u * tt * path.p2[0] + ttt * path.p3[0];
-                const y = uuu * path.p0[1] + 3 * uu * t * path.p1[1] + 3 * u * tt * path.p2[1] + ttt * path.p3[1];
-                return [x * width, y * height];
-            }
-
-            function draw(timestamp) {
-                ctx.clearRect(0, 0, width, height);
-                ctx.globalCompositeOperation = 'lighter';
-
-                paths.forEach((path) => {
-                    const t = prefersReduced ? path.offset : (timestamp * path.speed + path.offset) % 1;
-                    const point = cubic(path, t);
-                    const tail = cubic(path, Math.max(0, t - 0.055));
-                    const head = cubic(path, Math.min(1, t + 0.025));
-
-                    const gradient = ctx.createLinearGradient(tail[0], tail[1], head[0], head[1]);
-                    gradient.addColorStop(0, 'rgba(255,255,255,0)');
-                    gradient.addColorStop(0.45, path.color + '88');
-                    gradient.addColorStop(1, '#ffffffcc');
-
-                    ctx.strokeStyle = gradient;
-                    ctx.lineWidth = 2;
-                    ctx.beginPath();
-                    ctx.moveTo(tail[0], tail[1]);
-                    ctx.lineTo(head[0], head[1]);
-                    ctx.stroke();
-
-                    ctx.fillStyle = path.color;
-                    ctx.shadowColor = path.color;
-                    ctx.shadowBlur = 18;
-                    ctx.beginPath();
-                    ctx.arc(point[0], point[1], 4.2, 0, Math.PI * 2);
-                    ctx.fill();
-                    ctx.shadowBlur = 0;
+            const openDetail = (id) => {
+                if (!detailStack) return;
+                detailStack.classList.add("is-open");
+                detailCards.forEach((card) => {
+                    card.classList.toggle("is-open", card.id === id);
                 });
+                const active = document.getElementById(id);
+                if (active) {
+                    requestAnimationFrame(() => {
+                        active.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
+                    });
+                }
+            };
 
-                if (!prefersReduced && visible) requestAnimationFrame(draw);
-            }
-
-            const visibilityObserver = new IntersectionObserver((entries) => {
-                visible = entries.some(entry => entry.isIntersecting);
-                if (visible && !prefersReduced) requestAnimationFrame(draw);
-            }, { threshold: 0.1 });
-
-            const resizeObserver = new ResizeObserver(() => {
-                resize();
-                requestAnimationFrame(draw);
+            detailTriggers.forEach((trigger) => {
+                trigger.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    openDetail(trigger.dataset.detailOpen);
+                });
             });
 
-            resizeObserver.observe(lab);
-            visibilityObserver.observe(lab);
-            resize();
-            requestAnimationFrame(draw);
-        })();
-
-        // Global page rail (left vertical progress, hero → footer)
-        (function () {
-            const rail = document.getElementById('pageRail');
-            const railFill = document.getElementById('railFill');
-            const railDots = document.querySelectorAll('.rail-dot');
-            const hero = document.getElementById('hero');
-            const footer = document.querySelector('footer');
-            const sections = Array.from(railDots).map(d => document.getElementById(d.dataset.section));
-            if (!rail || !hero || !footer) return;
-
-            function update() {
-                const heroBottom = hero.getBoundingClientRect().bottom;
-                const footerTop = footer.getBoundingClientRect().top;
-                const vh = window.innerHeight;
-
-                // Show rail once hero is mostly scrolled past; hide once footer enters
-                const visible = heroBottom < vh * 0.4 && footerTop > vh * 0.2;
-                rail.classList.toggle('show', visible);
-
-                // Progress: based on scroll between hero-bottom and footer-top
-                const total = (footer.offsetTop) - (hero.offsetTop + hero.offsetHeight);
-                const scrolled = window.scrollY - (hero.offsetTop + hero.offsetHeight) + vh * 0.5;
-                const progress = Math.max(0, Math.min(1, scrolled / total));
-                railFill.style.height = (progress * 100) + '%';
-
-                // Active dot = current section in viewport
-                let activeIdx = -1;
-                sections.forEach((sec, i) => {
-                    if (!sec) return;
-                    const r = sec.getBoundingClientRect();
-                    if (r.top < vh * 0.5 && r.bottom > vh * 0.3) activeIdx = i;
-                });
-                railDots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
+            const initialHash = window.location.hash.replace("#", "");
+            if (initialHash && detailCards.some((card) => card.id === initialHash)) {
+                openDetail(initialHash);
             }
-            window.addEventListener('scroll', update, { passive: true });
-            window.addEventListener('resize', update);
-            update();
-        })();
 
-        // Timeline (vertical process): activate steps + fill line as they enter viewport
-        (function () {
-            const timeline = document.getElementById('timeline');
-            const fill = document.getElementById('timelineFill');
-            const steps = document.querySelectorAll('.timeline-step');
-            if (!timeline || !steps.length) return;
+            const quoteNode = document.getElementById("testimonialQuote");
+            const nameNode = document.getElementById("testimonialName");
+            const roleNode = document.getElementById("testimonialRole");
+            const avatarNode = document.getElementById("testimonialAvatar");
+            const dotsNode = document.getElementById("testimonialDots");
+            let testimonialIndex = 0;
 
-            function update() {
-                const vh = window.innerHeight;
-                const trigger = vh * 0.55;
-                let lastActive = -1;
-                steps.forEach((s, i) => {
-                    const r = s.getBoundingClientRect();
-                    const active = r.top < trigger;
-                    s.classList.toggle('active', active);
-                    if (active) lastActive = i;
+            const renderTestimonial = () => {
+                const item = testimonials[testimonialIndex];
+                quoteNode.textContent = item.quote;
+                nameNode.textContent = item.name;
+                roleNode.textContent = item.role;
+                avatarNode.textContent = item.avatar;
+                dotsNode.innerHTML = testimonials.map((_, index) => (
+                    "<span class=\"" + (index === testimonialIndex ? "active" : "") + "\"></span>"
+                )).join("");
+            };
+
+            renderTestimonial();
+            if (!prefersReducedMotion) {
+                setInterval(() => {
+                    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+                    renderTestimonial();
+                }, 3400);
+            }
+
+            const canvas = document.getElementById("trail");
+            const ctx = canvas.getContext("2d");
+            const particles = [];
+            let lastSpawn = 0;
+
+            const resizeCanvas = () => {
+                const scale = window.devicePixelRatio || 1;
+                canvas.width = Math.floor(window.innerWidth * scale);
+                canvas.height = Math.floor(window.innerHeight * scale);
+                canvas.style.width = window.innerWidth + "px";
+                canvas.style.height = window.innerHeight + "px";
+                ctx.setTransform(scale, 0, 0, scale, 0, 0);
+            };
+
+            resizeCanvas();
+            window.addEventListener("resize", resizeCanvas);
+
+            const spawn = (x, y) => {
+                if (prefersReducedMotion) return;
+                particles.push({
+                    x,
+                    y,
+                    vx: (Math.random() - 0.5) * 0.45,
+                    vy: (Math.random() - 0.5) * 0.45 - 0.08,
+                    life: 1,
+                    radius: 0.8 + Math.random() * 1.6
+                });
+                if (particles.length > 28) particles.shift();
+            };
+
+            window.addEventListener("pointermove", (event) => {
+                const now = performance.now();
+                if (now - lastSpawn < 28) return;
+                lastSpawn = now;
+                spawn(event.clientX, event.clientY);
+            });
+
+            const renderTrail = () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach((particle, index) => {
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+                    particle.life -= 0.03;
+                    particle.radius *= 0.988;
+
+                    ctx.beginPath();
+                    ctx.fillStyle = "rgba(255, 87, 75," + Math.max(particle.life * 0.55, 0) + ")";
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = "rgba(255, 87, 75, 0.14)";
+                    ctx.arc(particle.x, particle.y, Math.max(particle.radius, 0.2), 0, Math.PI * 2);
+                    ctx.fill();
+
+                    if (particle.life <= 0.02) {
+                        particles.splice(index, 1);
+                    }
                 });
 
-                // Fill from top of timeline to the active dot
-                const tRect = timeline.getBoundingClientRect();
-                const tTop = tRect.top;
-                const tHeight = timeline.offsetHeight;
-                let fillPx = 0;
-                if (lastActive >= 0) {
-                    const dotEl = steps[lastActive];
-                    const dotTop = dotEl.getBoundingClientRect().top - tTop + 16;
-                    fillPx = Math.max(0, Math.min(tHeight, dotTop));
-                }
-                fill.style.height = fillPx + 'px';
-            }
-            window.addEventListener('scroll', update, { passive: true });
-            window.addEventListener('resize', update);
-            update();
+                ctx.shadowBlur = 0;
+                requestAnimationFrame(renderTrail);
+            };
+
+            renderTrail();
         })();
-
-
     </script>
-
 </body>
-
 </html>
